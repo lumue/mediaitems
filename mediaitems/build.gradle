@@ -2,10 +2,13 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'eclipse'
 
-    repositories {
-       mavenCentral()
-    }
-
+  repositories {
+		maven { url "http://repo.spring.io/snapshot" }
+		maven { url "http://repo.spring.io/milestone" }
+		mavenCentral()
+		mavenLocal()
+	}
+  
     dependencies {
         testCompile 'junit:junit:4.8.2'
     }

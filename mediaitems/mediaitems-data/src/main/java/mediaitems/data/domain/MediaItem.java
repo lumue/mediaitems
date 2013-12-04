@@ -7,16 +7,21 @@ public class MediaItem {
 	@Id
 	private String key;
 	
+	private String name;
+	
+	public MediaItem(String name, MediaType document, ContentLocation contentLocation) {
+		super();
+		this.name = name;
+		this.mediaType=document;
+		this.contentLocation=contentLocation;
+	}
+
 	private MediaType mediaType;
 	
 	private ContentLocation contentLocation;
 
 	public String getKey() {
 		return key;
-	}
-
-	public void setKey(String key) {
-		this.key = key;
 	}
 
 	public MediaType getMediaType() {
@@ -33,6 +38,14 @@ public class MediaItem {
 
 	public void setContentLocation(ContentLocation contentLocation) {
 		this.contentLocation = contentLocation;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }

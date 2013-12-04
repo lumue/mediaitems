@@ -9,6 +9,10 @@ public class ContentLocation {
 	
 	private String url;
 
+	public ContentLocation(String url) {
+		setUrl(url);
+	}
+
 	public String getUrl() {
 		return url;
 	}
@@ -16,6 +20,11 @@ public class ContentLocation {
 	public void setUrl(String url) {
 		this.url = url;
 	}
+
+	public String getKey() {
+		return key;
+	}
+	
 	
 	
 }

@@ -1,19 +1,18 @@
 buildscript {
-    repositories {
-        maven { url "http://repo.spring.io/libs-snapshot" }
-        mavenLocal()
-    }
+	repositories {
+		maven { url "http://repo.spring.io/snapshot" }
+		maven { url "http://repo.spring.io/milestone" }
+		mavenCentral()
+		mavenLocal()
+	}
+	dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:0.5.0.M6") }
 }
-
+apply plugin: 'eclipse'
+apply plugin: 'java'
+apply plugin: 'spring-boot'
 
 jar {
     baseName = 'mediaitems-data'
-    version =  '0.1.0'
-}
-
-repositories {
-    mavenCentral()
-    maven { url "http://repo.spring.io/libs-snapshot" }
 }
 
 dependencies {
@@ -22,6 +21,5 @@ dependencies {
     testCompile("junit:junit:4.11")
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '1.8'
-}
+
+
