@@ -9,10 +9,10 @@ public class MediaItem {
 	
 	private String name;
 	
-	public MediaItem(String name, MediaType document, ContentLocation contentLocation) {
+	public MediaItem(String name, MediaType mediaType, ContentLocation contentLocation) {
 		super();
 		this.name = name;
-		this.mediaType=document;
+		this.mediaType=mediaType;
 		this.contentLocation=contentLocation;
 	}
 
