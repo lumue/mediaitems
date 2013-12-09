@@ -1,6 +1,6 @@
 package mediaitems.data.repository.mongo;
 
-import mediaitems.data.domain.MediaItem;
+import mediaitems.metadata.domain.MediaItem;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

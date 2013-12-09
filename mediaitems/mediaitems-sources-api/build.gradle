@@ -1,13 +1,10 @@
 apply plugin: "java"
 
-repositories {
-    mavenCentral()
-}
+repositories { mavenCentral() }
 
 dependencies {
-     testCompile 'junit:junit:4.9'
+	compile 'joda-time:joda-time:2.2'
+	testCompile 'junit:junit:4.9'
 }
 
-jar {
-	  baseName="mediaitems-sources-api"
-}
+jar { baseName="mediaitems-sources-api" }

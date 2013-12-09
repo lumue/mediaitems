@@ -1,0 +1,11 @@
+apply plugin: "java"
+
+repositories { mavenCentral() }
+
+dependencies {
+	compile project(':mediaitems-sources-api')
+	compile project(':mediaitems-data')
+	testCompile 'junit:junit:4.9'
+}
+
+jar { baseName="mediaitems-sync-api" }

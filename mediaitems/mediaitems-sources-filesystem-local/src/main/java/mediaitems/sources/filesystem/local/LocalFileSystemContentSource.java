@@ -1,7 +1,9 @@
 package mediaitems.sources.filesystem.local;
 
+import java.util.Iterator;
 import java.util.UUID;
 
+import mediaitems.sources.api.ContentHandle;
 import mediaitems.sources.api.ContentSource;
 
 public class LocalFileSystemContentSource implements ContentSource{
@@ -78,6 +80,12 @@ public class LocalFileSystemContentSource implements ContentSource{
 	public String toString() {
 		return "LocalFileSystemContentSource [id=" + id + ", name=" + name
 				+ ", path=" + path + "]";
+	}
+
+	@Override
+	public Iterator<ContentHandle> iterator() {
+		return new LocalFileSystemIterator(getPath());
+		
 	}
 	
 	

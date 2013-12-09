@@ -1,4 +1,4 @@
-package mediaitems.data.domain;
+package mediaitems.metadata.domain;
 
 import org.springframework.data.annotation.Id;
 

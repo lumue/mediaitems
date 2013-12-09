@@ -5,6 +5,8 @@
 	<classpathentry kind="src" path="src/test/java"/>
 	<classpathentry kind="src" path="src/test/resources"/>
 	<classpathentry exported="true" kind="src" path="/mediaitems-data"/>
+	<classpathentry exported="true" kind="src" path="/mediaitems-sources-api"/>
+	<classpathentry exported="true" kind="src" path="/mediaitems-sources-filesystem-local"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="con" path="org.springsource.ide.eclipse.gradle.classpathcontainer"/>
 	<classpathentry kind="output" path="bin"/>

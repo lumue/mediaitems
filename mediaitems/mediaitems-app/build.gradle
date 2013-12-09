@@ -1,3 +1,5 @@
+import java.lang.invoke.LambdaForm.Compiled;
+
 buildscript {
 	repositories {
 		maven { url "http://repo.spring.io/snapshot" }
@@ -27,4 +29,7 @@ jar
 
 
 
-dependencies { compile project(':mediaitems-data') }
+dependencies { compile project(':mediaitems-data') 
+			   compile project(':mediaitems-sources-api')
+			   compile project(':mediaitems-sources-filesystem-local')
+}

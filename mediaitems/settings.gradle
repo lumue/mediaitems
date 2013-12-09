@@ -1,1 +1,1 @@
-include "mediaitems-data", "mediaitems-app","mediaitems-sources-api","mediaitems-sources-filesystem-local"
+include "mediaitems-data", "mediaitems-app","mediaitems-sources-api","mediaitems-sync-api","mediaitems-sources-filesystem-local"
