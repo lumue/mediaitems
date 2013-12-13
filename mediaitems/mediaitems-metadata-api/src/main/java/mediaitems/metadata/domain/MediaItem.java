@@ -3,6 +3,7 @@ package mediaitems.metadata.domain;
 public interface MediaItem {
 
 	
+	
 	public String getKey();
 
 	public MediaType getMediaType();

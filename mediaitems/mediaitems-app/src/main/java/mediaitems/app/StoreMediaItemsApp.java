@@ -1,9 +1,8 @@
 package mediaitems.app;
 
 import mediaitems.metadata.domain.mongo.ContentLocation;
-import mediaitems.metadata.domain.mongo.MediaItem;
-import mediaitems.metadata.domain.mongo.MediaType;
-import mediaitems.metadata.repository.mongo.MediaItemRepository;
+import mediaitems.metadata.domain.MediaType;
+import mediaitems.metadata.repository.mongo.MongoMediaItemRepository;
 import mediaitems.sources.api.ContentDescription;
 import mediaitems.sources.api.ContentHandle;
 import mediaitems.sources.api.ContentSource;
@@ -24,7 +23,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 public class StoreMediaItemsApp implements CommandLineRunner {
 
 	@Autowired
-	private MediaItemRepository repository;
+	private MongoMediaItemRepository repository;
 
 	
 	public static void main(String[] args) {
@@ -41,7 +40,7 @@ public class StoreMediaItemsApp implements CommandLineRunner {
 		
 		for (ContentHandle contentHandle : location) {
 			ContentDescription description = contentHandle.getDescription();
-			repository.save(new MediaItem(description.getName(), MediaType.forMimeType(description.getMimeType()), new ContentLocation(contentHandle.getLocationIdentifier())));
+			repository.create(repository.createNewBuilder().setName(description.getName()).setMediaType(MediaType.forMimeType(description.getMimeType())).setContentLocation(new ContentLocation(contentHandle.getLocationIdentifier())));
 			System.out.println(count);
 			count++;
 		}

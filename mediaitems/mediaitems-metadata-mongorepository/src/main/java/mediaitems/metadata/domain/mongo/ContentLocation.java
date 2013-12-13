@@ -2,7 +2,7 @@ package mediaitems.metadata.domain.mongo;
 
 import org.springframework.data.annotation.Id;
 
-public class ContentLocation {
+public class ContentLocation implements mediaitems.metadata.domain.ContentLocation{
 	
 	@Id
 	private String key;
