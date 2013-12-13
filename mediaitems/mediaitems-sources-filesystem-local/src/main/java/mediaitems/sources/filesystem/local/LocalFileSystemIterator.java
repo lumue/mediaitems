@@ -162,6 +162,7 @@ class LocalFileSystemIterator implements Iterator<ContentHandle> {
 			final List<Iterator<File>> dirStack = new ArrayList<Iterator<File>>();
 			Iterator<File> currentDir = Arrays.asList(root.listFiles())
 					.iterator();
+			
 			final boolean returnDirs = false;
 			final boolean returnFiles = true;
 

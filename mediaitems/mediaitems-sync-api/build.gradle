@@ -4,7 +4,7 @@ repositories { mavenCentral() }
 
 dependencies {
 	compile project(':mediaitems-sources-api')
-	compile project(':mediaitems-data')
+	compile project(':mediaitems-metadata-api')
 	testCompile 'junit:junit:4.9'
 }
 

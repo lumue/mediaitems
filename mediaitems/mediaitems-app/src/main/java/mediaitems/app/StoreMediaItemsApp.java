@@ -1,9 +1,9 @@
 package mediaitems.app;
 
-import mediaitems.data.repository.mongo.MediaItemRepository;
-import mediaitems.metadata.domain.ContentLocation;
-import mediaitems.metadata.domain.MediaItem;
-import mediaitems.metadata.domain.MediaType;
+import mediaitems.metadata.domain.mongo.ContentLocation;
+import mediaitems.metadata.domain.mongo.MediaItem;
+import mediaitems.metadata.domain.mongo.MediaType;
+import mediaitems.metadata.repository.mongo.MediaItemRepository;
 import mediaitems.sources.api.ContentDescription;
 import mediaitems.sources.api.ContentHandle;
 import mediaitems.sources.api.ContentSource;
@@ -34,14 +34,18 @@ public class StoreMediaItemsApp implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		ContentSource location=new LocalFileSystemContentSource(null, null, "/home/lm/downloads");
+		ContentSource location=new LocalFileSystemContentSource(null, null, "/home/lm");
 		
 		repository.deleteAll();
+		long count=0;
 		
 		for (ContentHandle contentHandle : location) {
 			ContentDescription description = contentHandle.getDescription();
 			repository.save(new MediaItem(description.getName(), MediaType.forMimeType(description.getMimeType()), new ContentLocation(contentHandle.getLocationIdentifier())));
+			System.out.println(count);
+			count++;
 		}
+		System.out.println("fertig");
 	}
 
 }
