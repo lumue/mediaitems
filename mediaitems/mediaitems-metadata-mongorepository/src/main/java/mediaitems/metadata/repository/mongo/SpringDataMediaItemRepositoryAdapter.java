@@ -4,35 +4,43 @@ import mediaitems.metadata.domain.Builder;
 import mediaitems.metadata.domain.mongo.MediaItem;
 import mediaitems.metadata.domain.mongo.MediaItem.MongoMediaItemBuilder;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.stereotype.Component;
 
-@Repository
-public abstract class MongoMediaItemRepository implements MongoRepository<MediaItem, String>,mediaitems.metadata.repository.MediaItemRepository {
 
-	
+@Component
+public class SpringDataMediaItemRepositoryAdapter implements mediaitems.metadata.repository.MediaItemRepository {
+
+	@Autowired(required=true)
+	private PagingAndSortingRepository<MediaItem, String> delegate;
 	
 
 	@Override
 	public MediaItem create(
 			Builder<? extends mediaitems.metadata.domain.MediaItem> builder) {
 		MongoMediaItemBuilder mybuilder=(MongoMediaItemBuilder) builder;
-		return save(mybuilder.build());
+		return delegate.save(mybuilder.build());
 	}
 
 	@Override
 	public MediaItem get(String key) {
-		return findOne(key);
+		return delegate.findOne(key);
 	}
 
 	@Override
 	public Iterable<MediaItem> getAll() {
-		return findAll();
+		return delegate.findAll();
 	}
 
 	@Override
 	public MediaItem.MongoMediaItemBuilder createNewBuilder() {
 		return new MediaItem.MongoMediaItemBuilder();
+	}
+
+	@Override
+	public void deleteAll() {
+		delegate.deleteAll();
 	}
 
 	

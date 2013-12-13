@@ -47,7 +47,7 @@ public class MediaItem implements mediaitems.metadata.domain.MediaItem{
 		this.name = name;
 	}
 
-	public static class MongoMediaItemBuilder implements  Builder<mediaitems.metadata.domain.MediaItem>
+	public static class MongoMediaItemBuilder implements  MediaItemBuilder<mediaitems.metadata.domain.MediaItem>
 	{
 
 
@@ -63,20 +63,25 @@ public class MediaItem implements mediaitems.metadata.domain.MediaItem{
 
 		}
 
+		@Override
 		public MongoMediaItemBuilder setName(String name) {
 			this.name = name;
 			return this;
 		}
 
+		@Override
 		public MongoMediaItemBuilder setMediaType(MediaType mediaType) {
 			this.mediaType = mediaType;
 			return this;
 		}
 
-		public MongoMediaItemBuilder setContentLocation(ContentLocation contentLocation) {
-			this.contentLocation = contentLocation;
+		@Override
+		public MongoMediaItemBuilder setContentLocation(
+				mediaitems.metadata.domain.ContentLocation location) {
+			this.contentLocation=(ContentLocation) location;
 			return this;
 		}
+
 		
 		
 		
