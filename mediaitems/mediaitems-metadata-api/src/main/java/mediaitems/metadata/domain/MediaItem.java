@@ -5,7 +5,7 @@ public interface MediaItem {
 	public interface MediaItemBuilder<T extends MediaItem> extends Builder<T>{
 		MediaItemBuilder<T> setName(String name);
 		MediaItemBuilder<T> setMediaType(MediaType mediaType);
-		MediaItemBuilder<T> setContentLocation(ContentLocation location);
+		MediaItemBuilder<T> setContentLocation(String string);
 	}
 	
 	public String getKey();

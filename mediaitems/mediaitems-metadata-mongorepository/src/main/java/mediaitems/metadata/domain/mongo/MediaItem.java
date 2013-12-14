@@ -1,6 +1,5 @@
 package mediaitems.metadata.domain.mongo;
 
-import mediaitems.metadata.domain.Builder;
 import mediaitems.metadata.domain.MediaType;
 
 import org.springframework.data.annotation.Id;
@@ -76,9 +75,8 @@ public class MediaItem implements mediaitems.metadata.domain.MediaItem{
 		}
 
 		@Override
-		public MongoMediaItemBuilder setContentLocation(
-				mediaitems.metadata.domain.ContentLocation location) {
-			this.contentLocation=(ContentLocation) location;
+		public MongoMediaItemBuilder setContentLocation(String location) {
+			this.contentLocation=new ContentLocation(location);
 			return this;
 		}
 
