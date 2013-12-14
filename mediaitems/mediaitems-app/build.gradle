@@ -29,7 +29,8 @@ jar
 
 
 
-dependencies { 	compile project(':mediaitems-metadata-api')
-				compile project(':mediaitems-metadata-mongorepository') 
-			   compile project(':mediaitems-sources-filesystem-local')
+dependencies { 	
+	compile project(':mediaitems-metadata-api')
+	compile project(':mediaitems-metadata-mongorepository') 
+	compile project(':mediaitems-sources-filesystem-local')
 }
