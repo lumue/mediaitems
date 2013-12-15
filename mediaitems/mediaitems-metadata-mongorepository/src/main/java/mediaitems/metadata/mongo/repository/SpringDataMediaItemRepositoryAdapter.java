@@ -1,16 +1,16 @@
-package mediaitems.metadata.repository.mongo;
+package mediaitems.metadata.mongo.repository;
 
 import mediaitems.metadata.domain.Builder;
-import mediaitems.metadata.domain.mongo.MediaItem;
-import mediaitems.metadata.domain.mongo.MediaItem.MongoMediaItemBuilder;
+import mediaitems.metadata.mongo.domain.MediaItem;
+import mediaitems.metadata.mongo.domain.MediaItem.MongoMediaItemBuilder;
+import mediaitems.metadata.repository.MediaItemRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-
-@Component
-public class SpringDataMediaItemRepositoryAdapter implements mediaitems.metadata.repository.MediaItemRepository {
+@Repository
+public class SpringDataMediaItemRepositoryAdapter implements MediaItemRepository {
 
 	@Autowired(required=true)
 	private PagingAndSortingRepository<MediaItem, String> delegate;

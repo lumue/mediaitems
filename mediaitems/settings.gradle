@@ -1,1 +1,1 @@
-include "mediaitems-metadata-mongorepository","mediaitems-metadata-api" ,"mediaitems-app","mediaitems-sources-api","mediaitems-sync-api","mediaitems-sources-filesystem-local"
+include "mediaitems-metadata-mongorepository","mediaitems-metadata-api" ,"mediaitems-app","mediaitems-http","mediaitems-sources-api","mediaitems-sync-api","mediaitems-sources-filesystem-local"

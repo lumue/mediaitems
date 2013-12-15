@@ -1,4 +1,4 @@
-package mediaitems.metadata.domain.mongo;
+package mediaitems.metadata.mongo.domain;
 
 import mediaitems.metadata.domain.MediaType;
 

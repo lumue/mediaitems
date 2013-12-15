@@ -1,0 +1,21 @@
+apply plugin: "java"
+apply plugin: "eclipse"
+
+repositories {
+	mavenCentral()
+	maven  {url 'http://maven.springframework.org/release/'}
+}
+
+dependencies {
+	compile project(':mediaitems-sources-api')
+	compile project(':mediaitems-metadata-api')
+
+	compile 'org.springframework:spring-web:4.0.0.RELEASE'
+	compile 'org.springframework:spring-tx:4.0.0.RELEASE'
+	
+	compile group: 'com.google.guava', name: 'guava', version: '12.0'
+
+	testCompile 'junit:junit:4.9'
+}
+
+jar { baseName="mediaitems-http" }

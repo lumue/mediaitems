@@ -27,10 +27,12 @@ jar
 	baseName="mediaitems-app"
 }
 
-
-
 dependencies { 	
+	compile("org.springframework.boot:spring-boot-starter-web:0.5.0.M6")
+	compile("org.springframework.boot:spring-boot-starter-actuator:0.5.0.M6")
+	compile("org.springframework.boot:spring-boot-starter-websocket:0.5.0.M6")
+	
+	compile project(':mediaitems-http')
 	compile project(':mediaitems-metadata-api')
 	compile project(':mediaitems-metadata-mongorepository') 
-	compile project(':mediaitems-sources-filesystem-local')
 }

@@ -1,9 +1,9 @@
 #org.springsource.ide.eclipse.gradle.core.actions.GradleRefreshPreferences
-#Mon Dec 02 23:01:03 CET 2013
+#Sun Dec 15 05:02:40 CET 2013
 addResourceFilters=true
 afterTasks=afterEclipseImport;
 beforeTasks=cleanEclipse;eclipse;
 enableAfterTasks=true
 enableBeforeTasks=true
-enableDSLD=false
+enableDSLD=true
 useHierarchicalNames=false
