@@ -5,7 +5,8 @@ repositories { mavenCentral() }
 dependencies {
 	
 	compile project(':mediaitems-sources-api')
-
+	compile group: 'com.google.guava', name: 'guava', version: '12.0'
+	
 	testCompile 'junit:junit:4.9'
 }
 

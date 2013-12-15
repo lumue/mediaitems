@@ -1,20 +1,21 @@
 package mediaitems.sources.filesystem.local;
 
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.UUID;
 
 import mediaitems.sources.api.ContentHandle;
 import mediaitems.sources.api.ContentSource;
 
-public class LocalFileSystemContentSource implements ContentSource{
+public class LocalFileSystemContentSource implements ContentSource {
 
 	private String id;
 	private String name;
-	private String path;	
-	
+	private String path;
+
 	public LocalFileSystemContentSource() {
 		super();
-		this.id=UUID.randomUUID().toString();
+		this.id = UUID.randomUUID().toString();
 	}
 
 	public LocalFileSystemContentSource(String id) {
@@ -40,7 +41,7 @@ public class LocalFileSystemContentSource implements ContentSource{
 	}
 
 	public void setName(String name) {
-		this.name=name;
+		this.name = name;
 	}
 
 	public String getPath() {
@@ -83,12 +84,19 @@ public class LocalFileSystemContentSource implements ContentSource{
 	}
 
 	@Override
-	public Iterator<ContentHandle> iterator() {
-		return new LocalFileSystemIterator(getPath());
-		
+	public Iterable<ContentHandle> list() throws IOException {
+		return new Iterable<ContentHandle>() {
+			
+			@Override
+			public Iterator<ContentHandle> iterator() {
+				try {
+					return new LocalFileSystemIterator(path);
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+				}
+				
+			}
+		};
 	}
-	
-	
-	
-	
+
 }

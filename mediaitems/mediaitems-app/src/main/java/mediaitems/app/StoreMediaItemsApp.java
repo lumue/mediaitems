@@ -33,12 +33,12 @@ public class StoreMediaItemsApp implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		ContentSource location=new LocalFileSystemContentSource(null, null, "/mnt/media/serien");
+		ContentSource location=new LocalFileSystemContentSource(null, null, "/mnt/media/");
 		
 		repository.deleteAll();
 		long count=0;
-		
-		for (ContentHandle contentHandle : location) {
+		long millisStart=System.currentTimeMillis();
+		for (ContentHandle contentHandle : location.list()) {
 			ContentDescription description = contentHandle.getDescription();
 			MediaItemBuilder<?> builder = repository.createNewBuilder()
 											.setName(description.getName())
@@ -48,7 +48,9 @@ public class StoreMediaItemsApp implements CommandLineRunner {
 			System.out.println(count);
 			count++;
 		}
-		System.out.println("fertig");
+		long millisEnd=System.currentTimeMillis();
+		
+		System.out.println("fertig. time took: "+(millisEnd-millisStart)+"ms");
 	}
 
 }

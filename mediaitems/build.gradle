@@ -4,6 +4,8 @@ subprojects {
 	sourceCompatibility = 1.7
 	
     apply plugin: 'eclipse'
+	
+	apply plugin: 'project-report'
 
   repositories {
 		maven { url "http://repo.spring.io/snapshot" }

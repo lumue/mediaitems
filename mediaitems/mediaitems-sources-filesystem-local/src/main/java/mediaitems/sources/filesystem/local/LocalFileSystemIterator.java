@@ -4,21 +4,18 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
-import java.util.NoSuchElementException;
-
-import org.joda.time.LocalDateTime;
 
 import mediaitems.sources.api.ContentDescription;
 import mediaitems.sources.api.ContentHandle;
+
+import org.joda.time.LocalDateTime;
 
 class LocalFileSystemIterator implements Iterator<ContentHandle> {
 
@@ -30,10 +27,8 @@ class LocalFileSystemIterator implements Iterator<ContentHandle> {
 		private final LocalDateTime creationTime;
 		private final LocalDateTime lastAccessTime;
 		private final LocalDateTime modificationTime;
-		private Map<String, Object> properties=Collections.emptyMap();
+		private final Map<String, Object> properties = Collections.emptyMap();
 
-		
-		
 		private LocalFileSystemContentDescription(String name, String mimeType,
 				Long size, LocalDateTime creationTime,
 				LocalDateTime lastAccessTime, LocalDateTime modificationTime) {
@@ -47,18 +42,17 @@ class LocalFileSystemIterator implements Iterator<ContentHandle> {
 		}
 
 		public static ContentDescription fromFile(File file) throws IOException {
-			Path path=file.toPath();
-			BasicFileAttributes attrs = Files.<BasicFileAttributes>readAttributes(path, BasicFileAttributes.class);
+			Path path = file.toPath();
+			BasicFileAttributes attrs = Files
+					.<BasicFileAttributes> readAttributes(path,
+							BasicFileAttributes.class);
 			return new LocalFileSystemContentDescription(readName(file),
-														 Files.probeContentType(path),
-														 Long.valueOf(attrs.size()),
-														 new LocalDateTime(attrs.creationTime().toMillis()),
-														 new LocalDateTime(attrs.lastAccessTime().toMillis()),
-														 new LocalDateTime(attrs.creationTime().toMillis()));
-			
-		}
+					Files.probeContentType(path), Long.valueOf(attrs.size()),
+					new LocalDateTime(attrs.creationTime().toMillis()),
+					new LocalDateTime(attrs.lastAccessTime().toMillis()),
+					new LocalDateTime(attrs.creationTime().toMillis()));
 
-		
+		}
 
 		private static String readName(File file) {
 			return file.getName();
@@ -153,59 +147,21 @@ class LocalFileSystemIterator implements Iterator<ContentHandle> {
 			return null;
 		}
 
+		public static ContentHandle fromPath(Path next) {
+			return fromFile(next.toFile());
+		}
+
 	}
 
-	private Iterator<File> fileIterator;
+	private final Iterator<Path> fileIterator;
 
-	private Iterator<File> newFileIterator(final File root) {
-		return new Iterator<File>() {
-			final List<Iterator<File>> dirStack = new ArrayList<Iterator<File>>();
-			Iterator<File> currentDir = Arrays.asList(root.listFiles())
-					.iterator();
-			
-			final boolean returnDirs = false;
-			final boolean returnFiles = true;
-
-			@Override
-			public boolean hasNext() {
-				return currentDir.hasNext();
-			}
-
-			@Override
-			public File next() {
-				while (currentDir.hasNext()) {
-					final File entry = currentDir.next();
-					if (entry.isDirectory()) {
-						final File[] entries = entry.listFiles();
-						if (entries.length > 0) {
-							dirStack.add(currentDir);
-							currentDir = Arrays.asList(entry.listFiles())
-									.iterator();
-							if (returnDirs) {
-								return entry;
-							}
-						}
-					} else {
-						while (!currentDir.hasNext() && !dirStack.isEmpty()) {
-							currentDir = dirStack.remove(dirStack.size() - 1);
-						}
-						if (returnFiles) {
-							return entry;
-						}
-					}
-				}
-				throw new NoSuchElementException();
-			}
-
-			@Override
-			public void remove() {
-				throw new UnsupportedOperationException();
-			}
-		};
+	private Iterator<Path> newFileIterator(final Path root) throws IOException {
+		return new AsynchronousRecursiveDirectoryStream(root, "*").iterator();
 	}
 
-	LocalFileSystemIterator(String path) {
-		this.fileIterator = newFileIterator(new File(path));
+	LocalFileSystemIterator(String path) throws IOException {
+		this.fileIterator = newFileIterator(FileSystems.getDefault().getPath(
+				path));
 	}
 
 	@Override
@@ -215,7 +171,7 @@ class LocalFileSystemIterator implements Iterator<ContentHandle> {
 
 	@Override
 	public ContentHandle next() {
-		return LocalFileSystemContentHandle.fromFile(fileIterator.next());
+		return LocalFileSystemContentHandle.fromPath(fileIterator.next());
 	}
 
 	@Override

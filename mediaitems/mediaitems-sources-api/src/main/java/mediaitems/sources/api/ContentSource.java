@@ -1,11 +1,13 @@
 package mediaitems.sources.api;
 
-public interface ContentSource extends Iterable<ContentHandle> {
+import java.io.IOException;
+
+public interface ContentSource  {
 
 	public String getId();
 	
 	public String getName();
 	
-	
+	public Iterable<ContentHandle> list() throws IOException;
 
 }
