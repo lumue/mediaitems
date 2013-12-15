@@ -18,7 +18,9 @@ repositories {
 }
 
 apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp'
 apply plugin: 'java'
+apply plugin: 'war'
 apply plugin: 'spring-boot'
 
 

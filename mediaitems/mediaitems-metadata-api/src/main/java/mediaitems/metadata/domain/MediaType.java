@@ -15,6 +15,23 @@ public enum MediaType {
 	public String getKey() {
 		return key;
 	}
+	
+	public static MediaType forKey(String key)
+	{
+		switch(key.toUpperCase())
+		{
+			case "DOCUMENT":
+				return DOCUMENT;
+			case "VIDEO":
+				return VIDEO;
+			case "AUDIO":
+				return AUDIO;
+			case "IMAGE":
+				return IMAGE;
+			default:
+				return UNKNOWN;
+		}
+	}
 
 	public static MediaType forMimeType(String mimeType) {
 		if(mimeType.startsWith("video"))
