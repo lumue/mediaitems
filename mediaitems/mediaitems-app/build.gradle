@@ -33,6 +33,5 @@ dependencies {
 	compile("org.springframework.boot:spring-boot-starter-websocket:0.5.0.M6")
 	
 	compile project(':mediaitems-http')
-	compile project(':mediaitems-metadata-api')
 	compile project(':mediaitems-metadata-mongorepository') 
 }
