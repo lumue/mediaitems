@@ -5,6 +5,7 @@ import mediaitems.metadata.domain.MediaType;
 import mediaitems.metadata.repository.MediaItemRepository;
 import mediaitems.sources.api.ContentDescription;
 import mediaitems.sources.api.ContentHandle;
+import mediaitems.sources.api.ContentIterable;
 import mediaitems.sources.api.ContentSource;
 import mediaitems.sources.filesystem.local.LocalFileSystemContentSource;
 
@@ -38,7 +39,8 @@ public class StoreMediaItemsApp implements CommandLineRunner {
 		repository.deleteAll();
 		long count=0;
 		long millisStart=System.currentTimeMillis();
-		for (ContentHandle contentHandle : location.list()) {
+		final ContentIterable<? extends ContentHandle> contentIterable = location.list();
+		for (ContentHandle contentHandle : contentIterable) {
 			ContentDescription description = contentHandle.getDescription();
 			MediaItemBuilder<?> builder = repository.createNewBuilder()
 											.setName(description.getName())
@@ -48,6 +50,7 @@ public class StoreMediaItemsApp implements CommandLineRunner {
 			System.out.println(count);
 			count++;
 		}
+		contentIterable.close();
 		long millisEnd=System.currentTimeMillis();
 		
 		System.out.println("fertig. time took: "+(millisEnd-millisStart)+"ms");

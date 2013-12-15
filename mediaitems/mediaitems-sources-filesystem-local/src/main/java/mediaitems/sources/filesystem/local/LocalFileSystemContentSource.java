@@ -1,15 +1,18 @@
 package mediaitems.sources.filesystem.local;
 
 import java.io.IOException;
+import java.nio.file.FileSystems;
 import java.util.Iterator;
 import java.util.UUID;
 
 import mediaitems.sources.api.ContentHandle;
+import mediaitems.sources.api.ContentIterable;
 import mediaitems.sources.api.ContentSource;
+import mediaitems.sources.api.error.ContentAccessException;
 
 public class LocalFileSystemContentSource implements ContentSource {
 
-	private String id;
+	private final String id;
 	private String name;
 	private String path;
 
@@ -84,17 +87,31 @@ public class LocalFileSystemContentSource implements ContentSource {
 	}
 
 	@Override
-	public Iterable<ContentHandle> list() throws IOException {
-		return new Iterable<ContentHandle>() {
-			
+	public ContentIterable<? extends ContentHandle> list() throws IOException {
+		return new ContentIterable<ContentHandle>() {
+
+			private AsynchronousRecursiveDirectoryStream directoryStream;
+
 			@Override
 			public Iterator<ContentHandle> iterator() {
 				try {
-					return new LocalFileSystemIterator(path);
+					directoryStream = new AsynchronousRecursiveDirectoryStream(
+							FileSystems.getDefault().getPath(path), "*");
+					return new DirectoryStreamWrappingContentIterator(
+							directoryStream);
 				} catch (IOException e) {
 					throw new RuntimeException(e);
 				}
-				
+
+			}
+
+			@Override
+			public void close() throws ContentAccessException {
+				try {
+					directoryStream.close();
+				} catch (IOException e) {
+					throw new ContentAccessException(e);
+				}
 			}
 		};
 	}

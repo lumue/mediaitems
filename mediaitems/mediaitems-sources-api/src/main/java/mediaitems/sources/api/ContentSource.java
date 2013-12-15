@@ -8,6 +8,6 @@ public interface ContentSource  {
 	
 	public String getName();
 	
-	public Iterable<ContentHandle> list() throws IOException;
+	public ContentIterable<? extends ContentHandle> list() throws IOException;
 
 }
