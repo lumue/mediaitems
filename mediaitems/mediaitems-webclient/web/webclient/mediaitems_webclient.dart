@@ -31,7 +31,7 @@ class MetadataResultView
       this.tableBodyElement.append(rowElement);
   });
   }
-  
+   
   clearView() {
     tableBodyElement.children.clear();
   }
