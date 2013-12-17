@@ -7,7 +7,7 @@ gradle/
 .children
 *.dart.js
 *.dart.js.map
-*.dart.precompile
+*.dart.precompiled.js
 *.dart.js.deps
 
 # pub
