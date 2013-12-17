@@ -4,13 +4,13 @@ bin/
 gradle/
 
 # Dart Editor
-.children
-*.dart.js
-*.dart.js.map
-*.dart.precompile
-*.dart.js.deps
+#.children
+#*.dart.js
+#*.dart.js.map
+#*.dart.precompile
+#*.dart.js.deps
 
 # pub
-packages
-pubspec.lock
+#packages
+#pubspec.lock
 
