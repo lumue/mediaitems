@@ -24,7 +24,7 @@ apply plugin: 'war'
 apply plugin: 'spring-boot'
 
 
-jar
+war
 {
 	baseName="mediaitems-app"
 }
@@ -32,8 +32,9 @@ jar
 dependencies { 	
 	compile("org.springframework.boot:spring-boot-starter-web:0.5.0.M6")
 	compile("org.springframework.boot:spring-boot-starter-actuator:0.5.0.M6")
-	compile("org.springframework.boot:spring-boot-starter-websocket:0.5.0.M6")
 	compile("org.springframework.boot:spring-boot-starter-tomcat:0.5.0.M6")
+	
+	compile 'org.springframework:spring-webmvc:4.0.0.RELEASE'
 	
 	compile project(':mediaitems-http')
 	compile project(':mediaitems-metadata-mongorepository') 

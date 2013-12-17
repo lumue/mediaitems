@@ -11,6 +11,6 @@ gradle/
 *.dart.js.deps
 
 # pub
-#packages
+packages
 pubspec.lock
 
