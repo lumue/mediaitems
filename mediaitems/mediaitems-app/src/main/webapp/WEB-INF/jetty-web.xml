@@ -1,0 +1,4 @@
+<!-- Allow symbolic links  -->
+<Call name="addAliasCheck">
+  <Arg><New class="org.eclipse.jetty.server.handler.AllowSymLinkAliasChecker"/></Arg>
+</Call>
