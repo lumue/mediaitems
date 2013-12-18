@@ -1,4 +1,5 @@
 import 'dart:html';
+import 'dart:convert';
 
 class MetadataResultView
 {
@@ -50,21 +51,37 @@ class MetadataViewController
   
   loadElements()
   {
-    List<MetadataItem> result=[
-    new MetadataItem("Charly und die Schokoladenfabrik","video"),
-    new MetadataItem("Der Grinch","video"),
-    new MetadataItem("Eine schöne Bescherung","video"),
-    new MetadataItem("Der Polarexpress","video"),
-    new MetadataItem("Der goldene Kompass","video")
-    ];
-    model.queryResult=result;
-    this.view.update();
+    String url="http://localhost:8080/app/metadata/video/list?from="+this.model.start.toString()+"&to="+this.model.pagesize.toString();
+    HttpRequest.getString(url).then((String result){
+      model.queryResult=this.parseResult(result);
+      onElementsLoaded();
+    });
   }
   
+  List<MetadataItem> parseResult(String json)
+  {
+    List<MetadataItem> ret=new List(model.pagesize);
+    
+    List resultList=JSON.decode(json);
+    
+    int i=0;
+    resultList.forEach((Map map){
+      ret[i++]=new MetadataItem(map["name"], map["mediaType"]);
+    });
+    
+    return ret;
+  }
+  
+  onElementsLoaded()
+  {
+    view.update();
+  }
 }
 
 class MetadataResultViewModel
 {
+    int start=0;
+    int pagesize=20;
     List<MetadataItem> queryResult;
 }
 
