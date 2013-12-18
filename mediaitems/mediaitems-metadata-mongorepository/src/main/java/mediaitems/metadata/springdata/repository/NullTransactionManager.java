@@ -1,4 +1,4 @@
-package mediaitems.metadata.mongo.repository;
+package mediaitems.metadata.springdata.repository;
 
 import java.util.UUID;
 

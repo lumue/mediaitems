@@ -1,7 +1,7 @@
-package mediaitems.metadata.mongo.repository;
+package mediaitems.metadata.springdata.repository;
 
 import mediaitems.metadata.domain.MediaType;
-import mediaitems.metadata.mongo.domain.MediaItem;
+import mediaitems.metadata.springdata.domain.MediaItem;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -9,7 +9,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-interface MediaItemPagingAndSortingRepository extends
+interface SpringDataMediaItemRepository extends
 		PagingAndSortingRepository<MediaItem, String> {
 
 	Page<MediaItem> findByMediaType(MediaType mediaType, Pageable pageable);

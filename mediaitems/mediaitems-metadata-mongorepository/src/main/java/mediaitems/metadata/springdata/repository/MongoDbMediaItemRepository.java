@@ -1,6 +1,6 @@
-package mediaitems.metadata.mongo.repository;
+package mediaitems.metadata.springdata.repository;
 
-import mediaitems.metadata.mongo.domain.MediaItem;
+import mediaitems.metadata.springdata.domain.MediaItem;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
