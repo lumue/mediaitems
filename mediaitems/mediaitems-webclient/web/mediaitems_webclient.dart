@@ -3,6 +3,10 @@ import 'dart:convert';
 
 class MetadataResultView
 {
+  Element pageForwardElement;
+  
+  Element pageBackElement;
+  
   Element tableBodyElement;
   
   MetadataResultViewModel model;
@@ -15,6 +19,8 @@ class MetadataResultView
     Element trElement = tableBodyElement.querySelector("tr");
     this.templateRowElement = trElement.clone(true);
     trElement.hidden = true;
+    this.pageBackElement=element.querySelector("#result_pager_back");
+    this.pageForwardElement=element.querySelector("#result_pager_forward");
   }
   
   bindModel(MetadataResultViewModel model){
@@ -47,11 +53,15 @@ class MetadataViewController
       this.view=new MetadataResultView(content);
       this.model=new MetadataResultViewModel();
       this.view.bindModel(model);
+      this.view.pageForwardElement.onClick.listen((e){this.pageForward();});
+      this.view.pageBackElement.onClick.listen((e){this.pageBack();});
+      
   }
   
   loadElements()
   {
-    String url="http://localhost:8080/app/metadata/video/list?from="+this.model.start.toString()+"&to="+this.model.pagesize.toString();
+    var to = (this.model.start+this.model.pagesize);
+    String url="http://localhost:8080/app/metadata/video/list?from="+this.model.start.toString()+"&to="+to.toString();
     HttpRequest.getString(url).then((String result){
       model.queryResult=this.parseResult(result);
       onElementsLoaded();
@@ -70,6 +80,21 @@ class MetadataViewController
     });
     
     return ret;
+  }
+  
+  pageForward()
+  {
+    model.start+=model.pagesize;
+    loadElements();
+  }
+  
+  pageBack()
+  {
+    if(model.start >= model.pagesize)
+    {
+      model.start-=model.pagesize;
+      loadElements();
+    }
   }
   
   onElementsLoaded()
