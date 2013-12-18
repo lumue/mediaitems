@@ -1,10 +1,10 @@
 package mediaitems.metadata.domain;
 
-public interface Taggable {
+public interface Taggable<T extends Tag> {
 
-	public abstract Iterable<? extends Tag> getTags();
+	public abstract Iterable<T> getTags();
 
-	public abstract void addTag(Tag tag);
+	public abstract void addTag(T tag);
 
 	public abstract void removeTag(Tag tag);
 

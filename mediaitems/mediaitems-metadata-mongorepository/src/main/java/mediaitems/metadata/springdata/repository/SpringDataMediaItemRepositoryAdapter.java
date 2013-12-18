@@ -19,7 +19,7 @@ class SpringDataMediaItemRepositoryAdapter implements MediaItemRepository {
 
 	@Override
 	public MediaItem create(
-			Builder<? extends mediaitems.metadata.domain.MediaItem> builder) {
+			Builder<? extends mediaitems.metadata.domain.MediaItem<?>> builder) {
 		MongoMediaItemBuilder mybuilder = (MongoMediaItemBuilder) builder;
 		return delegate.save(mybuilder.build());
 	}
@@ -45,7 +45,7 @@ class SpringDataMediaItemRepositoryAdapter implements MediaItemRepository {
 	}
 
 	@Override
-	public Iterable<? extends mediaitems.metadata.domain.MediaItem> getAll(
+	public Iterable<? extends mediaitems.metadata.domain.MediaItem<?>> getAll(
 			Integer from, Integer to) {
 
 		final PageRequest pageRequest = RepositoryUtil.createPageable(from, to);
@@ -54,7 +54,7 @@ class SpringDataMediaItemRepositoryAdapter implements MediaItemRepository {
 	}
 
 	@Override
-	public Iterable<? extends mediaitems.metadata.domain.MediaItem> getByMediaType(
+	public Iterable<? extends mediaitems.metadata.domain.MediaItem<?>> getByMediaType(
 			MediaType mediaType, Integer from, Integer to) {
 		return delegate.findByMediaType(mediaType,
 				RepositoryUtil.createPageable(from, to)).getContent();

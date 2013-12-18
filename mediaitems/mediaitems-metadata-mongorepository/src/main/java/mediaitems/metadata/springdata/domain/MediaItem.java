@@ -1,7 +1,7 @@
 package mediaitems.metadata.springdata.domain;
 
-import java.util.ArrayList;
-import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 import mediaitems.metadata.domain.MediaType;
 import mediaitems.metadata.domain.Tag;
@@ -9,14 +9,14 @@ import mediaitems.metadata.domain.Tag;
 import org.joda.time.LocalDateTime;
 import org.springframework.data.annotation.Id;
 
-public class MediaItem implements mediaitems.metadata.domain.MediaItem {
+public class MediaItem implements mediaitems.metadata.domain.MediaItem<TagImpl> {
 
 	@Id
 	private String key;
 
 	private String name;
 
-	private Collection<? extends Tag> tagCollection;
+	private Set<TagImpl> tagCollection;
 
 	MediaItem(String name, MediaType mediaType,
 			ContentLocation contentLocation, Long size, LocalDateTime time) {
@@ -110,16 +110,15 @@ public class MediaItem implements mediaitems.metadata.domain.MediaItem {
 	}
 
 	@Override
-	public Iterable<? extends Tag> getTags() {
+	public Iterable<TagImpl> getTags() {
 		return tagCollection;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
-	public void addTag(Tag tag) {
-		if (tagCollection == null)
-			tagCollection = new ArrayList<Tag>();
-		((Collection<Tag>) tagCollection).add(tag);
+	public void addTag(TagImpl tag) {
+		if (this.tagCollection == null)
+			tagCollection = new HashSet<TagImpl>();
+		tagCollection.add(tag);
 	}
 
 	@Override
