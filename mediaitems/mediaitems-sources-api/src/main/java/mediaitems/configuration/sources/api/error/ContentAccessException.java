@@ -1,4 +1,4 @@
-package mediaitems.sources.api.error;
+package mediaitems.configuration.sources.api.error;
 
 public class ContentAccessException extends Exception {
 

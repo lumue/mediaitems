@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectSettings>
+  <version format="5.6.0" />
+  <resourcepaths>
+    <path>src/main/java</path>
+    <builtin>core</builtin>
+    <builtin>diagram</builtin>
+  </resourcepaths>
+  <templatepaths />
+  <ignoreWhitespaceAtLineEnd>true</ignoreWhitespaceAtLineEnd>
+  <executeSaveActions>true</executeSaveActions>
+  <generateJavaModel>true</generateJavaModel>
+  <targetpaths>
+    <targetpath>
+      <path />
+    </targetpath>
+    <targetpath>
+      <path>build/model</path>
+      <build>
+        <buildConfig>dd1cf31a-e3e9-11dd-92ec-23d93272749f</buildConfig>
+        <package />
+      </build>
+      <build>
+        <buildConfig>4e84eba8-9533-11e1-a9b3-69bb83e7b8c9</buildConfig>
+      </build>
+    </targetpath>
+  </targetpaths>
+</projectSettings>
+

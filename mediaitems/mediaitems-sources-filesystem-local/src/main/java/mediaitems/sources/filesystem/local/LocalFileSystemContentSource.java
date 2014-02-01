@@ -1,20 +1,26 @@
 package mediaitems.sources.filesystem.local;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.nio.file.FileSystems;
+import java.security.InvalidParameterException;
 import java.util.Iterator;
 import java.util.UUID;
 
-import mediaitems.sources.api.ContentHandle;
-import mediaitems.sources.api.ContentIterable;
-import mediaitems.sources.api.ContentSource;
-import mediaitems.sources.api.error.ContentAccessException;
+import mediaitems.configuration.sources.ContentIterable;
+import mediaitems.configuration.sources.api.error.ContentAccessException;
+import mediaitems.configuration.sources.api.model.ContentHandle;
+import mediaitems.configuration.sources.api.model.ContentSource;
+import mediaitems.sources.api.io.ContentBrowser;
+import mediaitems.sources.api.io.ContentReader;
 
-public class LocalFileSystemContentSource implements ContentSource {
+public class LocalFileSystemContentSource implements ContentSource,
+		ContentBrowser, ContentReader {
 
 	private final String id;
 	private String name;
-	private String path;
+	private URI url;
 
 	public LocalFileSystemContentSource() {
 		super();
@@ -30,7 +36,11 @@ public class LocalFileSystemContentSource implements ContentSource {
 		super();
 		this.id = id;
 		this.name = name;
-		this.path = path;
+		try {
+			this.url = new URI(path);
+		} catch (URISyntaxException e) {
+			throw new InvalidParameterException(path + "is not a valid url");
+		}
 	}
 
 	@Override
@@ -43,16 +53,9 @@ public class LocalFileSystemContentSource implements ContentSource {
 		return this.name;
 	}
 
+	@Override
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getPath() {
-		return path;
-	}
-
-	public void setPath(String path) {
-		this.path = path;
 	}
 
 	@Override
@@ -83,11 +86,11 @@ public class LocalFileSystemContentSource implements ContentSource {
 	@Override
 	public String toString() {
 		return "LocalFileSystemContentSource [id=" + id + ", name=" + name
-				+ ", path=" + path + "]";
+				+ ", path=" + getUrl() + "]";
 	}
 
 	@Override
-	public ContentIterable<? extends ContentHandle> list() throws IOException {
+	public ContentIterable<? extends ContentHandle> list() {
 		return new ContentIterable<ContentHandle>() {
 
 			private AsynchronousRecursiveDirectoryStream directoryStream;
@@ -96,7 +99,8 @@ public class LocalFileSystemContentSource implements ContentSource {
 			public Iterator<ContentHandle> iterator() {
 				try {
 					directoryStream = new AsynchronousRecursiveDirectoryStream(
-							FileSystems.getDefault().getPath(path), "*");
+							FileSystems.getDefault()
+									.getPath(getUrl().getPath()), "*");
 					return new DirectoryStreamWrappingContentIterator(
 							directoryStream);
 				} catch (IOException e) {
@@ -114,6 +118,19 @@ public class LocalFileSystemContentSource implements ContentSource {
 				}
 			}
 		};
+	}
+
+	@Override
+	public URI getUrl() {
+		return this.url;
+	}
+
+	@Override
+	public boolean supportsScheme(String scheme) {
+		if ("file".equals(scheme))
+			return true;
+
+		return false;
 	}
 
 }

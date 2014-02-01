@@ -1,9 +1,9 @@
 package mediaitems.sync.api;
 
+import mediaitems.configuration.sources.api.model.ContentHandle;
+import mediaitems.configuration.sources.api.model.ContentSource;
 import mediaitems.metadata.domain.MediaItem;
 import mediaitems.metadata.repository.MediaItemRepository;
-import mediaitems.sources.api.ContentHandle;
-import mediaitems.sources.api.ContentSource;
 
 public interface Synchronizer {
 	

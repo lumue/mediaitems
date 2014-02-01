@@ -8,7 +8,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.Collections;
 import java.util.Map;
 
-import mediaitems.sources.api.ContentDescription;
+import mediaitems.configuration.sources.api.model.ContentDescription;
 
 import org.joda.time.LocalDateTime;
 

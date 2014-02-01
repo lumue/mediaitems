@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xmi:id="_F385EH-iEeOnW5LtGE_OMA" name="Model">
+  <packageImport xmi:id="_F385EX-iEeOnW5LtGE_OMA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:id="_o1Mp0H_IEeOB2uoN2mnXFw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_4rN8kH-iEeOnW5LtGE_OMA" name="mediaitems.model.items">
+    <packagedElement xmi:type="uml:Interface" xmi:id="__XZgsH-iEeOnW5LtGE_OMA" name="Item"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_A8eysH-kEeOnW5LtGE_OMA" name="Folder">
+      <generalization xmi:id="_MlUooH-lEeOnW5LtGE_OMA" general="__XZgsH-iEeOnW5LtGE_OMA"/>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_KYPwcH_OEeOFbuRAN6qwOA" name="folderItemsAssociation" memberEnd="_Tb8s8H_LEeOB2uoN2mnXFw"/>
+      <ownedAttribute xmi:id="_Tb8s8H_LEeOB2uoN2mnXFw" name="items" association="_KYPwcH_OEeOFbuRAN6qwOA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Tb-iIH_LEeOB2uoN2mnXFw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Tb-iIX_LEeOB2uoN2mnXFw" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_DV12wH-kEeOnW5LtGE_OMA" name="Document">
+      <generalization xmi:id="_VwWNwH-lEeOnW5LtGE_OMA" general="__XZgsH-iEeOnW5LtGE_OMA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_M_46MH-kEeOnW5LtGE_OMA" name="VideoDocument">
+      <generalization xmi:id="_XffQIH-lEeOnW5LtGE_OMA" general="_DV12wH-kEeOnW5LtGE_OMA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_PH69sH-kEeOnW5LtGE_OMA" name="AudioDocument">
+      <generalization xmi:id="_X5Y94H-lEeOnW5LtGE_OMA" general="_DV12wH-kEeOnW5LtGE_OMA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_YjvX4H-kEeOnW5LtGE_OMA" name="GenericDocument">
+      <generalization xmi:id="_ZGvh0H-lEeOnW5LtGE_OMA" general="_DV12wH-kEeOnW5LtGE_OMA"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

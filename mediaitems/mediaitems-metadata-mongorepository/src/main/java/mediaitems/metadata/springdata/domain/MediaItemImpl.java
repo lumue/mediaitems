@@ -1,6 +1,8 @@
 package mediaitems.metadata.springdata.domain;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import mediaitems.metadata.domain.MediaType;
@@ -9,7 +11,8 @@ import mediaitems.metadata.domain.Tag;
 import org.joda.time.LocalDateTime;
 import org.springframework.data.annotation.Id;
 
-public class MediaItem implements mediaitems.metadata.domain.MediaItem<TagImpl> {
+public class MediaItemImpl implements
+		mediaitems.metadata.domain.MediaItem<TagImpl> {
 
 	@Id
 	private String key;
@@ -18,8 +21,8 @@ public class MediaItem implements mediaitems.metadata.domain.MediaItem<TagImpl> 
 
 	private Set<TagImpl> tagCollection;
 
-	MediaItem(String name, MediaType mediaType,
-			ContentLocation contentLocation, Long size, LocalDateTime time) {
+	MediaItemImpl(String name, MediaType mediaType,
+			List<ContentLocation> contentLocation, Long size, LocalDateTime time) {
 		super();
 		this.name = name;
 		this.mediaType = mediaType;
@@ -30,7 +33,7 @@ public class MediaItem implements mediaitems.metadata.domain.MediaItem<TagImpl> 
 
 	private final MediaType mediaType;
 
-	private final ContentLocation contentLocation;
+	private final List<ContentLocation> contentLocation;
 
 	private final LocalDateTime creationTime;
 
@@ -47,7 +50,7 @@ public class MediaItem implements mediaitems.metadata.domain.MediaItem<TagImpl> 
 	}
 
 	@Override
-	public ContentLocation getContentLocation() {
+	public List<ContentLocation> getContentLocations() {
 		return contentLocation;
 	}
 
@@ -62,17 +65,17 @@ public class MediaItem implements mediaitems.metadata.domain.MediaItem<TagImpl> 
 	}
 
 	public static class MongoMediaItemBuilder implements
-			MediaItemBuilder<MediaItem> {
+			MediaItemBuilder<MediaItemImpl> {
 
 		private String name;
 		private MediaType mediaType;
-		private ContentLocation contentLocation;
+		private final List<ContentLocation> contentLocation = new ArrayList<ContentLocation>();
 		private Long size;
 		private LocalDateTime time;
 
 		@Override
-		public MediaItem build() {
-			return new MediaItem(this.name, this.mediaType,
+		public MediaItemImpl build() {
+			return new MediaItemImpl(this.name, this.mediaType,
 					this.contentLocation, this.size, this.time);
 
 		}
@@ -90,8 +93,8 @@ public class MediaItem implements mediaitems.metadata.domain.MediaItem<TagImpl> 
 		}
 
 		@Override
-		public MongoMediaItemBuilder setContentLocation(String location) {
-			this.contentLocation = new ContentLocation(location);
+		public MongoMediaItemBuilder addContentLocation(String location) {
+			this.contentLocation.add(new ContentLocation(location));
 			return this;
 		}
 
@@ -104,6 +107,14 @@ public class MediaItem implements mediaitems.metadata.domain.MediaItem<TagImpl> 
 		@Override
 		public MongoMediaItemBuilder setCreationTime(LocalDateTime time) {
 			this.time = time;
+			return this;
+		}
+
+		@Override
+		public mediaitems.metadata.domain.MediaItem.MediaItemBuilder<MediaItemImpl> setContentLocation(
+				String location) {
+			this.contentLocation.clear();
+			this.addContentLocation(location);
 			return this;
 		}
 
@@ -154,7 +165,7 @@ public class MediaItem implements mediaitems.metadata.domain.MediaItem<TagImpl> 
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		MediaItem other = (MediaItem) obj;
+		MediaItemImpl other = (MediaItemImpl) obj;
 		if (key == null) {
 			if (other.key != null)
 				return false;

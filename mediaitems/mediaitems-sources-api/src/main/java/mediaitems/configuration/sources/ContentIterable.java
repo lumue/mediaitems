@@ -1,8 +1,9 @@
-package mediaitems.sources.api;
+package mediaitems.configuration.sources;
 
 import java.util.Iterator;
 
-import mediaitems.sources.api.error.ContentAccessException;
+import mediaitems.configuration.sources.api.error.ContentAccessException;
+import mediaitems.configuration.sources.api.model.ContentHandle;
 
 public interface ContentIterable<T extends ContentHandle> extends Iterable<T> {
 	

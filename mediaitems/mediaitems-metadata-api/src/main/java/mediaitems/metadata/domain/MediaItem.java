@@ -1,5 +1,7 @@
 package mediaitems.metadata.domain;
 
+import java.util.List;
+
 import org.joda.time.LocalDateTime;
 
 public interface MediaItem<T extends Tag> extends Taggable<T> {
@@ -15,13 +17,15 @@ public interface MediaItem<T extends Tag> extends Taggable<T> {
 		MediaItemBuilder<T> setSize(Long size);
 
 		MediaItemBuilder<T> setCreationTime(LocalDateTime time);
+
+		MediaItemBuilder<T> addContentLocation(String location);
 	}
 
 	public String getKey();
 
 	public MediaType getMediaType();
 
-	public ContentLocation getContentLocation();
+	public List<? extends ContentLocation> getContentLocations();
 
 	public String getName();
 

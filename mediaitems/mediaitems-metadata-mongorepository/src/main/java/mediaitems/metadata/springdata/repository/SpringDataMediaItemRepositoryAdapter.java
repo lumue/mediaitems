@@ -1,10 +1,13 @@
 package mediaitems.metadata.springdata.repository;
 
 import mediaitems.metadata.domain.Builder;
+import mediaitems.metadata.domain.MediaItem;
 import mediaitems.metadata.domain.MediaType;
+import mediaitems.metadata.domain.Tag;
 import mediaitems.metadata.repository.MediaItemRepository;
-import mediaitems.metadata.springdata.domain.MediaItem;
-import mediaitems.metadata.springdata.domain.MediaItem.MongoMediaItemBuilder;
+import mediaitems.metadata.springdata.domain.MediaItemImpl;
+import mediaitems.metadata.springdata.domain.MediaItemImpl.MongoMediaItemBuilder;
+import mediaitems.metadata.springdata.domain.TagImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -18,25 +21,25 @@ class SpringDataMediaItemRepositoryAdapter implements MediaItemRepository {
 	private SpringDataMediaItemRepository delegate;
 
 	@Override
-	public MediaItem create(
+	public MediaItemImpl create(
 			Builder<? extends mediaitems.metadata.domain.MediaItem<?>> builder) {
 		MongoMediaItemBuilder mybuilder = (MongoMediaItemBuilder) builder;
 		return delegate.save(mybuilder.build());
 	}
 
 	@Override
-	public MediaItem get(String key) {
+	public MediaItemImpl get(String key) {
 		return delegate.findOne(key);
 	}
 
 	@Override
-	public Iterable<MediaItem> getAll() {
+	public Iterable<? extends MediaItem<?>> getAll() {
 		return delegate.findAll();
 	}
 
 	@Override
-	public MediaItem.MongoMediaItemBuilder createNewBuilder() {
-		return new MediaItem.MongoMediaItemBuilder();
+	public MediaItemImpl.MongoMediaItemBuilder createNewBuilder() {
+		return new MediaItemImpl.MongoMediaItemBuilder();
 	}
 
 	@Override
@@ -49,7 +52,7 @@ class SpringDataMediaItemRepositoryAdapter implements MediaItemRepository {
 			Integer from, Integer to) {
 
 		final PageRequest pageRequest = RepositoryUtil.createPageable(from, to);
-		Page<MediaItem> resultPage = delegate.findAll(pageRequest);
+		Page<MediaItemImpl> resultPage = delegate.findAll(pageRequest);
 		return resultPage.getContent();
 	}
 
@@ -57,6 +60,13 @@ class SpringDataMediaItemRepositoryAdapter implements MediaItemRepository {
 	public Iterable<? extends mediaitems.metadata.domain.MediaItem<?>> getByMediaType(
 			MediaType mediaType, Integer from, Integer to) {
 		return delegate.findByMediaType(mediaType,
+				RepositoryUtil.createPageable(from, to)).getContent();
+	}
+
+	@Override
+	public Iterable<? extends mediaitems.metadata.domain.MediaItem<?>> getByTag(
+			Tag tag, Integer from, Integer to) {
+		return delegate.findByTags((TagImpl) tag,
 				RepositoryUtil.createPageable(from, to)).getContent();
 	}
 }

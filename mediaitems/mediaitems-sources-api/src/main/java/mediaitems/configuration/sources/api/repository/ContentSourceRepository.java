@@ -1,4 +1,4 @@
-package mediaitems.sources.api;
+package mediaitems.configuration.sources.api.repository;
 
 public interface ContentSourceRepository {
 	public void testxme();
