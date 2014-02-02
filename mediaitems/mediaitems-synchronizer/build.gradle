@@ -10,11 +10,9 @@ dependencies {
 	compile project(':mediaitems-sources-api')
 	compile project(':mediaitems-metadata-api')
 	
-	
-	
 	compile group: 'com.google.guava', name: 'guava', version: '12.0'
 
 	testCompile 'junit:junit:4.9'
 }
 
-jar { baseName="mediaitems-scanner" }
+jar { baseName="mediaitems-synchronizer" }

@@ -1,49 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>mediaitems-metadata-api</name>
-	<comment></comment>
-	<projects>
-	</projects>
+	<comment/>
+	<projects/>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
 	<buildSpec>
 		<buildCommand>
 			<name>org.eclipse.jdt.core.javabuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.pde.ManifestBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.pde.SchemaBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.acceleo.ide.ui.acceleoBuilder</name>
-			<arguments>
-				<dictionary>
-					<key>compilation.kind</key>
-					<value>compilation.absolute.path</value>
-				</dictionary>
-				<dictionary>
-					<key>compliance</key>
-					<value>pragmatic</value>
-				</dictionary>
-				<dictionary>
-					<key>resource.kind</key>
-					<value>xmi</value>
-				</dictionary>
-			</arguments>
+			<arguments/>
 		</buildCommand>
 	</buildSpec>
-	<natures>
-		<nature>org.springsource.ide.eclipse.gradle.core.nature</nature>
-		<nature>org.eclipse.jdt.core.javanature</nature>
-		<nature>org.eclipse.jdt.groovy.core.groovyNature</nature>
-		<nature>org.eclipse.acceleo.ide.ui.acceleoNature</nature>
-		<nature>org.eclipse.pde.PluginNature</nature>
-		<nature>ch.actifsource.environment.nature</nature>
-	</natures>
+	<linkedResources/>
 </projectDescription>
