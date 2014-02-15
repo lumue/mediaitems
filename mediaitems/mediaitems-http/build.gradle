@@ -7,7 +7,7 @@ repositories {
 }
 
 dependencies {
-	compile project(':mediaitems-sources-api')
+	compile project(':mediaitems-sources-configuration-api')
 	compile project(':mediaitems-metadata-api')
 	
 	compile 'org.springframework:spring-web:4.0.0.RELEASE'

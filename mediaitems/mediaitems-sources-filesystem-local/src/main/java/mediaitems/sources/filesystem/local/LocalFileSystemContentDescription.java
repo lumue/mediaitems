@@ -8,12 +8,11 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.Collections;
 import java.util.Map;
 
-import mediaitems.configuration.sources.api.model.ContentDescription;
+import mediaitems.sources.api.io.ContentDescription;
 
 import org.joda.time.LocalDateTime;
 
-class LocalFileSystemContentDescription implements
-		ContentDescription {
+class LocalFileSystemContentDescription implements ContentDescription {
 	private final String name;
 	private final String mimeType;
 	private final Long size;
@@ -36,9 +35,8 @@ class LocalFileSystemContentDescription implements
 
 	public static ContentDescription fromFile(File file) throws IOException {
 		Path path = file.toPath();
-		BasicFileAttributes attrs = Files
-				.<BasicFileAttributes> readAttributes(path,
-						BasicFileAttributes.class);
+		BasicFileAttributes attrs = Files.<BasicFileAttributes> readAttributes(
+				path, BasicFileAttributes.class);
 		return new LocalFileSystemContentDescription(readName(file),
 				Files.probeContentType(path), Long.valueOf(attrs.size()),
 				new LocalDateTime(attrs.creationTime().toMillis()),

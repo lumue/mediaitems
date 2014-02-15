@@ -21,8 +21,7 @@ import com.google.common.base.Function;
 /**
  * @author lm
  */
-public class AsynchronousRecursiveDirectoryStream implements
-		DirectoryStream<Path> {
+class AsynchronousRecursiveDirectoryStream implements DirectoryStream<Path> {
 
 	static class FunctionVisitor extends SimpleFileVisitor<Path> {
 

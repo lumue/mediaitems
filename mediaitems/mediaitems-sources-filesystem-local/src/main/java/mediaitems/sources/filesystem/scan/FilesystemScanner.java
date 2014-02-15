@@ -1,21 +1,21 @@
 package mediaitems.sources.filesystem.scan;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
-import mediaitems.configuration.sources.ContentIterable;
-import mediaitems.configuration.sources.api.error.ContentAccessException;
-import mediaitems.configuration.sources.api.model.ContentHandle;
-import mediaitems.configuration.sources.api.scan.ContentDiscoveredEvent;
-import mediaitems.configuration.sources.api.scan.ScanEvent;
-import mediaitems.configuration.sources.api.scan.ScanEventHandler;
-import mediaitems.configuration.sources.api.scan.ScanFailedEvent;
-import mediaitems.configuration.sources.api.scan.ScanStartedEvent;
-import mediaitems.configuration.sources.api.scan.SourceScanner;
-import mediaitems.sources.filesystem.local.LocalFileSystemContentSource;
+import mediaitems.sources.api.error.ContentAccessException;
+import mediaitems.sources.api.io.ContentBrowser;
+import mediaitems.sources.api.io.ContentHandle;
+import mediaitems.sources.api.io.ContentIterable;
+import mediaitems.sources.api.scan.ContentDiscoveredEvent;
+import mediaitems.sources.api.scan.ScanEvent;
+import mediaitems.sources.api.scan.ScanEventHandler;
+import mediaitems.sources.api.scan.ScanFailedEvent;
+import mediaitems.sources.api.scan.ScanStartedEvent;
+import mediaitems.sources.api.scan.SourceScanner;
 
-public class FilesystemScanner implements
-		SourceScanner<LocalFileSystemContentSource> {
+public class FilesystemScanner implements SourceScanner {
 
 	private final List<ScanEventHandler> handlers = new ArrayList<ScanEventHandler>();
 
@@ -25,11 +25,11 @@ public class FilesystemScanner implements
 	}
 
 	@Override
-	public void scan(LocalFileSystemContentSource source) {
+	public void scan(URI uri) {
 		try {
 			publishEvent(new ScanStartedEvent() {
 			});
-			ContentIterable<? extends ContentHandle> contentIterable = source
+			ContentIterable<? extends ContentHandle> contentIterable = getContentBrowser()
 					.list();
 			for (final ContentHandle contentHandle : contentIterable) {
 				publishEvent(new ContentDiscoveredEvent() {
@@ -44,6 +44,11 @@ public class FilesystemScanner implements
 			scanFailed(e);
 		}
 
+	}
+
+	private ContentBrowser getContentBrowser() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	private void scanFailed(ContentAccessException e) {

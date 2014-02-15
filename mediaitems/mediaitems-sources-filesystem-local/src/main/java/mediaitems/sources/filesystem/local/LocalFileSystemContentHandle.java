@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.nio.file.Path;
 
-import mediaitems.configuration.sources.api.model.ContentHandle;
+import mediaitems.sources.api.io.ContentHandle;
 
 class LocalFileSystemContentHandle implements ContentHandle {
 

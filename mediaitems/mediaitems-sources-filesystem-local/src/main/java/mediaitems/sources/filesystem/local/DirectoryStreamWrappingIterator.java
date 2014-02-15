@@ -5,7 +5,7 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Path;
 import java.util.Iterator;
 
-import mediaitems.configuration.sources.api.model.ContentHandle;
+import mediaitems.sources.api.io.ContentHandle;
 
 class DirectoryStreamWrappingContentIterator implements Iterator<ContentHandle> {
 
