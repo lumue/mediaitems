@@ -1,114 +1,71 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project-modules id="moduleCoreId" project-version="2.0">
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
 	<wb-module deploy-name="mediaitems-app">
 		<property name="context-root" value="mediaitems"/>
 		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/resources"/>
 		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/java"/>
 		<wb-resource deploy-path="/" source-path="src/main/webapp"/>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/mediaitems-http/mediaitems-http">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/mediaitems-sources-api/mediaitems-sources-api">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/mediaitems-metadata-mongorepository/mediaitems-metadata-mongorepository">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
 		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/mediaitems-metadata-api/mediaitems-metadata-api">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.5/6b262da268f8ad9eff941b25503a9198f0a0ac93/slf4j-api-1.7.5.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/mediaitems-sources-configuration-api/mediaitems-sources-configuration-api">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.0.0.RC1/fc848cf8ee6dd2eef7f23e073cf850e08781fb74/spring-webmvc-4.0.0.RC1.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.0.0.RELEASE/a82202c4d09d684a8d52ade479c0e508d904700b/spring-webmvc-4.0.0.RELEASE.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/0.5.0.M6/96c996e8449314d3d09fdc225dd85fca277ff53e/spring-boot-starter-web-0.5.0.M6.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.0.0.RELEASE/6ce2dda16a3c1581920fc17551f3ae17d26499aa/spring-web-4.0.0.RELEASE.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.0.13/6b56ec752b42ccfa1415c0361fb54b1ed7ca3db6/logback-classic-1.0.13.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.0.0.RELEASE/cceb3e9510774b3f88b008a70c6a9aefb98d891f/spring-aop-4.0.0.RELEASE.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-logging-juli/7.0.42/155c90c656d7b71829c87ea5323e7e27d8bd84f8/tomcat-embed-logging-juli-7.0.42.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-jaxrs/1.9.13/534d72d2b9d6199dd531dfb27083dd4844082bba/jackson-jaxrs-1.9.13.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.0.0.RC1/f0225eebfbba710c1d6d48bcddda1c146d60cb58/spring-context-4.0.0.RC1.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/log4j/log4j/1.2.16/7999a63bfccbc7c247a9aea10d83d4272bd492c6/log4j-1.2.16.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.5/cd5970bd13fa85f7bed41ca606d6daf7cbf1365/jcl-over-slf4j-1.7.5.jar">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.1.0.CR2/28725380c07f917ace4e511db21cc45e9ae5a72b/jboss-logging-3.1.0.CR2.jar">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/7.0.42/8679657679a9d88ef02f7249932139ca8f30daba/tomcat-embed-core-7.0.42.jar">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/0.5.0.M6/51ec635f62a85d3d83654290472a7c80dfe18d1/spring-boot-starter-logging-0.5.0.M6.jar">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/0.5.0.M6/82f0251b89c013bc975df73562a4fb3fab97432c/spring-boot-0.5.0.M6.jar">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-actuator/0.5.0.M6/6834f7361f1b6162e24696a1a51683271c156288/spring-boot-starter-actuator-0.5.0.M6.jar">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/0.5.0.M6/d2fce5588eb8e915d9904235bf3e397a48febcc1/spring-boot-starter-tomcat-0.5.0.M6.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-xc/1.9.13/e3480072bc95c202476ffa1de99ff7ee9149f29c/jackson-xc-1.9.13.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
 		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.1/5043bfebc3db072ed80fbd362e7caf00e885d8ae/commons-logging-1.1.1.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.2.2/285cb9c666f0f0f3dd8a1be04e1f457eb7b15113/jackson-annotations-2.2.2.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.0.0.RELEASE/57586271e775982f8961e1e7e338447d4af1864c/spring-context-4.0.0.RELEASE.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.0.0.RC1/4928ea25564e00836a16d6df682145a78c015e5d/spring-core-4.0.0.RC1.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-log4j12/1.6.4/6b4973e0320e220ec6534478d60233fd1cc51c9b/slf4j-log4j12-1.6.4.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-validator/4.3.1.Final/49b31d8ea51fa21cc78a89e9d4ddb11d6bfb4669/hibernate-validator-4.3.1.Final.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.0.0.RELEASE/199be03c976524b6427dff31078227bfc703400b/spring-expression-4.0.0.RELEASE.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.0.0.RC1/88fffcb255bb5b05b6c8f79be1b34bb371e6a38c/spring-expression-4.0.0.RC1.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.0.0.RELEASE/73b485e25b13a7a44b73a301fe6757c3cbad453e/spring-core-4.0.0.RELEASE.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.1/1a508b0ecd360507a39a4dbaedd1aa4750741f6d/slf4j-api-1.7.1.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.0.0.RC1/596a1de80fddb6a7bf2291b9895c202499ced50c/spring-web-4.0.0.RC1.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.0.0.RELEASE/97e97a04aede419679392176ec1df175d3e9a7a0/spring-beans-4.0.0.RELEASE.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-actuator/0.5.0.M6/cd63a152af929ab0dff452212e28cb4e39f36133/spring-boot-actuator-0.5.0.M6.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.slf4j/log4j-over-slf4j/1.7.5/bf39ccad53c1f695f32d610ce7f0e5bf9895b262/log4j-over-slf4j-1.7.5.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-mapper-asl/1.9.13/1ee2f2bed0e5dd29d1cb155a166e6f8d50bbddb7/jackson-mapper-asl-1.9.13.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/0.5.0.M6/62b7b757c6fa2484d5f6bd35ddec912988a1b3bf/spring-boot-autoconfigure-0.5.0.M6.jar">
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-core-asl/1.9.13/3c304d70f42f832e0a86d45bd437f692129299a4/jackson-core-asl-1.9.13.jar">
 			<dependency-type>uses</dependency-type>
 		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.5/d2b0f76abde33a62f1dbc19a9da726ffe9a0180e/jul-to-slf4j-1.7.5.jar">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.0.13/dc6e6ce937347bd4d990fc89f4ceb469db53e45e/logback-core-1.0.13.jar">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.0.0.GA/b6bd7f9d78f6fdaa3c37dae18a4bd298915f328e/validation-api-1.0.0.GA.jar">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/0.5.0.M6/bb3819ff9f41e990335ecbdd959712c49ad50d6d/spring-boot-starter-0.5.0.M6.jar">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.0.0.RC1/b39243f23d065bab1e50ea571d3b7a44f9aaca9c/spring-aop-4.0.0.RC1.jar">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
-		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.0.0.RC1/bab1f389bfd168ac6a116d0a0efb256864f7c857/spring-beans-4.0.0.RC1.jar">
-			<dependency-type>uses</dependency-type>
-		</dependent-module>
+        <dependent-module deploy-path="/webclient" handle="module:/org.jboss.ide.eclipse.archives.webtools.filesets.vcf.FilesetComponentResolver/path=%2Fmediaitems-webclient%2Fbuild&amp;includes=**&amp;excludes=">
+            <dependency-type>consumes</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mediaitems-metadata-mongorepository.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/mediaitems-metadata-mongorepository/mediaitems-metadata-mongorepository">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mediaitems-http.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/mediaitems-http/mediaitems-http">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
 	</wb-module>
 </project-modules>

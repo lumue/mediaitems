@@ -1,45 +1,10 @@
 apply plugin: "java"
-apply plugin: "maven"
 
-group = "myorg"
-version = 1.0
-
-repositories {
-    mavenCentral()
-}
-
-sourceSets.all { set ->
-    def jarTask = task("${set.name}Jar", type: Jar) {
-        baseName = baseName + "-$set.name"
-        from set.output
-    }
-
-    artifacts {
-        archives jarTask
-    }
-}
-
-sourceSets {
-    api
-    impl
-}
+repositories { mavenCentral() }
 
 dependencies {
-    apiCompile 'commons-codec:commons-codec:1.5'
-	apiCompile 'joda-time:joda-time:2.2'
-    implCompile sourceSets.api.output
-    implCompile 'commons-lang:commons-lang:2.6'
-
-    testCompile 'junit:junit:4.9'
-    testCompile sourceSets.api.output
-    testCompile sourceSets.impl.output
-    runtime configurations.apiRuntime
-    runtime configurations.implRuntime
+	compile 'joda-time:joda-time:2.2'
+	testCompile 'junit:junit:4.9'
 }
 
-jar {
-    from sourceSets.api.output
-    from sourceSets.impl.output
-}
-
-
+jar { baseName="mediaitems-sources-api" }

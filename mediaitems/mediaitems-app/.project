@@ -3,6 +3,9 @@
 	<name>mediaitems-app</name>
 	<comment></comment>
 	<projects>
+		<project>mediaitems-app</project>
+		<project>mediaitems-metadata-mongorepository</project>
+		<project>mediaitems-http</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

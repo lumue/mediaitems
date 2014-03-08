@@ -1,6 +1,23 @@
 apply plugin: "java"
 apply plugin: "eclipse"
 
+/*
+configurations {
+	provided
+	}
+	
+	sourceSets {
+	main { compileClasspath += configurations.provided }
+	}
+	*/
+	
+	/*
+	*/
+	configurations {
+	provided
+	compile.extendsFrom provided
+	}
+
 repositories {
 	mavenCentral()
 	maven  {url 'http://maven.springframework.org/release/'}
@@ -9,6 +26,8 @@ repositories {
 dependencies {
 	compile project(':mediaitems-sources-configuration-api')
 	compile project(':mediaitems-metadata-api')
+	
+	provided 'javax.servlet:javax.servlet-api:3.0.1'
 	
 	compile 'org.springframework:spring-web:4.0.0.RELEASE'
 	compile 'org.springframework:spring-tx:4.0.0.RELEASE'

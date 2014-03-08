@@ -21,8 +21,6 @@ apply plugin: 'eclipse'
 apply plugin: 'eclipse-wtp'
 apply plugin: 'java'
 apply plugin: 'war'
-apply plugin: 'spring-boot'
-
 
 
 war
@@ -32,11 +30,17 @@ war
 }
 
 dependencies { 	
-	compile("org.springframework.boot:spring-boot-starter-web:0.5.0.M6")
-	compile("org.springframework.boot:spring-boot-starter-actuator:0.5.0.M6")
-	compile("org.springframework.boot:spring-boot-starter-tomcat:0.5.0.M6")
+	
 	
 	compile 'org.springframework:spring-webmvc:4.0.0.RELEASE'
+	compile 'org.slf4j:slf4j-api:1.6.4'
+	runtime'org.slf4j:slf4j-log4j12:1.6.4'
+	runtime 'log4j:log4j:1.2.14'
+	runtime 'org.codehaus.jackson:jackson-core-asl:1.9.13'
+	runtime 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
+	runtime 'org.codehaus.jackson:jackson-xc:1.9.13'
+	runtime 'org.codehaus.jackson:jackson-jaxrs:1.9.13'
+            
 	
 	compile project(':mediaitems-http')
 	compile project(':mediaitems-metadata-mongorepository') 
