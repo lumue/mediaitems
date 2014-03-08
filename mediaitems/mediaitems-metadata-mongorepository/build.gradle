@@ -18,9 +18,10 @@ baseName = 'mediaitems-metadata-mongorepository'
 dependencies {
 compile project(':mediaitems-metadata-api')
 
-compile("org.springframework.data:spring-data-mongodb:1.4.0.M1")
+compile 'org.springframework.data:spring-data-mongodb:1.4.0.RELEASE'
 compile 'org.springframework:spring-context:4.0.0.RELEASE'
 compile 'org.springframework:spring-beans:4.0.0.RELEASE'
+compile 'org.springframework:spring-tx:4.0.0.RELEASE'
 
 testCompile("junit:junit:4.11")
 }

@@ -1,0 +1,55 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : mediaitems:mediaitems-app : mediaitems-0.1.0.war">
+    <output-path>$PROJECT_DIR$/build/classes/artifacts/mediaitems-app</output-path>
+    <root id="archive" name="mediaitems-0.1.0.war">
+      <element id="javaee-facet-resources" facet="mediaitems-app/web/Web Gradle : mediaitems-0.1.0.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="mediaitems-app" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="mediaitems-mediaitems-http-0.1.0.jar">
+            <element id="module-output" name="mediaitems-http" />
+          </element>
+          <element id="archive" name="mediaitems-mediaitems-sources-configuration-api-0.1.0.jar">
+            <element id="module-output" name="mediaitems-sources-configuration-api" />
+          </element>
+          <element id="library" level="project" name="Gradle: joda-time-2.2" />
+          <element id="archive" name="mediaitems-mediaitems-metadata-api-0.1.0.jar">
+            <element id="module-output" name="mediaitems-metadata-api" />
+          </element>
+          <element id="library" level="project" name="Gradle: spring-web-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: spring-tx-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: guava-12.0" />
+          <element id="library" level="project" name="Gradle: aopalliance-1.0" />
+          <element id="library" level="project" name="Gradle: commons-logging-1.1.1" />
+          <element id="library" level="project" name="Gradle: spring-core-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: spring-beans-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: spring-aop-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: spring-expression-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: spring-context-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: jsr305-1.3.9" />
+          <element id="archive" name="mediaitems-mediaitems-metadata-mongorepository-0.1.0.jar">
+            <element id="module-output" name="mediaitems-metadata-mongorepository" />
+          </element>
+          <element id="library" level="project" name="Gradle: spring-data-mongodb-1.4.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: slf4j-api-1.7.6" />
+          <element id="library" level="project" name="Gradle: spring-data-commons-1.7.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: jcl-over-slf4j-1.7.6" />
+          <element id="library" level="project" name="Gradle: mongo-java-driver-2.11.4" />
+          <element id="library" level="project" name="Gradle: spring-webmvc-4.0.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: slf4j-log4j12-1.6.4" />
+          <element id="library" level="project" name="Gradle: jackson-core-asl-1.9.13" />
+          <element id="library" level="project" name="Gradle: jackson-mapper-asl-1.9.13" />
+          <element id="library" level="project" name="Gradle: jackson-xc-1.9.13" />
+          <element id="library" level="project" name="Gradle: jackson-jaxrs-1.9.13" />
+          <element id="library" level="project" name="Gradle: log4j-1.2.16" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.0.1/6bf0ebb7efd993e222fc1112377b5e92a13b38dd/javax.servlet-api-3.0.1.jar" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/build/classes/artifacts/mediaitems-app/mediaitems-0.1.0/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
