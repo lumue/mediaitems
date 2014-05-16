@@ -2,11 +2,11 @@ build
 dartbuild
 .gradle
 
-#.settings
-#.classpath
-#.project
-#.idea
-#.springBeans
+.settings
+.classpath
+.project
+.idea
+.springBeans
 
 
 bin

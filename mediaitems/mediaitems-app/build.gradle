@@ -1,49 +1,49 @@
-import java.lang.invoke.LambdaForm.Compiled;
-
-buildscript {
-	repositories {
-		maven { url "http://repo.spring.io/snapshot" }
-		maven { url "http://repo.spring.io/milestone" }
-		mavenCentral()
-		mavenLocal()
-	}
-}
-
-repositories {
-	maven { url "http://repo.spring.io/snapshot" }
-	maven { url "http://repo.spring.io/milestone" }
-	mavenCentral()
-	mavenLocal()
-}
-
-apply plugin: 'eclipse'
-apply plugin: 'eclipse-wtp'
 apply plugin: 'java'
+sourceCompatibility = jdk_version
+targetCompatibility = jdk_version
+
 apply plugin: 'war'
-
-
 
 war
 {
-	from ("../mediaitems-webclient/build"){into ("webclient")}
-	baseName="mediaitems"
+        from ("../mediaitems-webclient/build"){into ("webclient")}
+        baseName="mediaitems"
 }
 
+war.dependsOn(":mediaitems-webclient:build")
+
 dependencies {
-    compile project(':mediaitems-http')
-    compile project(':mediaitems-metadata-mongorepository')
+	compile project(':mediaitems-http')
+	compile project(':mediaitems-metadata-mongorepository')
 
-    testCompile ('junit:junit:4.8.2')
-    compile 'org.springframework:spring-webmvc:4.0.4.RELEASE'
+	testCompile ('junit:junit:4.8.2')
+	compile "org.springframework:spring-webmvc:$spring_version"
 	compile 'org.slf4j:slf4j-api:1.6.4'
-	compile 'org.springframework.integration:spring-integration-core:4.0.4.RELEASE'
+	compile "org.springframework.integration:spring-integration-core:3.0.2.RELEASE"
 
-    providedCompile 'javax.servlet:javax.servlet-api:3.0.1'
+	providedCompile 'javax:javaee-api:7.0'
 
-	runtime'org.slf4j:slf4j-log4j12:1.6.4'
+	runtime 'org.slf4j:slf4j-log4j12:1.6.4'
 	runtime 'log4j:log4j:1.2.14'
 	runtime 'org.codehaus.jackson:jackson-core-asl:1.9.13'
 	runtime 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
 	runtime 'org.codehaus.jackson:jackson-xc:1.9.13'
 	runtime 'org.codehaus.jackson:jackson-jaxrs:1.9.13'
 }
+
+
+apply plugin:'eclipse-wtp'
+eclipse.project {
+	natures (		'org.springframework.ide.eclipse.core.springnature',
+				'org.springsource.ide.eclipse.gradle.core.nature',
+				'org.eclipse.jdt.core.javanature',
+				'org.eclipse.wst.common.project.facet.core.nature',
+				'org.eclipse.wst.common.modulecore.ModuleCoreNature',
+				'org.eclipse.jem.workbench.JavaEMFNature')
+	
+	buildCommand 'org.springframework.ide.eclipse.core.springbuilder'
+	buildCommand 'org.eclipse.wst.common.project.facet.core.builder'
+	buildCommand 'org.eclipse.wst.validation.validationbuilder'
+}
+
+

@@ -1,18 +1,26 @@
+rootProject.group = 'org.mediaitems'
+version = '0.1.0-SNAPSHOT'
 
 
-allprojects {
 
-	apply plugin: 'eclipse'
-
-  repositories {
-		maven { url "http://repo.spring.io/snapshot" }
-		maven { url "http://repo.spring.io/milestone" }
+allprojects {		
+	
+	ext {
+		jdk_version='1.8'
+		spring_version='4.0.3.RELEASE'
+	}
+	
+	repositories {
 		mavenCentral()
 		mavenLocal()
 	}
 
-
-
-    version = '0.1.0'
-
+	
+	apply plugin: 'eclipse'
+	eclipse.project {
+		natures 'org.springsource.ide.eclipse.gradle.core.nature'
+	}
+	eclipse.classpath {
+		containers 'org.springsource.ide.eclipse.gradle.classpathcontainer'
+	}
 }

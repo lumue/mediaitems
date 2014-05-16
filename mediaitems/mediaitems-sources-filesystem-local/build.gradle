@@ -1,6 +1,6 @@
-apply plugin: "java"
-
-repositories { mavenCentral() }
+apply plugin: 'java'
+sourceCompatibility = jdk_version
+targetCompatibility = jdk_version
 
 dependencies {
 	compile 'joda-time:joda-time:2.2'
@@ -9,5 +9,3 @@ dependencies {
 	
 	testCompile 'junit:junit:4.9'
 }
-
-jar { baseName="mediaitems-sources-filesystem-local" }
