@@ -1,16 +1,15 @@
-build/
-bin/
-.gradle/
-gradle/
+build
+dartbuild
+.gradle
 
-# Dart Editor
-.children
-*.dart.js
-*.dart.js.map
-*.dart.precompiled.js
-*.dart.js.deps
+#.settings
+#.classpath
+#.project
+#.idea
+#.springBeans
 
-# pub
+
+bin
 packages
 pubspec.lock
 

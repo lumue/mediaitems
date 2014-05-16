@@ -1,5 +1,8 @@
-subprojects {
 
+
+allprojects {
+
+	apply plugin: 'eclipse'
 
   repositories {
 		maven { url "http://repo.spring.io/snapshot" }
