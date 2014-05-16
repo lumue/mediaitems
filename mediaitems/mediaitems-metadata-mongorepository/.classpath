@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="output" path="bin"/>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/main/resources"/>
 	<classpathentry kind="src" path="src/test/java"/>
 	<classpathentry kind="src" path="src/test/resources"/>
-	<classpathentry exported="true" kind="src" path="/mediaitems-metadata-api"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="con" path="org.springsource.ide.eclipse.gradle.classpathcontainer">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
+	<classpathentry kind="src" path="/mediaitems-metadata-api" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/1.4.0.RELEASE/1567a735867c074d89a0d410de2306335b9f7b8/spring-data-mongodb-1.4.0.RELEASE-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/1.4.0.RELEASE/6f07edb71e9f90a54e85f666a66e6723623afc53/spring-data-mongodb-1.4.0.RELEASE.jar" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.0.0.RELEASE/54a7ccfd434c2ca2ba3a6265f9c42d34b0d05734/spring-context-4.0.0.RELEASE-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.0.0.RELEASE/57586271e775982f8961e1e7e338447d4af1864c/spring-context-4.0.0.RELEASE.jar" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.0.0.RELEASE/96ce15137a178249aa14d58ea1e08bc7da93ab71/spring-beans-4.0.0.RELEASE-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.0.0.RELEASE/97e97a04aede419679392176ec1df175d3e9a7a0/spring-beans-4.0.0.RELEASE.jar" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.0.0.RELEASE/dfb013916542ee55590500a02e98b1d3e1c56c02/spring-tx-4.0.0.RELEASE-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.0.0.RELEASE/d150bb19360ed1b81a96c9c09ef4d93c2969f34c/spring-tx-4.0.0.RELEASE.jar" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/28e0ad201304e4a4abf999ca0570b7cffc352c3c/junit-4.11-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/4e031bb61df09069aeb2bffb4019e7a5034a4ee0/junit-4.11.jar" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.6/97bb93c1badeae97a3d37e3c902df2985ee3de34/slf4j-api-1.7.6-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.6/562424e36df3d2327e8e9301a76027fca17d54ea/slf4j-api-1.7.6.jar" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/28bb0405fddaf04f15058fbfbe01fe2780d7d3b6/commons-logging-1.1.3-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.1.3/f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f/commons-logging-1.1.3.jar" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.0.0.RELEASE/db9dd83713dbad3d7810a269c026d798f0b8d6db/spring-core-4.0.0.RELEASE-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.0.0.RELEASE/73b485e25b13a7a44b73a301fe6757c3cbad453e/spring-core-4.0.0.RELEASE.jar" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/1.7.0.RELEASE/cd47f211a27cf0c63ef7866f36d81c6b6046954e/spring-data-commons-1.7.0.RELEASE-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/1.7.0.RELEASE/fd12f6a3ed57f356497c0eef3cf73ddecc9611f3/spring-data-commons-1.7.0.RELEASE.jar" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.6/eccf8c93c8cbc25d1fdae373ac38fc7bbd809397/jcl-over-slf4j-1.7.6-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.6/ab1648fe1dd6f1e5c2ec6d12f394672bb8c1036a/jcl-over-slf4j-1.7.6.jar" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/2.11.4/41c41b20bb2170e94549f66c77f403d7443101c1/mongo-java-driver-2.11.4-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/org.mongodb/mongo-java-driver/2.11.4/b989c66514af8473bf8cf7368bbb7552da5879e3/mongo-java-driver-2.11.4.jar" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/4a4b6d692e17846a9f3da036438a7ac491d3c814/aopalliance-1.0-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.0.0.RELEASE/faeab9c14a8c24993dd28179c1c20706c3d0ec0b/spring-aop-4.0.0.RELEASE-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.0.0.RELEASE/cceb3e9510774b3f88b008a70c6a9aefb98d891f/spring-aop-4.0.0.RELEASE.jar" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.0.0.RELEASE/60c70ff1bb9c5ab97a7f3c3230f86cf738bc1505/spring-expression-4.0.0.RELEASE-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.0.0.RELEASE/199be03c976524b6427dff31078227bfc703400b/spring-expression-4.0.0.RELEASE.jar" exported="true"/>
+	<classpathentry sourcepath="/home/lm/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar" kind="lib" path="/home/lm/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar" exported="true"/>
 </classpath>

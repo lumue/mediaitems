@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.5.1.201404212242-CI-B709]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[true]]></enableImports>
+	<configs>
+		<config>src/main/resources/mediaitems/app/integration/integration-context.xml</config>
+	</configs>
+	<autoconfigs>
+		<config>java:mediaitems.app.http.Application</config>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

@@ -21,6 +21,7 @@
             <option value="$PROJECT_DIR$/mediaitems-sources-filesystem-local" />
             <option value="$PROJECT_DIR$/mediaitems-sync-api" />
             <option value="$PROJECT_DIR$/mediaitems-synchronizer" />
+            <option value="$PROJECT_DIR$/mediaitems-webclient" />
           </set>
         </option>
       </GradleProjectSettings>

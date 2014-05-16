@@ -44,6 +44,9 @@
           <element id="library" level="project" name="Gradle: jackson-xc-1.9.13" />
           <element id="library" level="project" name="Gradle: jackson-jaxrs-1.9.13" />
           <element id="library" level="project" name="Gradle: log4j-1.2.16" />
+          <element id="archive" name="mediaitems-mediaitems-webclient-0.1.0.jar">
+            <element id="module-output" name="mediaitems-webclient" />
+          </element>
           <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.0.1/6bf0ebb7efd993e222fc1112377b5e92a13b38dd/javax.servlet-api-3.0.1.jar" />
         </element>
       </element>

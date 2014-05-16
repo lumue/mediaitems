@@ -40,7 +40,7 @@ public enum MediaType {
 			return AUDIO;
 		if (mimeType.startsWith("image"))
 			return IMAGE;
-		if (mimeType.startsWith("text") || mimeType.startsWith("applicaion"))
+		if (mimeType.startsWith("text") || mimeType.startsWith("application"))
 			return DOCUMENT;
 
 		return UNKNOWN;

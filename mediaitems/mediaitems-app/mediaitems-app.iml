@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="mediaitems" external.system.module.version="0.1.0" type="JAVA_MODULE" version="4">
+<module external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/../mediaitems-webclient" external.system.id="GRADLE" external.system.module.group="mediaitems" external.system.module.version="0.1.0" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/mediaitems/app/http/Application.java</file>
+          <file>file://$MODULE_DIR$/../mediaitems-metadata-mongorepository/src/main/java/mediaitems/metadata/springdata/Config.java</file>
+        </fileset>
+      </configuration>
+    </facet>
     <facet type="web" name="Web Gradle : mediaitems-0.1.0.war">
       <configuration>
         <webroots>
@@ -50,6 +58,8 @@
     <orderEntry type="library" scope="TEST" name="Gradle: log4j-1.2.16" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Gradle: log4j-1.2.16" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: junit-4.8.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.servlet-api-3.0.1" level="project" />
+    <orderEntry type="module" module-name="mediaitems-webclient" exported="" />
   </component>
 </module>
 

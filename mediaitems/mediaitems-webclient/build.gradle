@@ -1,0 +1,14 @@
+apply plugin: de.bolchsteinegger.gradle.plugin.DartPlugin
+dart {
+   defaultTasks( 'pubBuild','pubBuild', 'testDart')
+}
+
+buildscript {
+    repositories {
+        maven { url "http://travep.de/maven/" }
+    }
+    dependencies {
+        classpath 'de.bolchsteinegger:gradle-dart-plugin:0.1.5'
+    }
+}
+
