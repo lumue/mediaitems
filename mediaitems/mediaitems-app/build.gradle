@@ -18,7 +18,7 @@ dependencies {
 	testCompile ('junit:junit:4.8.2')
 	compile "org.springframework:spring-webmvc:$spring_version"
 	compile 'org.slf4j:slf4j-api:1.6.4'
-	compile "org.springframework.integration:spring-integration-core:3.0.2.RELEASE"
+	compile "org.springframework.integration:spring-integration-core:4.0.0.RELEASE"
 
 	providedCompile 'javax:javaee-api:7.0'
 
@@ -28,9 +28,11 @@ dependencies {
 	runtime 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
 	runtime 'org.codehaus.jackson:jackson-xc:1.9.13'
 	runtime 'org.codehaus.jackson:jackson-jaxrs:1.9.13'
+	
+	
 }
 
-
+//eclipse project setup
 apply plugin:'eclipse-wtp'
 eclipse {
 	project {
@@ -66,4 +68,30 @@ eclipse {
 	}
 }
 
-
+//cargo deployment
+repositories {
+	mavenRepo urls:'http://repository.jboss.org/nexus/content/groups/public-jboss/'
+}
+apply plugin: 'cargo-base'
+apply plugin: 'cargo'
+buildscript {
+	repositories {jcenter()}
+	dependencies {classpath 'org.gradle.api.plugins:gradle-cargo-plugin:1.5'}
+}
+dependencies{ 
+def cargoVersion = '1.4.8'
+cargo 'org.wildfly:wildfly-controller-client:8.0.0.Final',
+	  "org.codehaus.cargo:cargo-core-uberjar:$cargoVersion",
+	  "org.codehaus.cargo:cargo-ant:$cargoVersion"
+}
+cargo {	
+		containerId = 'wildfly8x'
+	
+		remote {
+			hostname = 'localhost'
+			username = 'admin'
+			password = 'admin'
+		}
+}
+cargoDeployRemote.dependsOn(war)
+cargoRedeployRemote.dependsOn(war)
