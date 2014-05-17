@@ -1,9 +1,0 @@
-apply plugin: 'java'
-sourceCompatibility = jdk_version
-targetCompatibility = jdk_version
-
-dependencies {
-	compile project(':mediaitems-sources-api')
-	compile project(':mediaitems-metadata-api')
-	testCompile 'junit:junit:4.9'
-}

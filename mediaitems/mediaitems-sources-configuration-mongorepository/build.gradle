@@ -5,7 +5,7 @@ targetCompatibility = jdk_version
 dependencies {
 compile project(':mediaitems-metadata-api')
 
-compile 'org.springframework.data:spring-data-mongodb:1.4.0.M1'
+compile 'org.springframework.data:spring-data-mongodb:1.4.2.RELEASE'
 compile "org.springframework:spring-context:$spring_version"
 compile "org.springframework:spring-beans:$spring_version"
 

@@ -3,24 +3,25 @@ version = '0.1.0-SNAPSHOT'
 
 
 
-allprojects {		
-	
+allprojects {
+
 	ext {
 		jdk_version='1.8'
 		spring_version='4.0.3.RELEASE'
 	}
-	
+
 	repositories {
 		mavenCentral()
 		mavenLocal()
 	}
 
-	
+
 	apply plugin: 'eclipse'
-	eclipse.project {
-		natures 'org.springsource.ide.eclipse.gradle.core.nature'
-	}
-	eclipse.classpath {
-		containers 'org.springsource.ide.eclipse.gradle.classpathcontainer'
+	eclipse {
+		project { natures 'org.springsource.ide.eclipse.gradle.core.nature' }
+		classpath {containers 'org.springsource.ide.eclipse.gradle.classpathcontainer'}
 	}
 }
+
+
+
