@@ -3,6 +3,9 @@ sourceCompatibility = jdk_version
 targetCompatibility = jdk_version
 
 dependencies {
+	//project dependencies
+	compile project(':mediaitems-common-domain')
+	
 	compile 'joda-time:joda-time:2.2'
 	testCompile 'junit:junit:4.9'
 }

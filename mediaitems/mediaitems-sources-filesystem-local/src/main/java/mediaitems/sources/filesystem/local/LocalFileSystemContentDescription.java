@@ -15,6 +15,7 @@ import org.joda.time.LocalDateTime;
 class LocalFileSystemContentDescription implements ContentDescription {
 	private final String name;
 	private final String mimeType;
+	private final String mediaType;
 	private final Long size;
 	private final LocalDateTime creationTime;
 	private final LocalDateTime lastAccessTime;
@@ -27,30 +28,45 @@ class LocalFileSystemContentDescription implements ContentDescription {
 		super();
 		this.name = name;
 		this.mimeType = mimeType;
+		this.mediaType = fromMimeType(mimeType);
 		this.size = size;
 		this.creationTime = creationTime;
 		this.lastAccessTime = lastAccessTime;
 		this.modificationTime = modificationTime;
 	}
 
+	private static String fromMimeType(String mimeType) {
+		if (mimeType.startsWith("video"))
+			return "VIDEO";
+		if (mimeType.startsWith("audio"))
+			return "AUDIO";
+		if (mimeType.startsWith("image"))
+			return "IMAGE";
+		if (mimeType.startsWith("text") || mimeType.startsWith("application"))
+			return "DOCUMENT";
+
+		return "GENERIC";
+	}
+
 	public static ContentDescription fromFile(File file) throws IOException {
-		Path path = file.toPath();
+		return fromPath(file.toPath());
+	}
+
+	public static ContentDescription fromPath(Path path) throws IOException {
 		BasicFileAttributes attrs = Files.<BasicFileAttributes> readAttributes(
 				path, BasicFileAttributes.class);
-		return new LocalFileSystemContentDescription(readName(file),
+		return new LocalFileSystemContentDescription(path.toString(),
 				Files.probeContentType(path), Long.valueOf(attrs.size()),
 				new LocalDateTime(attrs.creationTime().toMillis()),
 				new LocalDateTime(attrs.lastAccessTime().toMillis()),
 				new LocalDateTime(attrs.creationTime().toMillis()));
-
 	}
 
-	private static String readName(File file) {
-		return file.getName();
-	}
+
+
 
 	@Override
-	public String getName() {
+	public String getPath() {
 		return this.name;
 	}
 
@@ -82,6 +98,12 @@ class LocalFileSystemContentDescription implements ContentDescription {
 	@Override
 	public LocalDateTime getLastAccessTime() {
 		return lastAccessTime;
+	}
+
+	@Override
+	public String getMediaType() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

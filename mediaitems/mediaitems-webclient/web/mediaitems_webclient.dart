@@ -61,7 +61,7 @@ class MetadataViewController
   loadElements()
   {
     var to = (this.model.start+this.model.pagesize);
-    String url="http://localhost:8080/mediaitems/app/metadata/video/list?from="+this.model.start.toString()+"&to="+to.toString();
+    String url="../../app/metadata/video/list?from="+this.model.start.toString()+"&to="+to.toString();
     HttpRequest.getString(url).then((String result){
       model.queryResult=this.parseResult(result);
       onElementsLoaded();

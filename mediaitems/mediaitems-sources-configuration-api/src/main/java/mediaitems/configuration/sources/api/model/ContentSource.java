@@ -2,6 +2,8 @@ package mediaitems.configuration.sources.api.model;
 
 import java.net.URI;
 
+import mediaitems.common.domain.api.Builder;
+
 public interface ContentSource {
 
 	public String getId();
@@ -18,11 +20,11 @@ public interface ContentSource {
 		private String name;
 		private final URI url;
 
-		private ContentSourceImpl(String id, String name, String url) {
+		private ContentSourceImpl(String id, String name, URI url) {
 			super();
 			this.id = id;
 			this.name = name;
-			this.url = this.url;
+			this.url = url;
 		}
 
 		@Override
@@ -67,7 +69,7 @@ public interface ContentSource {
 
 		@Override
 		public String toString() {
-			return "LocalFileSystemContentSource [id=" + id + ", name=" + name
+			return ContentSourceImpl.class.getTypeName()+"[id=" + id + ", name=" + name
 					+ ", path=" + getUrl() + "]";
 		}
 
@@ -78,9 +80,10 @@ public interface ContentSource {
 
 	}
 
-	public static class ContentSourceBuilder {
+	public static class ContentSourceBuilder implements Builder<ContentSource> {
 		private String name;
 		private URI url;
+		private String key;
 
 		public ContentSourceBuilder setName(String name) {
 			this.name = name;
@@ -90,6 +93,16 @@ public interface ContentSource {
 		public ContentSourceBuilder setUrl(URI url) {
 			this.url = url;
 			return this;
+		}
+
+		@Override
+		public ContentSource build() {
+			return new ContentSourceImpl(key, name,
+					url);
+		}
+
+		public void setKey(String key) {
+			this.key = key;
 		}
 	}
 

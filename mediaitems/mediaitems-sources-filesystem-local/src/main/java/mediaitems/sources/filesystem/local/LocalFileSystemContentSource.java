@@ -8,6 +8,7 @@ import java.util.Iterator;
 
 import mediaitems.sources.api.error.ContentAccessException;
 import mediaitems.sources.api.io.ContentBrowser;
+import mediaitems.sources.api.io.ContentDescription;
 import mediaitems.sources.api.io.ContentHandle;
 import mediaitems.sources.api.io.ContentIterable;
 import mediaitems.sources.api.io.ContentReader;
@@ -57,6 +58,18 @@ public class LocalFileSystemContentSource implements ContentBrowser,
 			return true;
 
 		return false;
+	}
+
+	@Override
+	public ContentDescription describe(ContentHandle handle)
+			throws ContentAccessException {
+		try {
+			return LocalFileSystemContentDescription.fromPath(FileSystems
+					.getDefault().getPath(
+							handle.getLocationIdentifier().getPath()));
+		} catch (IOException e) {
+			throw new ContentAccessException(e);
+		}
 	}
 
 }

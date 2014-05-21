@@ -13,15 +13,20 @@ sourceSets.test.runtimeClasspath += configurations.providedCompile
 dependencies {
 	compile project(':mediaitems-sources-configuration-api')
 	compile project(':mediaitems-metadata-api')
+	compile project(':mediaitems-sources-api')
+	compile project(':mediaitems-sources-filesystem-local')
 	
 	providedCompile 'javax:javaee-api:7.0'
 	
 	
 	compile "org.springframework:spring-web:$spring_version"
 	compile "org.springframework:spring-tx:$spring_version"
+	compile "org.springframework.integration:spring-integration-core:4.0.0.RELEASE"
+	
 	
 	compile group: 'com.google.guava', name: 'guava', version: '12.0'
-
+	compile 'org.slf4j:slf4j-api:1.6.4'
+	
 	testCompile 'junit:junit:4.9'
 }
 

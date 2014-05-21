@@ -7,7 +7,7 @@ import javax.servlet.ServletRegistration;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.context.support.XmlWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
 public class ApplicationInitializer implements WebApplicationInitializer {
@@ -23,9 +23,8 @@ public class ApplicationInitializer implements WebApplicationInitializer {
 		dispatcher.setLoadOnStartup(1);
 	}
 
-	private AnnotationConfigWebApplicationContext getContext() {
-		AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-		context.setConfigLocation("mediaitems.app.http.Application");
+	private WebApplicationContext getContext() {
+		WebApplicationContext context = new XmlWebApplicationContext();
 		return context;
 	}
 

@@ -4,18 +4,18 @@ import mediaitems.common.domain.api.Builder;
 import mediaitems.metadata.domain.MediaItem;
 import mediaitems.metadata.domain.MediaType;
 import mediaitems.metadata.domain.Tag;
-import mediaitems.metadata.repository.MediaItemRepository;
+import mediaitems.metadata.repository.VideoItemRepository;
 import mediaitems.metadata.springdata.domain.MediaItemImpl;
-import mediaitems.metadata.springdata.domain.MediaItemImpl.MongoMediaItemBuilder;
 import mediaitems.metadata.springdata.domain.TagImpl;
+import mediaitems.metadata.springdata.domain.VideoItemImpl;
+import mediaitems.metadata.springdata.domain.VideoItemImpl.VideoItemBuilderImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.stereotype.Repository;
 
-@Repository
-class SpringDataMediaItemRepositoryAdapter implements MediaItemRepository {
+public class SpringDataVideoItemRepositoryAdapter implements
+		VideoItemRepository {
 
 	@Autowired(required = true)
 	private SpringDataMediaItemRepository delegate;
@@ -23,7 +23,7 @@ class SpringDataMediaItemRepositoryAdapter implements MediaItemRepository {
 	@Override
 	public MediaItemImpl create(
 			Builder<? extends mediaitems.metadata.domain.MediaItem> builder) {
-		MongoMediaItemBuilder mybuilder = (MongoMediaItemBuilder) builder;
+		VideoItemBuilderImpl mybuilder = (VideoItemBuilderImpl) builder;
 		return delegate.save(mybuilder.build());
 	}
 
@@ -36,6 +36,7 @@ class SpringDataMediaItemRepositoryAdapter implements MediaItemRepository {
 	public Iterable<? extends MediaItem> getAll() {
 		return delegate.findAll();
 	}
+
 	@Override
 	public void deleteAll() {
 		delegate.deleteAll();
@@ -65,8 +66,10 @@ class SpringDataMediaItemRepositoryAdapter implements MediaItemRepository {
 	}
 
 	@Override
-	public MediaItemImpl.MongoMediaItemBuilder createNewBuilder() {
-		return new MediaItemImpl.MongoMediaItemBuilder();
+	public VideoItemImpl.VideoItemBuilderImpl createNewBuilder() {
+		return new VideoItemImpl.VideoItemBuilderImpl();
 	}
+
+
 
 }

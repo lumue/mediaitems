@@ -1,6 +1,6 @@
 package mediaitems.metadata.springdata.repository;
 
-import mediaitems.metadata.domain.Builder;
+import mediaitems.common.domain.api.Builder;
 import mediaitems.metadata.domain.Tag;
 import mediaitems.metadata.repository.TagRepository;
 import mediaitems.metadata.springdata.domain.TagImpl;

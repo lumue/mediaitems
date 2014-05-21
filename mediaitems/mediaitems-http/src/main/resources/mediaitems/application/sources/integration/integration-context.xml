@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-4.0.xsd">
+
+	<bean id="contentDiscoveryEndpoint" class="mediaitems.application.sources.integration.ContentDiscoveryEndpoint">
+	  <property name="outputChannel" ref="content-source-scanner-in" />
+	</bean>
+	
+	<int:transformer ref="contentHandleToContentDescription" 
+	                 input-channel="contenthandle-input-channel"
+	                 output-channel="contentdescription-input-channel"/>
+	
+	<int:channel id="contentdescription-input-channel" datatype="mediaitems.sources.api.io.ContentDescription">
+    <int:queue />
+  </int:channel>
+	
+	<int:channel id="contenthandle-input-channel" datatype="mediaitems.application.sources.integration.ContentDiscoveryEndpoint$ContentDiscoveredMessageContent">
+		<int:queue />
+	</int:channel>
+	
+	<int:channel id="generic-contentdescription-input-channel" datatype="mediaitems.sources.api.io.ContentDescription">
+    <int:queue />
+  </int:channel>
+  
+  <int:channel id="video-contentdescription-input-channel" datatype="mediaitems.sources.api.io.ContentDescription">
+    <int:queue />
+  </int:channel>
+  
+  <int:channel id="audio-contentdescription-input-channel" datatype="mediaitems.sources.api.io.ContentDescription">
+    <int:queue />
+  </int:channel>
+  
+  <int:channel id="document-contentdescription-input-channel" datatype="mediaitems.sources.api.io.ContentDescription">
+    <int:queue />
+  </int:channel>
+	
+	<int:channel id="image-contentdescription-input-channel" datatype="mediaitems.sources.api.io.ContentDescription">
+    <int:queue />
+  </int:channel>
+	
+	<int:router id="contentDescriptionByMimetypeRouter" expression="payload.mediaType"
+	            input-channel="contentdescription-input-channel"
+	            default-output-channel="generic-contentdescription-input-channel"
+	            >
+	  <int:mapping value="GENERIC"  channel="generic-contentdescription-input-channel" />	              
+	  <int:mapping value="VIDEO" channel="video-contentdescription-input-channel" />
+	  <int:mapping value="AUDIO" channel="audio-contentdescription-input-channel" />
+	  <int:mapping value="DOCUMENT" channel="document-contentdescription-input-channel" />
+	  <int:mapping value="IMAGE" channel="image-contentdescription-input-channel" />
+	</int:router>
+	
+</beans>

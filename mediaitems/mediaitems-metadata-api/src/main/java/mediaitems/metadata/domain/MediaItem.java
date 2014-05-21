@@ -2,11 +2,13 @@ package mediaitems.metadata.domain;
 
 import java.util.List;
 
+import mediaitems.common.domain.api.Builder;
+
 import org.joda.time.LocalDateTime;
 
-public interface MediaItem<T extends Tag> extends Taggable<T> {
+public interface MediaItem extends Taggable {
 
-	public interface MediaItemBuilder<T extends MediaItem<?>> extends
+	public interface MediaItemBuilder<T extends MediaItem> extends
 			Builder<T> {
 		MediaItemBuilder<T> setName(String name);
 

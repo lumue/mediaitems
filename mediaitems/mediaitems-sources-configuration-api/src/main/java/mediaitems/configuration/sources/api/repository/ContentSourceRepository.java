@@ -1,5 +1,9 @@
 package mediaitems.configuration.sources.api.repository;
 
-public interface ContentSourceRepository {
+import mediaitems.common.repository.api.ObjectRepository;
+import mediaitems.configuration.sources.api.model.ContentSource;
+
+public interface ContentSourceRepository extends
+		ObjectRepository<ContentSource> {
 
 }

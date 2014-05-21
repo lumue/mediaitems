@@ -12,14 +12,14 @@ import org.joda.time.LocalDateTime;
 import org.springframework.data.annotation.Id;
 
 public class MediaItemImpl implements
-		mediaitems.metadata.domain.MediaItem<TagImpl> {
+ mediaitems.metadata.domain.MediaItem {
 
 	@Id
 	private String key;
 
 	private String name;
 
-	private Set<TagImpl> tagCollection;
+	private Set<Tag> tagCollection;
 
 	MediaItemImpl(String name, MediaType mediaType,
 			List<ContentLocation> contentLocation, Long size, LocalDateTime time) {
@@ -121,14 +121,14 @@ public class MediaItemImpl implements
 	}
 
 	@Override
-	public Iterable<TagImpl> getTags() {
+	public Iterable<Tag> getTags() {
 		return tagCollection;
 	}
 
 	@Override
-	public void addTag(TagImpl tag) {
+	public void addTag(Tag tag) {
 		if (this.tagCollection == null)
-			tagCollection = new HashSet<TagImpl>();
+			tagCollection = new HashSet<Tag>();
 		tagCollection.add(tag);
 	}
 

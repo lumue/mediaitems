@@ -5,8 +5,10 @@ import java.util.Map;
 import org.joda.time.LocalDateTime;
 
 public interface ContentDescription {
-		public String getName();
+	public String getPath();
 		public String getMimeType();
+
+	public String getMediaType();
 		public Long getSize();
 		public LocalDateTime getCreationTime();
 		public LocalDateTime getModificationTime();
