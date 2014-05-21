@@ -7,7 +7,7 @@ import java.nio.file.Path;
 
 import mediaitems.sources.api.io.ContentHandle;
 
-class LocalFileSystemContentHandle implements ContentHandle {
+final class LocalFileSystemContentHandle implements ContentHandle {
 
 	private final File file;
 

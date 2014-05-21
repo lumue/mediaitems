@@ -3,10 +3,6 @@ package mediaitems.metadata.springdata.repository;
 import org.springframework.data.domain.PageRequest;
 
 class RepositoryUtil {
-	private RepositoryUtil() {
-		throw new IllegalAccessError();
-	}
-
 	static PageRequest createPageable(Integer from, Integer to) {
 		from = from == null ? 0 : from.intValue();
 		to = to == null ? 0 : to.intValue();

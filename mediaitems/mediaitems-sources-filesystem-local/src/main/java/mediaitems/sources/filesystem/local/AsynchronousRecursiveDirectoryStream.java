@@ -16,6 +16,8 @@ import java.util.concurrent.FutureTask;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 
+import mediaitems.sources.api.error.ContentAccessException;
+
 import com.google.common.base.Function;
 
 /**
@@ -131,7 +133,7 @@ class AsynchronousRecursiveDirectoryStream implements DirectoryStream<Path> {
 	}
 
 	private Function<Path, FileVisitResult> getFunction(
-			final Filter<Path> filter) {
+			final Filter<Path> filter)  {
 		return new Function<Path, FileVisitResult>() {
 			@Override
 			public FileVisitResult apply(Path input) {
@@ -140,9 +142,10 @@ class AsynchronousRecursiveDirectoryStream implements DirectoryStream<Path> {
 						pathsBlockingQueue.offer(input);
 					}
 				} catch (IOException e) {
-					throw new RuntimeException(e.getMessage());
+					throw new ContentAccessException.RuntimeContentAccessException(
+							e);
 				}
-				return (pathTask.isCancelled()) ? FileVisitResult.TERMINATE
+				return pathTask.isCancelled() ? FileVisitResult.TERMINATE
 						: FileVisitResult.CONTINUE;
 			}
 		};

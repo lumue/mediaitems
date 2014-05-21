@@ -23,4 +23,38 @@ public class ContentAccessException extends Exception {
 		super(cause);
 	}
 
+	public static class RuntimeContentAccessException extends RuntimeException {
+	
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1651466620063864876L;
+
+		/**
+		 * 
+		 */
+
+		public RuntimeContentAccessException() {
+			super();
+		}
+
+		public RuntimeContentAccessException(String message, Throwable cause,
+				boolean enableSuppression, boolean writableStackTrace) {
+			super(message, cause, enableSuppression, writableStackTrace);
+		}
+
+		public RuntimeContentAccessException(String message, Throwable cause) {
+			super(message, cause);
+		}
+
+		public RuntimeContentAccessException(String message) {
+			super(message);
+		}
+
+		public RuntimeContentAccessException(Throwable cause) {
+			super(cause);
+		}
+
+	}
+
 }

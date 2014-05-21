@@ -12,7 +12,7 @@ import mediaitems.sources.api.io.ContentDescription;
 
 import org.joda.time.LocalDateTime;
 
-class LocalFileSystemContentDescription implements ContentDescription {
+final class LocalFileSystemContentDescription implements ContentDescription {
 	private final String name;
 	private final String mimeType;
 	private final String mediaType;

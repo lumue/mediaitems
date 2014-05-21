@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.util.Iterator;
 
 import mediaitems.sources.api.error.ContentAccessException;
+import mediaitems.sources.api.error.ContentAccessException.RuntimeContentAccessException;
 import mediaitems.sources.api.io.ContentBrowser;
 import mediaitems.sources.api.io.ContentDescription;
 import mediaitems.sources.api.io.ContentHandle;
@@ -36,7 +37,7 @@ public class LocalFileSystemContentSource implements ContentBrowser,
 					return new DirectoryStreamWrappingContentIterator(
 							directoryStream);
 				} catch (IOException e) {
-					throw new RuntimeException(e);
+					throw new RuntimeContentAccessException(e);
 				}
 
 			}
