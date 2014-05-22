@@ -1,0 +1,8 @@
+/**
+ * as a pure eclipse papyrus modeling project mediaitems-model does not need to build
+ * gradle is only used to setup the eclipse project 
+ */
+
+ eclipse{
+	 project.name=mediaitems-model
+ }

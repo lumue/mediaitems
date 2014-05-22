@@ -1,16 +1,16 @@
 rootProject.name = 'mediaitems'
 
 include (		'mediaitems-metadata-mongorepository',
-			'mediaitems-metadata-api',
-			'mediaitems-app',
-			'mediaitems-http',
-			'mediaitems-webclient',
-			'mediaitems-synchronizer',
-			'mediaitems-sources-api',
-			'mediaitems-sync-api',
-			'mediaitems-sources-filesystem-local',
-			'mediaitems-common-domain',
-			'mediaitems-sources-api',
-			'mediaitems-sources-configuration-api',
-			
-			'mediaitems-sources-configuration-mongorepository')
+				'mediaitems-metadata-api',
+				'mediaitems-app',
+				'mediaitems-http',
+				'mediaitems-webclient',
+				'mediaitems-synchronizer',
+				'mediaitems-sources-api',
+				'mediaitems-sync-api',
+				'mediaitems-sources-filesystem-local',
+				'mediaitems-common-domain',
+				'mediaitems-sources-api',
+				'mediaitems-sources-configuration-api',
+				'mediaitems-model',	
+				'mediaitems-sources-configuration-mongorepository')
