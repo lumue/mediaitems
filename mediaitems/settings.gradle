@@ -2,8 +2,8 @@ rootProject.name = 'mediaitems'
 
 include (		'mediaitems-metadata-mongorepository',
 				'mediaitems-metadata-api',
-				'mediaitems-app',
-				'mediaitems-http',
+				'mediaitems-webapp',
+				'mediaitems-application',
 				'mediaitems-webclient',
 				'mediaitems-synchronizer',
 				'mediaitems-sources-api',

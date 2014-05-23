@@ -12,7 +12,7 @@ war {
 war.dependsOn(":mediaitems-webclient:build")
 
 dependencies {
-	compile project(':mediaitems-http')
+	compile project(':mediaitems-application')
 	compile project(':mediaitems-metadata-mongorepository')
 
 	testCompile ('junit:junit:4.8.2')

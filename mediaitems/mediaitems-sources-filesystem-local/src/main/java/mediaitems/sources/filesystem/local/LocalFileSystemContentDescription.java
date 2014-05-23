@@ -102,8 +102,7 @@ final class LocalFileSystemContentDescription implements ContentDescription {
 
 	@Override
 	public String getMediaType() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.mediaType;
 	}
 
 }
