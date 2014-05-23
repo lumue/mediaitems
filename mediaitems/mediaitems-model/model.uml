@@ -1,6 +1,1795 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_EyWsQOH1EeOWXtTCBTdXBw" name="Model">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_EyWsQOH1EeOWXtTCBTdXBw" name="Model">
   <packageImport xmi:type="uml:PackageImport" xmi:id="_EyXTUOH1EeOWXtTCBTdXBw">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_zqMiYOH9EeOjUNvXUJp2WQ" name="mediaitems">
+    <packagedElement xmi:type="uml:Package" xmi:id="_zqMiYeH9EeOjUNvXUJp2WQ" name="metadata">
+      <packagedElement xmi:type="uml:Package" xmi:id="_zqMiYuH9EeOjUNvXUJp2WQ" name="domain">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_zqMiY-H9EeOjUNvXUJp2WQ" name="AudioItem" isAbstract="true">
+          <generalization xmi:type="uml:Generalization" xmi:id="_zqMiZOH9EeOjUNvXUJp2WQ" general="_zqMiceH9EeOjUNvXUJp2WQ"/>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_zqMiZeH9EeOjUNvXUJp2WQ" name="AudioItemBuilder" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_zqMiZuH9EeOjUNvXUJp2WQ" general="_zqMic-H9EeOjUNvXUJp2WQ"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMiZ-H9EeOjUNvXUJp2WQ" name="setAudioCodec" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMiaOH9EeOjUNvXUJp2WQ" name="arg0" type="_zqNwheH9EeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMiaeH9EeOjUNvXUJp2WQ" name="return" type="_zqMiZeH9EeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMiauH9EeOjUNvXUJp2WQ" name="setLength" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMia-H9EeOjUNvXUJp2WQ" name="arg0" type="_zqNwkeH9EeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMibOH9EeOjUNvXUJp2WQ" name="return" type="_zqMiZeH9EeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+          </nestedClassifier>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMibeH9EeOjUNvXUJp2WQ" name="getAudioCodec" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMibuH9EeOjUNvXUJp2WQ" name="return" type="_zqNwheH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMib-H9EeOjUNvXUJp2WQ" name="getLength" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMicOH9EeOjUNvXUJp2WQ" name="return" type="_zqNwkeH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_zqMiceH9EeOjUNvXUJp2WQ" name="MediaItem" isAbstract="true">
+          <generalization xmi:type="uml:Generalization" xmi:id="_zqMicuH9EeOjUNvXUJp2WQ" general="_zqMiouH9EeOjUNvXUJp2WQ"/>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_zqMic-H9EeOjUNvXUJp2WQ" name="MediaItemBuilder" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_zqMidOH9EeOjUNvXUJp2WQ" general="_zqMi9-H9EeOjUNvXUJp2WQ"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMideH9EeOjUNvXUJp2WQ" name="setName" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMiduH9EeOjUNvXUJp2WQ" name="arg0" type="_zqNwheH9EeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMid-H9EeOjUNvXUJp2WQ" name="return" type="_zqMic-H9EeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMieOH9EeOjUNvXUJp2WQ" name="setMediaType" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMieeH9EeOjUNvXUJp2WQ" name="arg0" type="_zqMiqeH9EeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMieuH9EeOjUNvXUJp2WQ" name="return" type="_zqMic-H9EeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMie-H9EeOjUNvXUJp2WQ" name="setContentLocation" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMifOH9EeOjUNvXUJp2WQ" name="arg0" type="_zqNwheH9EeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMifeH9EeOjUNvXUJp2WQ" name="return" type="_zqMic-H9EeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMifuH9EeOjUNvXUJp2WQ" name="setSize" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMif-H9EeOjUNvXUJp2WQ" name="arg0" type="_zqNwhuH9EeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMigOH9EeOjUNvXUJp2WQ" name="return" type="_zqMic-H9EeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMigeH9EeOjUNvXUJp2WQ" name="setCreationTime" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMiguH9EeOjUNvXUJp2WQ" name="arg0" type="_zqNwkuH9EeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMig-H9EeOjUNvXUJp2WQ" name="return" type="_zqMic-H9EeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMihOH9EeOjUNvXUJp2WQ" name="addContentLocation" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMiheH9EeOjUNvXUJp2WQ" name="arg0" type="_zqNwheH9EeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMihuH9EeOjUNvXUJp2WQ" name="return" type="_zqMic-H9EeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+          </nestedClassifier>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMih-H9EeOjUNvXUJp2WQ" name="getKey" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMiiOH9EeOjUNvXUJp2WQ" name="return" type="_zqNwheH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMiieH9EeOjUNvXUJp2WQ" name="getMediaType" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMiiuH9EeOjUNvXUJp2WQ" name="return" type="_zqMiqeH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMii-H9EeOjUNvXUJp2WQ" name="getContentLocations" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMijOH9EeOjUNvXUJp2WQ" name="return" type="_zqNwi-H9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMijeH9EeOjUNvXUJp2WQ" name="getName" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMijuH9EeOjUNvXUJp2WQ" name="return" type="_zqNwheH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMij-H9EeOjUNvXUJp2WQ" name="setName" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMikOH9EeOjUNvXUJp2WQ" name="arg0" type="_zqNwheH9EeOjUNvXUJp2WQ"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMikeH9EeOjUNvXUJp2WQ" name="getSize" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMikuH9EeOjUNvXUJp2WQ" name="return" type="_zqNwhuH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMik-H9EeOjUNvXUJp2WQ" name="getCreationTime" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMilOH9EeOjUNvXUJp2WQ" name="return" type="_zqNwkuH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_zqMileH9EeOjUNvXUJp2WQ" name="ContentLocation" isAbstract="true">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMiluH9EeOjUNvXUJp2WQ" name="getUrl" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMil-H9EeOjUNvXUJp2WQ" name="return" type="_zqNwheH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMimOH9EeOjUNvXUJp2WQ" name="getKey" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMimeH9EeOjUNvXUJp2WQ" name="return" type="_zqNwheH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_zqMimuH9EeOjUNvXUJp2WQ" name="DocumentItem" isAbstract="true">
+          <generalization xmi:type="uml:Generalization" xmi:id="_zqMim-H9EeOjUNvXUJp2WQ" general="_zqMiceH9EeOjUNvXUJp2WQ"/>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_zqMinOH9EeOjUNvXUJp2WQ" name="DocumentItemBuilder" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_zqMineH9EeOjUNvXUJp2WQ" general="_zqMic-H9EeOjUNvXUJp2WQ"/>
+          </nestedClassifier>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_zqMinuH9EeOjUNvXUJp2WQ" name="ImageItem" isAbstract="true">
+          <generalization xmi:type="uml:Generalization" xmi:id="_zqMin-H9EeOjUNvXUJp2WQ" general="_zqMiceH9EeOjUNvXUJp2WQ"/>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_zqMioOH9EeOjUNvXUJp2WQ" name="ImageItemBuilder" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_zqMioeH9EeOjUNvXUJp2WQ" general="_zqMic-H9EeOjUNvXUJp2WQ"/>
+          </nestedClassifier>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_zqMiouH9EeOjUNvXUJp2WQ" name="Taggable" isAbstract="true">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMio-H9EeOjUNvXUJp2WQ" name="getTags" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMipOH9EeOjUNvXUJp2WQ" name="return" type="_zqNwiOH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMipeH9EeOjUNvXUJp2WQ" name="addTag" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMipuH9EeOjUNvXUJp2WQ" name="arg0" type="_zqMiwOH9EeOjUNvXUJp2WQ"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMip-H9EeOjUNvXUJp2WQ" name="removeTag" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMiqOH9EeOjUNvXUJp2WQ" name="arg0" type="_zqMiwOH9EeOjUNvXUJp2WQ"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_zqMiqeH9EeOjUNvXUJp2WQ" name="MediaType" isLeaf="true">
+          <generalization xmi:type="uml:Generalization" xmi:id="_zqMiquH9EeOjUNvXUJp2WQ" general="_zqNwh-H9EeOjUNvXUJp2WQ"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_zqMiq-H9EeOjUNvXUJp2WQ" name="DOCUMENT" visibility="public" isLeaf="true" isStatic="true" type="_zqMiqeH9EeOjUNvXUJp2WQ" isReadOnly="true"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_zqMirOH9EeOjUNvXUJp2WQ" name="VIDEO" visibility="public" isLeaf="true" isStatic="true" type="_zqMiqeH9EeOjUNvXUJp2WQ" isReadOnly="true"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_zqMireH9EeOjUNvXUJp2WQ" name="AUDIO" visibility="public" isLeaf="true" isStatic="true" type="_zqMiqeH9EeOjUNvXUJp2WQ" isReadOnly="true"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_zqMiruH9EeOjUNvXUJp2WQ" name="IMAGE" visibility="public" isLeaf="true" isStatic="true" type="_zqMiqeH9EeOjUNvXUJp2WQ" isReadOnly="true"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_zqMir-H9EeOjUNvXUJp2WQ" name="UNKNOWN" visibility="public" isLeaf="true" isStatic="true" type="_zqMiqeH9EeOjUNvXUJp2WQ" isReadOnly="true"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMisOH9EeOjUNvXUJp2WQ" name="getKey" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMiseH9EeOjUNvXUJp2WQ" name="return" type="_zqNwheH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMisuH9EeOjUNvXUJp2WQ" name="forKey" visibility="public" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMis-H9EeOjUNvXUJp2WQ" name="key" type="_zqNwheH9EeOjUNvXUJp2WQ"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMitOH9EeOjUNvXUJp2WQ" name="return" type="_zqMiqeH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMiteH9EeOjUNvXUJp2WQ" name="forMimeType" visibility="public" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMituH9EeOjUNvXUJp2WQ" name="mimeType" type="_zqNwheH9EeOjUNvXUJp2WQ"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMit-H9EeOjUNvXUJp2WQ" name="return" type="_zqMiqeH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMiuOH9EeOjUNvXUJp2WQ" name="values" visibility="public" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMiueH9EeOjUNvXUJp2WQ" name="return" type="_zqMiveH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMiuuH9EeOjUNvXUJp2WQ" name="valueOf" visibility="public" isStatic="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMiu-H9EeOjUNvXUJp2WQ" name="arg0" type="_zqNwheH9EeOjUNvXUJp2WQ"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMivOH9EeOjUNvXUJp2WQ" name="return" type="_zqMiqeH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_zqMiveH9EeOjUNvXUJp2WQ" name="MediaType[]" isLeaf="true" isAbstract="true">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zqMivuH9EeOjUNvXUJp2WQ" source="Jar2UML">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zqMiv-H9EeOjUNvXUJp2WQ" key="inferred" value="true"/>
+          </eAnnotations>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_zqMiwOH9EeOjUNvXUJp2WQ" name="Tag" isAbstract="true">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMiweH9EeOjUNvXUJp2WQ" name="getKey" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMiwuH9EeOjUNvXUJp2WQ" name="return" type="_zqNwheH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMiw-H9EeOjUNvXUJp2WQ" name="getName" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMixOH9EeOjUNvXUJp2WQ" name="return" type="_zqNwheH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_zqMixeH9EeOjUNvXUJp2WQ" name="VideoItem" isAbstract="true">
+          <generalization xmi:type="uml:Generalization" xmi:id="_zqMixuH9EeOjUNvXUJp2WQ" general="_zqMiceH9EeOjUNvXUJp2WQ"/>
+          <nestedClassifier xmi:type="uml:Interface" xmi:id="_zqMix-H9EeOjUNvXUJp2WQ" name="VideoItemBuilder" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_zqMiyOH9EeOjUNvXUJp2WQ" general="_zqMic-H9EeOjUNvXUJp2WQ"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMiyeH9EeOjUNvXUJp2WQ" name="setVideoCodec" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMiyuH9EeOjUNvXUJp2WQ" name="arg0" type="_zqNwheH9EeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMiy-H9EeOjUNvXUJp2WQ" name="return" type="_zqMix-H9EeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMizOH9EeOjUNvXUJp2WQ" name="setAudioCodec" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMizeH9EeOjUNvXUJp2WQ" name="arg0" type="_zqNwheH9EeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMizuH9EeOjUNvXUJp2WQ" name="return" type="_zqMix-H9EeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMiz-H9EeOjUNvXUJp2WQ" name="setLength" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi0OH9EeOjUNvXUJp2WQ" name="arg0" type="_zqNwkeH9EeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi0eH9EeOjUNvXUJp2WQ" name="return" type="_zqMix-H9EeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+          </nestedClassifier>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMi0uH9EeOjUNvXUJp2WQ" name="getVideoCodec" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi0-H9EeOjUNvXUJp2WQ" name="return" type="_zqNwheH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMi1OH9EeOjUNvXUJp2WQ" name="getAudioCodec" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi1eH9EeOjUNvXUJp2WQ" name="return" type="_zqNwheH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMi1uH9EeOjUNvXUJp2WQ" name="getLength" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi1-H9EeOjUNvXUJp2WQ" name="return" type="_zqNwkeH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_zqMi2OH9EeOjUNvXUJp2WQ" name="repository">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_zqMi2eH9EeOjUNvXUJp2WQ" name="MediaItemRepository" isAbstract="true">
+          <generalization xmi:type="uml:Generalization" xmi:id="_zqMi2uH9EeOjUNvXUJp2WQ" general="_zqMi-uH9EeOjUNvXUJp2WQ"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMi2-H9EeOjUNvXUJp2WQ" name="createNewBuilder" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi3OH9EeOjUNvXUJp2WQ" name="return" type="_zqMic-H9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMi3eH9EeOjUNvXUJp2WQ" name="getByMediaType" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi3uH9EeOjUNvXUJp2WQ" name="arg0" type="_zqMiqeH9EeOjUNvXUJp2WQ"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi3-H9EeOjUNvXUJp2WQ" name="arg1" type="_zqNwieH9EeOjUNvXUJp2WQ"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi4OH9EeOjUNvXUJp2WQ" name="arg2" type="_zqNwieH9EeOjUNvXUJp2WQ"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi4eH9EeOjUNvXUJp2WQ" name="return" type="_zqNwiOH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMi4uH9EeOjUNvXUJp2WQ" name="getByTag" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi4-H9EeOjUNvXUJp2WQ" name="arg0" type="_zqMiwOH9EeOjUNvXUJp2WQ"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi5OH9EeOjUNvXUJp2WQ" name="arg1" type="_zqNwieH9EeOjUNvXUJp2WQ"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi5eH9EeOjUNvXUJp2WQ" name="arg2" type="_zqNwieH9EeOjUNvXUJp2WQ"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi5uH9EeOjUNvXUJp2WQ" name="return" type="_zqNwiOH9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_zqMi5-H9EeOjUNvXUJp2WQ" name="TagBuilder" isAbstract="true">
+          <generalization xmi:type="uml:Generalization" xmi:id="_zqMi6OH9EeOjUNvXUJp2WQ" general="_zqMi9-H9EeOjUNvXUJp2WQ"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMi6eH9EeOjUNvXUJp2WQ" name="setName" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi6uH9EeOjUNvXUJp2WQ" name="arg0" type="_zqNwheH9EeOjUNvXUJp2WQ"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi6-H9EeOjUNvXUJp2WQ" name="return" type="_zqMi5-H9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_zqMi7OH9EeOjUNvXUJp2WQ" name="TagRepository" isAbstract="true">
+          <generalization xmi:type="uml:Generalization" xmi:id="_zqMi7eH9EeOjUNvXUJp2WQ" general="_zqMi-uH9EeOjUNvXUJp2WQ"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_zqMi7uH9EeOjUNvXUJp2WQ" name="createNewBuilder" visibility="public" isAbstract="true">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_zqMi7-H9EeOjUNvXUJp2WQ" name="return" type="_zqMi5-H9EeOjUNvXUJp2WQ" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_zqMi8OH9EeOjUNvXUJp2WQ" name="VideoItemRepository" isAbstract="true">
+          <generalization xmi:type="uml:Generalization" xmi:id="_zqMi8eH9EeOjUNvXUJp2WQ" general="_zqMi2eH9EeOjUNvXUJp2WQ"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_LmJWcOIEEeOjUNvXUJp2WQ" name="springdata">
+        <packagedElement xmi:type="uml:Class" xmi:id="_LmJWceIEEeOjUNvXUJp2WQ" name="ApplicationConfig" visibility="package">
+          <generalization xmi:type="uml:Generalization" xmi:id="_LmJWcuIEEeOjUNvXUJp2WQ">
+            <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jDJeU-ICEeOjUNvXUJp2WQ"/>
+          </generalization>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWc-IEEeOjUNvXUJp2WQ" name="getDatabaseName" visibility="protected">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWdOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+              <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWdeIEEeOjUNvXUJp2WQ" name="mongo" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWduIEEeOjUNvXUJp2WQ" name="return" direction="return">
+              <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jDJeVuICEeOjUNvXUJp2WQ"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWd-IEEeOjUNvXUJp2WQ" name="getMappingBasePackage" visibility="protected">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWeOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+              <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_LmJWeeIEEeOjUNvXUJp2WQ" name="domain">
+          <packagedElement xmi:type="uml:Class" xmi:id="_LmJWeuIEEeOjUNvXUJp2WQ" name="ContentLocation" visibility="package">
+            <generalization xmi:type="uml:Generalization" xmi:id="_LmJWe-IEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_LmJWfOIEEeOjUNvXUJp2WQ" client="_LmJWeuIEEeOjUNvXUJp2WQ">
+              <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDAUYOICEeOjUNvXUJp2WQ"/>
+              <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDAUYOICEeOjUNvXUJp2WQ"/>
+            </interfaceRealization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWfeIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWfuIEEeOjUNvXUJp2WQ" name="url">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWf-IEEeOjUNvXUJp2WQ" name="getUrl" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWgOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWgeIEEeOjUNvXUJp2WQ" name="setUrl" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWguIEEeOjUNvXUJp2WQ" name="url">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWg-IEEeOjUNvXUJp2WQ" name="getKey" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWhOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_LmJWheIEEeOjUNvXUJp2WQ" name="MediaItemImpl">
+            <generalization xmi:type="uml:Generalization" xmi:id="_LmJWhuIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_LmJWh-IEEeOjUNvXUJp2WQ" client="_LmJWheIEEeOjUNvXUJp2WQ">
+              <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_tU-ICEeOjUNvXUJp2WQ"/>
+              <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_tU-ICEeOjUNvXUJp2WQ"/>
+            </interfaceRealization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWiOIEEeOjUNvXUJp2WQ" name="getKey" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWieIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWiuIEEeOjUNvXUJp2WQ" name="getMediaType" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWi-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jDD-w-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWjOIEEeOjUNvXUJp2WQ" name="getContentLocations" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWjeIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC602OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWjuIEEeOjUNvXUJp2WQ" name="getName" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWj-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWkOIEEeOjUNvXUJp2WQ" name="setName" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWkeIEEeOjUNvXUJp2WQ" name="name">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWkuIEEeOjUNvXUJp2WQ" name="getTags" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWk-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC4_oOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWlOIEEeOjUNvXUJp2WQ" name="addTag" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWleIEEeOjUNvXUJp2WQ" name="tag">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDEl0OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWluIEEeOjUNvXUJp2WQ" name="removeTag" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWl-IEEeOjUNvXUJp2WQ" name="tag">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDEl0OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWmOIEEeOjUNvXUJp2WQ" name="getSize" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWmeIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLVuICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWmuIEEeOjUNvXUJp2WQ" name="getCreationTime" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWm-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLWeICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWnOIEEeOjUNvXUJp2WQ" name="hashCode" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWneIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="reverse/mediaitems-app.uml#_jDI3QuICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWnuIEEeOjUNvXUJp2WQ" name="equals" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWn-IEEeOjUNvXUJp2WQ" name="obj">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWoOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="reverse/mediaitems-app.uml#_jCrkRuICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_LmJWoeIEEeOjUNvXUJp2WQ" name="MongoMediaItemBuilder">
+              <generalization xmi:type="uml:Generalization" xmi:id="_LmJWouIEEeOjUNvXUJp2WQ">
+                <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </generalization>
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_LmJWo-IEEeOjUNvXUJp2WQ" client="_LmJWoeIEEeOjUNvXUJp2WQ">
+                <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+                <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+              </interfaceRealization>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWpOIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWpeIEEeOjUNvXUJp2WQ" name="build" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWpuIEEeOjUNvXUJp2WQ" name="return" type="_LmJWheIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWp-IEEeOjUNvXUJp2WQ" name="setName" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWqOIEEeOjUNvXUJp2WQ" name="name">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWqeIEEeOjUNvXUJp2WQ" name="return" type="_LmJWoeIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWquIEEeOjUNvXUJp2WQ" name="setMediaType" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWq-IEEeOjUNvXUJp2WQ" name="mediaType">
+                  <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jDD-w-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWrOIEEeOjUNvXUJp2WQ" name="return" type="_LmJWoeIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWreIEEeOjUNvXUJp2WQ" name="addContentLocation" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWruIEEeOjUNvXUJp2WQ" name="location">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWr-IEEeOjUNvXUJp2WQ" name="return" type="_LmJWoeIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWsOIEEeOjUNvXUJp2WQ" name="setSize" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWseIEEeOjUNvXUJp2WQ" name="size">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLVuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWsuIEEeOjUNvXUJp2WQ" name="return" type="_LmJWoeIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWs-IEEeOjUNvXUJp2WQ" name="setCreationTime" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWtOIEEeOjUNvXUJp2WQ" name="time">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLWeICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWteIEEeOjUNvXUJp2WQ" name="return" type="_LmJWoeIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWtuIEEeOjUNvXUJp2WQ" name="setContentLocation" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWt-IEEeOjUNvXUJp2WQ" name="location">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWuOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWueIEEeOjUNvXUJp2WQ" name="setCreationTime" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWuuIEEeOjUNvXUJp2WQ" name="arg0">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLWeICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWu-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWvOIEEeOjUNvXUJp2WQ" name="setSize" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWveIEEeOjUNvXUJp2WQ" name="arg0">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLVuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWvuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWv-IEEeOjUNvXUJp2WQ" name="build" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWwOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWweIEEeOjUNvXUJp2WQ" name="setName" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWwuIEEeOjUNvXUJp2WQ" name="arg0">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWw-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWxOIEEeOjUNvXUJp2WQ" name="setMediaType" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWxeIEEeOjUNvXUJp2WQ" name="arg0">
+                  <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jDD-w-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWxuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWx-IEEeOjUNvXUJp2WQ" name="addContentLocation" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWyOIEEeOjUNvXUJp2WQ" name="arg0">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWyeIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+            </nestedClassifier>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_LmJWyuIEEeOjUNvXUJp2WQ" name="TagImpl">
+            <generalization xmi:type="uml:Generalization" xmi:id="_LmJWy-IEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_LmJWzOIEEeOjUNvXUJp2WQ" client="_LmJWyuIEEeOjUNvXUJp2WQ">
+              <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDEl0OICEeOjUNvXUJp2WQ"/>
+              <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDEl0OICEeOjUNvXUJp2WQ"/>
+            </interfaceRealization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWzeIEEeOjUNvXUJp2WQ" name="getKey" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJWzuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJWz-IEEeOjUNvXUJp2WQ" name="getName" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW0OIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW0eIEEeOjUNvXUJp2WQ" name="hashCode" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW0uIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="reverse/mediaitems-app.uml#_jDI3QuICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW0-IEEeOjUNvXUJp2WQ" name="equals" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW1OIEEeOjUNvXUJp2WQ" name="obj">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW1eIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="reverse/mediaitems-app.uml#_jCrkRuICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_LmJW1uIEEeOjUNvXUJp2WQ" name="TagImplBuilder">
+              <generalization xmi:type="uml:Generalization" xmi:id="_LmJW1-IEEeOjUNvXUJp2WQ">
+                <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </generalization>
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_LmJW2OIEEeOjUNvXUJp2WQ" client="_LmJW1uIEEeOjUNvXUJp2WQ">
+                <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDFM5OICEeOjUNvXUJp2WQ"/>
+                <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDFM5OICEeOjUNvXUJp2WQ"/>
+              </interfaceRealization>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW2eIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW2uIEEeOjUNvXUJp2WQ" name="build" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW2-IEEeOjUNvXUJp2WQ" name="return" type="_LmJWyuIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW3OIEEeOjUNvXUJp2WQ" name="setName" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW3eIEEeOjUNvXUJp2WQ" name="name">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW3uIEEeOjUNvXUJp2WQ" name="return" type="_LmJW1uIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW3-IEEeOjUNvXUJp2WQ" name="build" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW4OIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW4eIEEeOjUNvXUJp2WQ" name="setName" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW4uIEEeOjUNvXUJp2WQ" name="arg0">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW4-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDFM5OICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+            </nestedClassifier>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_LmJW5OIEEeOjUNvXUJp2WQ" name="VideoItemImpl">
+            <generalization xmi:type="uml:Generalization" xmi:id="_LmJW5eIEEeOjUNvXUJp2WQ" general="_LmJWheIEEeOjUNvXUJp2WQ"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_LmJW5uIEEeOjUNvXUJp2WQ" client="_LmJW5OIEEeOjUNvXUJp2WQ">
+              <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDEl1eICEeOjUNvXUJp2WQ"/>
+              <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDEl1eICEeOjUNvXUJp2WQ"/>
+            </interfaceRealization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW5-IEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW6OIEEeOjUNvXUJp2WQ" name="name">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW6eIEEeOjUNvXUJp2WQ" name="mediaType">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jDD-w-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW6uIEEeOjUNvXUJp2WQ" name="contentLocation">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC602OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW6-IEEeOjUNvXUJp2WQ" name="size">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLVuICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW7OIEEeOjUNvXUJp2WQ" name="time">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLWeICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW7eIEEeOjUNvXUJp2WQ" name="videoCodec">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW7uIEEeOjUNvXUJp2WQ" name="length">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC_tUeICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW7-IEEeOjUNvXUJp2WQ" name="audioCodec">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW8OIEEeOjUNvXUJp2WQ" name="getVideoCodec" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW8eIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW8uIEEeOjUNvXUJp2WQ" name="getAudioCodec" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW8-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW9OIEEeOjUNvXUJp2WQ" name="getLength" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW9eIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC_tUeICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_LmJW9uIEEeOjUNvXUJp2WQ" name="VideoItemBuilderImpl">
+              <generalization xmi:type="uml:Generalization" xmi:id="_LmJW9-IEEeOjUNvXUJp2WQ">
+                <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </generalization>
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_LmJW-OIEEeOjUNvXUJp2WQ" client="_LmJW9uIEEeOjUNvXUJp2WQ">
+                <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDEl0-ICEeOjUNvXUJp2WQ"/>
+                <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDEl0-ICEeOjUNvXUJp2WQ"/>
+              </interfaceRealization>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW-eIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW-uIEEeOjUNvXUJp2WQ" name="build" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW--IEEeOjUNvXUJp2WQ" name="return" type="_LmJW5OIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW_OIEEeOjUNvXUJp2WQ" name="setName" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW_eIEEeOjUNvXUJp2WQ" name="name">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJW_uIEEeOjUNvXUJp2WQ" name="return" type="_LmJW9uIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJW_-IEEeOjUNvXUJp2WQ" name="setMediaType" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJXAOIEEeOjUNvXUJp2WQ" name="mediaType">
+                  <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jDD-w-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJXAeIEEeOjUNvXUJp2WQ" name="return" type="_LmJW9uIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJXAuIEEeOjUNvXUJp2WQ" name="addContentLocation" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJXA-IEEeOjUNvXUJp2WQ" name="location">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJXBOIEEeOjUNvXUJp2WQ" name="return" type="_LmJW9uIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJXBeIEEeOjUNvXUJp2WQ" name="setSize" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJXBuIEEeOjUNvXUJp2WQ" name="size">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLVuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJXB-IEEeOjUNvXUJp2WQ" name="return" type="_LmJW9uIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9gOIEEeOjUNvXUJp2WQ" name="setCreationTime" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9geIEEeOjUNvXUJp2WQ" name="time">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLWeICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9guIEEeOjUNvXUJp2WQ" name="return" type="_LmJW9uIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9g-IEEeOjUNvXUJp2WQ" name="setContentLocation" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9hOIEEeOjUNvXUJp2WQ" name="location">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9heIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9huIEEeOjUNvXUJp2WQ" name="setVideoCodec" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9h-IEEeOjUNvXUJp2WQ" name="codec">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9iOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDEl0-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9ieIEEeOjUNvXUJp2WQ" name="setAudioCodec" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9iuIEEeOjUNvXUJp2WQ" name="codec">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9i-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDEl0-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9jOIEEeOjUNvXUJp2WQ" name="setLength" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9jeIEEeOjUNvXUJp2WQ" name="duration">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC_tUeICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9juIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDEl0-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9j-IEEeOjUNvXUJp2WQ" name="setCreationTime" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9kOIEEeOjUNvXUJp2WQ" name="arg0">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLWeICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9keIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9kuIEEeOjUNvXUJp2WQ" name="setSize" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9k-IEEeOjUNvXUJp2WQ" name="arg0">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLVuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9lOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9leIEEeOjUNvXUJp2WQ" name="build" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9luIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9l-IEEeOjUNvXUJp2WQ" name="setName" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9mOIEEeOjUNvXUJp2WQ" name="arg0">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9meIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9muIEEeOjUNvXUJp2WQ" name="setMediaType" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9m-IEEeOjUNvXUJp2WQ" name="arg0">
+                  <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jDD-w-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9nOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9neIEEeOjUNvXUJp2WQ" name="addContentLocation" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9nuIEEeOjUNvXUJp2WQ" name="arg0">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9n-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+            </nestedClassifier>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_LmJ9oOIEEeOjUNvXUJp2WQ" name="repository">
+          <packagedElement xmi:type="uml:Class" xmi:id="_LmJ9oeIEEeOjUNvXUJp2WQ" name="NullTransactionManager" isLeaf="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_LmJ9ouIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jDL6luICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9o-IEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9pOIEEeOjUNvXUJp2WQ" name="doGetTransaction" visibility="protected">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9peIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9puIEEeOjUNvXUJp2WQ" name="doBegin" visibility="protected">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9p-IEEeOjUNvXUJp2WQ" name="transaction">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9qOIEEeOjUNvXUJp2WQ" name="definition">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jDL6mOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9qeIEEeOjUNvXUJp2WQ" name="doCommit" visibility="protected">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9quIEEeOjUNvXUJp2WQ" name="status">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jDL6meICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9q-IEEeOjUNvXUJp2WQ" name="doRollback" visibility="protected">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9rOIEEeOjUNvXUJp2WQ" name="status">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jDL6meICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_LmJ9reIEEeOjUNvXUJp2WQ" name="RepositoryUtil" visibility="package">
+            <generalization xmi:type="uml:Generalization" xmi:id="_LmJ9ruIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_LmJ9r-IEEeOjUNvXUJp2WQ" name="SpringDataMediaItemRepository" visibility="package" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_LmJ9sOIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDMhpOICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9seIEEeOjUNvXUJp2WQ" name="findByMediaType" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9suIEEeOjUNvXUJp2WQ" name="arg0">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jDD-w-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9s-IEEeOjUNvXUJp2WQ" name="arg1">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jDMhp-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9tOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jDMhqOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9teIEEeOjUNvXUJp2WQ" name="findByTags" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9tuIEEeOjUNvXUJp2WQ" name="arg0" type="_LmJWyuIEEeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9t-IEEeOjUNvXUJp2WQ" name="arg1">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jDMhp-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9uOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jDMhqOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_LmJ9ueIEEeOjUNvXUJp2WQ" name="SpringDataMediaItemRepositoryAdapter" visibility="package">
+            <generalization xmi:type="uml:Generalization" xmi:id="_LmJ9uuIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_LmJ9u-IEEeOjUNvXUJp2WQ" client="_LmJ9ueIEEeOjUNvXUJp2WQ">
+              <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDFM4uICEeOjUNvXUJp2WQ"/>
+              <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDFM4uICEeOjUNvXUJp2WQ"/>
+            </interfaceRealization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9vOIEEeOjUNvXUJp2WQ" name="create" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9veIEEeOjUNvXUJp2WQ" name="builder">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC6NyOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9vuIEEeOjUNvXUJp2WQ" name="return" type="_LmJWheIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9v-IEEeOjUNvXUJp2WQ" name="get" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9wOIEEeOjUNvXUJp2WQ" name="key">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9weIEEeOjUNvXUJp2WQ" name="return" type="_LmJWheIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9wuIEEeOjUNvXUJp2WQ" name="getAll" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9w-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC4_oOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9xOIEEeOjUNvXUJp2WQ" name="deleteAll" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9xeIEEeOjUNvXUJp2WQ" name="getAll" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9xuIEEeOjUNvXUJp2WQ" name="from">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9x-IEEeOjUNvXUJp2WQ" name="to">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9yOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC4_oOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9yeIEEeOjUNvXUJp2WQ" name="getByMediaType" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9yuIEEeOjUNvXUJp2WQ" name="mediaType">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jDD-w-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9y-IEEeOjUNvXUJp2WQ" name="from">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9zOIEEeOjUNvXUJp2WQ" name="to">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9zeIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC4_oOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9zuIEEeOjUNvXUJp2WQ" name="getByTag" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9z-IEEeOjUNvXUJp2WQ" name="tag">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDEl0OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ90OIEEeOjUNvXUJp2WQ" name="from">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ90eIEEeOjUNvXUJp2WQ" name="to">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ90uIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC4_oOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ90-IEEeOjUNvXUJp2WQ" name="createNewBuilder" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ91OIEEeOjUNvXUJp2WQ" name="return" type="_LmJWoeIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ91eIEEeOjUNvXUJp2WQ" name="createNewBuilder" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ91uIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC6NyOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ91-IEEeOjUNvXUJp2WQ" name="createNewBuilder" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ92OIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ92eIEEeOjUNvXUJp2WQ" name="get" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ92uIEEeOjUNvXUJp2WQ" name="arg0">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ92-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ93OIEEeOjUNvXUJp2WQ" name="create" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ93eIEEeOjUNvXUJp2WQ" name="arg0">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC6NyOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ93uIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_LmJ93-IEEeOjUNvXUJp2WQ" name="SpringDataTagRepository" visibility="package" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_LmJ94OIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDMhpOICEeOjUNvXUJp2WQ"/>
+            </generalization>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_LmJ94eIEEeOjUNvXUJp2WQ" name="SpringDataTagRepositoryAdapter">
+            <generalization xmi:type="uml:Generalization" xmi:id="_LmJ94uIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_LmJ94-IEEeOjUNvXUJp2WQ" client="_LmJ94eIEEeOjUNvXUJp2WQ">
+              <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDFM5uICEeOjUNvXUJp2WQ"/>
+              <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDFM5uICEeOjUNvXUJp2WQ"/>
+            </interfaceRealization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ95OIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ95eIEEeOjUNvXUJp2WQ" name="delegate" type="_LmJ93-IEEeOjUNvXUJp2WQ"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ95uIEEeOjUNvXUJp2WQ" name="create" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ95-IEEeOjUNvXUJp2WQ" name="builder">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC6NyOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ96OIEEeOjUNvXUJp2WQ" name="return" type="_LmJWyuIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ96eIEEeOjUNvXUJp2WQ" name="get" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ96uIEEeOjUNvXUJp2WQ" name="key">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ96-IEEeOjUNvXUJp2WQ" name="return" type="_LmJWyuIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ97OIEEeOjUNvXUJp2WQ" name="getAll" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ97eIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC4_oOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ97uIEEeOjUNvXUJp2WQ" name="getAll" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ97-IEEeOjUNvXUJp2WQ" name="from">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ98OIEEeOjUNvXUJp2WQ" name="to">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ98eIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC4_oOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ98uIEEeOjUNvXUJp2WQ" name="deleteAll" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ98-IEEeOjUNvXUJp2WQ" name="createNewBuilder" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ99OIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDFM5OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ99eIEEeOjUNvXUJp2WQ" name="createNewBuilder" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ99uIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC6NyOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ99-IEEeOjUNvXUJp2WQ" name="get" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9-OIEEeOjUNvXUJp2WQ" name="arg0">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9-eIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ9-uIEEeOjUNvXUJp2WQ" name="create" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9--IEEeOjUNvXUJp2WQ" name="arg0">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC6NyOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ9_OIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_LmJ9_eIEEeOjUNvXUJp2WQ" name="SpringDataVideoItemRepositoryAdapter">
+            <generalization xmi:type="uml:Generalization" xmi:id="_LmJ9_uIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_LmJ9_-IEEeOjUNvXUJp2WQ" client="_LmJ9_eIEEeOjUNvXUJp2WQ">
+              <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDFM6OICEeOjUNvXUJp2WQ"/>
+              <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDFM6OICEeOjUNvXUJp2WQ"/>
+            </interfaceRealization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ-AOIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ-AeIEEeOjUNvXUJp2WQ" name="create" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-AuIEEeOjUNvXUJp2WQ" name="builder">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC6NyOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-A-IEEeOjUNvXUJp2WQ" name="return" type="_LmJWheIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ-BOIEEeOjUNvXUJp2WQ" name="get" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-BeIEEeOjUNvXUJp2WQ" name="key">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-BuIEEeOjUNvXUJp2WQ" name="return" type="_LmJWheIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ-B-IEEeOjUNvXUJp2WQ" name="getAll" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-COIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC4_oOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ-CeIEEeOjUNvXUJp2WQ" name="deleteAll" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ-CuIEEeOjUNvXUJp2WQ" name="getAll" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-C-IEEeOjUNvXUJp2WQ" name="from">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-DOIEEeOjUNvXUJp2WQ" name="to">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-DeIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC4_oOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ-DuIEEeOjUNvXUJp2WQ" name="getByMediaType" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-D-IEEeOjUNvXUJp2WQ" name="mediaType">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jDD-w-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-EOIEEeOjUNvXUJp2WQ" name="from">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-EeIEEeOjUNvXUJp2WQ" name="to">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-EuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC4_oOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ-E-IEEeOjUNvXUJp2WQ" name="getByTag" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-FOIEEeOjUNvXUJp2WQ" name="tag">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jDEl0OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-FeIEEeOjUNvXUJp2WQ" name="from">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-FuIEEeOjUNvXUJp2WQ" name="to">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-F-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC4_oOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ-GOIEEeOjUNvXUJp2WQ" name="createNewBuilder" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-GeIEEeOjUNvXUJp2WQ" name="return" type="_LmJW9uIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ-GuIEEeOjUNvXUJp2WQ" name="createNewBuilder" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-G-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC6NyOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ-HOIEEeOjUNvXUJp2WQ" name="createNewBuilder" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-HeIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_GSuICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ-HuIEEeOjUNvXUJp2WQ" name="get" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-H-IEEeOjUNvXUJp2WQ" name="arg0">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-IOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LmJ-IeIEEeOjUNvXUJp2WQ" name="create" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-IuIEEeOjUNvXUJp2WQ" name="arg0">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC6NyOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LmJ-I-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_zqMi8uH9EeOjUNvXUJp2WQ" name="common">
+      <packagedElement xmi:type="uml:Package" xmi:id="_zqMi9eH9EeOjUNvXUJp2WQ" name="domain">
+        <packagedElement xmi:type="uml:Package" xmi:id="_zqMi9uH9EeOjUNvXUJp2WQ" name="api">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_zqMi9-H9EeOjUNvXUJp2WQ" name="Builder" isAbstract="true"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_zqMi-OH9EeOjUNvXUJp2WQ" name="repository">
+        <packagedElement xmi:type="uml:Package" xmi:id="_zqMi-eH9EeOjUNvXUJp2WQ" name="api">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_zqMi-uH9EeOjUNvXUJp2WQ" name="ObjectRepository" isAbstract="true"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_GK_8YOIEEeOjUNvXUJp2WQ" name="app">
+      <packagedElement xmi:type="uml:Package" xmi:id="_GK_8YeIEEeOjUNvXUJp2WQ" name="http">
+        <packagedElement xmi:type="uml:Class" xmi:id="_GK_8YuIEEeOjUNvXUJp2WQ" name="Application">
+          <generalization xmi:type="uml:Generalization" xmi:id="_GK_8Y-IEEeOjUNvXUJp2WQ">
+            <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCmryOICEeOjUNvXUJp2WQ"/>
+          </generalization>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_GK_8ZOIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_GK_8ZeIEEeOjUNvXUJp2WQ" name="ApplicationInitializer">
+          <generalization xmi:type="uml:Generalization" xmi:id="_GK_8ZuIEEeOjUNvXUJp2WQ">
+            <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+          </generalization>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_GK_8Z-IEEeOjUNvXUJp2WQ" client="_GK_8ZeIEEeOjUNvXUJp2WQ">
+            <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jCnS0eICEeOjUNvXUJp2WQ"/>
+            <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jCnS0eICEeOjUNvXUJp2WQ"/>
+          </interfaceRealization>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_GK_8aOIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_GK_8aeIEEeOjUNvXUJp2WQ" name="onStartup" visibility="public">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_GK_8auIEEeOjUNvXUJp2WQ" name="servletContext">
+              <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCnS2eICEeOjUNvXUJp2WQ"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_JEuikOIEEeOjUNvXUJp2WQ" name="sources">
+      <packagedElement xmi:type="uml:Package" xmi:id="_JEuikeIEEeOjUNvXUJp2WQ" name="filesystem">
+        <packagedElement xmi:type="uml:Package" xmi:id="_JEuikuIEEeOjUNvXUJp2WQ" name="local">
+          <packagedElement xmi:type="uml:Class" xmi:id="_JEuik-IEEeOjUNvXUJp2WQ" name="AsynchronousRecursiveDirectoryStream" visibility="package">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEuilOIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JEuileIEEeOjUNvXUJp2WQ" client="_JEuik-IEEeOjUNvXUJp2WQ">
+              <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jCq9MOICEeOjUNvXUJp2WQ"/>
+              <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jCq9MOICEeOjUNvXUJp2WQ"/>
+            </interfaceRealization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuiluIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuil-IEEeOjUNvXUJp2WQ" name="startPath">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCpIA-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuimOIEEeOjUNvXUJp2WQ" name="pattern">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuimeIEEeOjUNvXUJp2WQ" name="iterator" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuimuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jCrkQ-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuim-IEEeOjUNvXUJp2WQ" name="close" visibility="public"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_JEuinOIEEeOjUNvXUJp2WQ" name="FilterBuilder" visibility="package">
+              <generalization xmi:type="uml:Generalization" xmi:id="_JEuineIEEeOjUNvXUJp2WQ">
+                <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </generalization>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuinuIEEeOjUNvXUJp2WQ" name="buildGlobFilter" visibility="public" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuin-IEEeOjUNvXUJp2WQ" name="pattern">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuioOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCog8uICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuioeIEEeOjUNvXUJp2WQ" name="buildRegexFilter" visibility="public" isStatic="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuiouIEEeOjUNvXUJp2WQ" name="pattern">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuio-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCog8uICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+            </nestedClassifier>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_JEuipOIEEeOjUNvXUJp2WQ" name="FunctionVisitor" visibility="package">
+              <generalization xmi:type="uml:Generalization" xmi:id="_JEuipeIEEeOjUNvXUJp2WQ">
+                <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCog9OICEeOjUNvXUJp2WQ"/>
+              </generalization>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuipuIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuip-IEEeOjUNvXUJp2WQ" name="pathFunction">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCpIAuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuiqOIEEeOjUNvXUJp2WQ" name="visitFile" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuiqeIEEeOjUNvXUJp2WQ" name="file">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCpIA-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuiquIEEeOjUNvXUJp2WQ" name="attrs">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCpIBeICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuiq-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCpIBuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuirOIEEeOjUNvXUJp2WQ" name="visitFile" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuireIEEeOjUNvXUJp2WQ" name="arg0">
+                  <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuiruIEEeOjUNvXUJp2WQ" name="arg1">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCpIBeICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuir-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCpIBuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+            </nestedClassifier>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_JEuisOIEEeOjUNvXUJp2WQ" name="DirectoryStreamWrappingContentIterator" visibility="package">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEuiseIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JEuisuIEEeOjUNvXUJp2WQ" client="_JEuisOIEEeOjUNvXUJp2WQ">
+              <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jCrkQ-ICEeOjUNvXUJp2WQ"/>
+              <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jCrkQ-ICEeOjUNvXUJp2WQ"/>
+            </interfaceRealization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuis-IEEeOjUNvXUJp2WQ" name="hasNext" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuitOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="reverse/mediaitems-app.uml#_jCrkRuICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuiteIEEeOjUNvXUJp2WQ" name="next" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuituIEEeOjUNvXUJp2WQ" name="return" type="_JEui_-IEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuit-IEEeOjUNvXUJp2WQ" name="remove" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuiuOIEEeOjUNvXUJp2WQ" name="next" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuiueIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_JEuiuuIEEeOjUNvXUJp2WQ" name="LocalFileSystemContentDescription" visibility="package" isLeaf="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEuiu-IEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JEuivOIEEeOjUNvXUJp2WQ" client="_JEuiuuIEEeOjUNvXUJp2WQ" supplier="_JEui7uIEEeOjUNvXUJp2WQ" contract="_JEui7uIEEeOjUNvXUJp2WQ"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuiveIEEeOjUNvXUJp2WQ" name="fromFile" visibility="public" isStatic="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuivuIEEeOjUNvXUJp2WQ" name="file">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLVOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuiv-IEEeOjUNvXUJp2WQ" name="return" type="_JEui7uIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuiwOIEEeOjUNvXUJp2WQ" name="fromPath" visibility="public" isStatic="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuiweIEEeOjUNvXUJp2WQ" name="path">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCpIA-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuiwuIEEeOjUNvXUJp2WQ" name="return" type="_JEui7uIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuiw-IEEeOjUNvXUJp2WQ" name="getPath" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuixOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuixeIEEeOjUNvXUJp2WQ" name="getProperties" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuixuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLVeICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuix-IEEeOjUNvXUJp2WQ" name="getMimeType" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuiyOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuiyeIEEeOjUNvXUJp2WQ" name="getSize" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuiyuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLVuICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuiy-IEEeOjUNvXUJp2WQ" name="getCreationTime" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuizOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLWeICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuizeIEEeOjUNvXUJp2WQ" name="getModificationTime" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEuizuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLWeICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEuiz-IEEeOjUNvXUJp2WQ" name="getLastAccessTime" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui0OIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLWeICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui0eIEEeOjUNvXUJp2WQ" name="getMediaType" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui0uIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_JEui0-IEEeOjUNvXUJp2WQ" name="LocalFileSystemContentHandle" visibility="package" isLeaf="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEui1OIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JEui1eIEEeOjUNvXUJp2WQ" client="_JEui0-IEEeOjUNvXUJp2WQ" supplier="_JEui_-IEEeOjUNvXUJp2WQ" contract="_JEui_-IEEeOjUNvXUJp2WQ"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui1uIEEeOjUNvXUJp2WQ" name="fromFile" visibility="public" isStatic="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui1-IEEeOjUNvXUJp2WQ" name="file">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLVOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui2OIEEeOjUNvXUJp2WQ" name="return" type="_JEui_-IEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui2eIEEeOjUNvXUJp2WQ" name="fromPath" visibility="public" isStatic="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui2uIEEeOjUNvXUJp2WQ" name="next">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCpIA-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui2-IEEeOjUNvXUJp2WQ" name="return" type="_JEui_-IEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui3OIEEeOjUNvXUJp2WQ" name="getLocationIdentifier" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui3eIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsyZOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_JEui3uIEEeOjUNvXUJp2WQ" name="LocalFileSystemContentSource">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEui3-IEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JEui4OIEEeOjUNvXUJp2WQ" client="_JEui3uIEEeOjUNvXUJp2WQ" supplier="_JEujAuIEEeOjUNvXUJp2WQ" contract="_JEujAuIEEeOjUNvXUJp2WQ"/>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JEui4eIEEeOjUNvXUJp2WQ" client="_JEui3uIEEeOjUNvXUJp2WQ" supplier="_JEujCOIEEeOjUNvXUJp2WQ" contract="_JEujCOIEEeOjUNvXUJp2WQ"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui4uIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui4-IEEeOjUNvXUJp2WQ" name="uri">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsyZOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui5OIEEeOjUNvXUJp2WQ" name="list" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui5eIEEeOjUNvXUJp2WQ" name="return" type="_JEujD-IEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui5uIEEeOjUNvXUJp2WQ" name="supportsScheme" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui5-IEEeOjUNvXUJp2WQ" name="scheme">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui6OIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="reverse/mediaitems-app.uml#_jCrkRuICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui6eIEEeOjUNvXUJp2WQ" name="describe" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui6uIEEeOjUNvXUJp2WQ" name="handle" type="_JEui_-IEEeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui6-IEEeOjUNvXUJp2WQ" name="return" type="_JEui7uIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_JEui7OIEEeOjUNvXUJp2WQ" name="api">
+        <packagedElement xmi:type="uml:Package" xmi:id="_JEui7eIEEeOjUNvXUJp2WQ" name="io">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_JEui7uIEEeOjUNvXUJp2WQ" name="ContentDescription" isAbstract="true">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui7-IEEeOjUNvXUJp2WQ" name="getPath" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui8OIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui8eIEEeOjUNvXUJp2WQ" name="getMimeType" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui8uIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui8-IEEeOjUNvXUJp2WQ" name="getMediaType" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui9OIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui9eIEEeOjUNvXUJp2WQ" name="getSize" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui9uIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLVuICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui9-IEEeOjUNvXUJp2WQ" name="getCreationTime" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui-OIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLWeICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui-eIEEeOjUNvXUJp2WQ" name="getModificationTime" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui-uIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLWeICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui--IEEeOjUNvXUJp2WQ" name="getLastAccessTime" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui_OIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLWeICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEui_eIEEeOjUNvXUJp2WQ" name="getProperties" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEui_uIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsLVeICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_JEui_-IEEeOjUNvXUJp2WQ" name="ContentHandle" isAbstract="true">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujAOIEEeOjUNvXUJp2WQ" name="getLocationIdentifier" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujAeIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsyZOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_JEujAuIEEeOjUNvXUJp2WQ" name="ContentBrowser" isAbstract="true">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujA-IEEeOjUNvXUJp2WQ" name="supportsScheme" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujBOIEEeOjUNvXUJp2WQ" name="arg0">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujBeIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="reverse/mediaitems-app.uml#_jCrkRuICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujBuIEEeOjUNvXUJp2WQ" name="list" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujB-IEEeOjUNvXUJp2WQ" name="return" type="_JEujD-IEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_JEujCOIEEeOjUNvXUJp2WQ" name="ContentReader" isAbstract="true">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujCeIEEeOjUNvXUJp2WQ" name="supportsScheme" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujCuIEEeOjUNvXUJp2WQ" name="arg0">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujC-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="reverse/mediaitems-app.uml#_jCrkRuICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujDOIEEeOjUNvXUJp2WQ" name="describe" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujDeIEEeOjUNvXUJp2WQ" name="arg0" type="_JEui_-IEEeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujDuIEEeOjUNvXUJp2WQ" name="return" type="_JEui7uIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_JEujD-IEEeOjUNvXUJp2WQ" name="ContentIterable" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEujEOIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC4_oOICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujEeIEEeOjUNvXUJp2WQ" name="iterator" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujEuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jCrkQ-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujE-IEEeOjUNvXUJp2WQ" name="close" visibility="public" isAbstract="true"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_JEujFOIEEeOjUNvXUJp2WQ" name="scan">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_JEujFeIEEeOjUNvXUJp2WQ" name="SourceScanner" isAbstract="true">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujFuIEEeOjUNvXUJp2WQ" name="registerScanEventHandler" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujF-IEEeOjUNvXUJp2WQ" name="arg0" type="_JEujIeIEEeOjUNvXUJp2WQ"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujGOIEEeOjUNvXUJp2WQ" name="scan" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujGeIEEeOjUNvXUJp2WQ" name="arg0">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsyZOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_JEujGuIEEeOjUNvXUJp2WQ" name="ContentDiscoveredEvent" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEujG-IEEeOjUNvXUJp2WQ" general="_JEujHuIEEeOjUNvXUJp2WQ"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujHOIEEeOjUNvXUJp2WQ" name="getContentHandle" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujHeIEEeOjUNvXUJp2WQ" name="return" type="_JEui_-IEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_JEujHuIEEeOjUNvXUJp2WQ" name="ScanEvent" isAbstract="true"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_JEujH-IEEeOjUNvXUJp2WQ" name="ScanCompleteEvent" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEujIOIEEeOjUNvXUJp2WQ" general="_JEujHuIEEeOjUNvXUJp2WQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_JEujIeIEEeOjUNvXUJp2WQ" name="ScanEventHandler" isAbstract="true">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujIuIEEeOjUNvXUJp2WQ" name="handleEvent" visibility="public" isAbstract="true">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujI-IEEeOjUNvXUJp2WQ" name="arg0" type="_JEujHuIEEeOjUNvXUJp2WQ"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_JEujJOIEEeOjUNvXUJp2WQ" name="ScanFailedEvent" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEujJeIEEeOjUNvXUJp2WQ" general="_JEujHuIEEeOjUNvXUJp2WQ"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_JEujJuIEEeOjUNvXUJp2WQ" name="ScanStartedEvent" isAbstract="true">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEujJ-IEEeOjUNvXUJp2WQ" general="_JEujHuIEEeOjUNvXUJp2WQ"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_JEujKOIEEeOjUNvXUJp2WQ" name="error">
+          <packagedElement xmi:type="uml:Class" xmi:id="_JEujKeIEEeOjUNvXUJp2WQ" name="ContentAccessException">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEujKuIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jC1VQOICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujK-IEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujLOIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujLeIEEeOjUNvXUJp2WQ" name="message">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujLuIEEeOjUNvXUJp2WQ" name="cause">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC0uNeICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujL-IEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujMOIEEeOjUNvXUJp2WQ" name="message">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujMeIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujMuIEEeOjUNvXUJp2WQ" name="cause">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC0uNeICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_JEujM-IEEeOjUNvXUJp2WQ" name="RuntimeContentAccessException">
+              <generalization xmi:type="uml:Generalization" xmi:id="_JEujNOIEEeOjUNvXUJp2WQ">
+                <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jC0uM-ICEeOjUNvXUJp2WQ"/>
+              </generalization>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujNeIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujNuIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujN-IEEeOjUNvXUJp2WQ" name="message">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujOOIEEeOjUNvXUJp2WQ" name="cause">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC0uNeICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujOeIEEeOjUNvXUJp2WQ" name="enableSuppression">
+                  <type xmi:type="uml:PrimitiveType" href="reverse/mediaitems-app.uml#_jCrkRuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujOuIEEeOjUNvXUJp2WQ" name="writableStackTrace">
+                  <type xmi:type="uml:PrimitiveType" href="reverse/mediaitems-app.uml#_jCrkRuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujO-IEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujPOIEEeOjUNvXUJp2WQ" name="message">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujPeIEEeOjUNvXUJp2WQ" name="cause">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC0uNeICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujPuIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujP-IEEeOjUNvXUJp2WQ" name="message">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujQOIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujQeIEEeOjUNvXUJp2WQ" name="cause">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC0uNeICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+            </nestedClassifier>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_JEujQuIEEeOjUNvXUJp2WQ" name="AbstractSourceScanner" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_JEujQ-IEEeOjUNvXUJp2WQ">
+          <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+        </generalization>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JEujROIEEeOjUNvXUJp2WQ" client="_JEujQuIEEeOjUNvXUJp2WQ" supplier="_JEujFeIEEeOjUNvXUJp2WQ" contract="_JEujFeIEEeOjUNvXUJp2WQ"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujReIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujRuIEEeOjUNvXUJp2WQ" name="registerScanEventHandler" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujR-IEEeOjUNvXUJp2WQ" name="scanEventHandler" type="_JEujIeIEEeOjUNvXUJp2WQ"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujSOIEEeOjUNvXUJp2WQ" name="scan" visibility="public">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujSeIEEeOjUNvXUJp2WQ" name="uri">
+            <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsyZOICEeOjUNvXUJp2WQ"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujSuIEEeOjUNvXUJp2WQ" name="getContentBrowser" visibility="protected" isAbstract="true">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujS-IEEeOjUNvXUJp2WQ" name="arg0">
+            <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsyZOICEeOjUNvXUJp2WQ"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujTOIEEeOjUNvXUJp2WQ" name="return" type="_JEujAuIEEeOjUNvXUJp2WQ" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_JEujTeIEEeOjUNvXUJp2WQ" name="application">
+      <packagedElement xmi:type="uml:Package" xmi:id="_JEujTuIEEeOjUNvXUJp2WQ" name="metadata">
+        <packagedElement xmi:type="uml:Package" xmi:id="_JEujT-IEEeOjUNvXUJp2WQ" name="controller">
+          <packagedElement xmi:type="uml:Class" xmi:id="_JEujUOIEEeOjUNvXUJp2WQ" name="MediaItemRestController">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEujUeIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujUuIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujU-IEEeOjUNvXUJp2WQ" name="listMediaType" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujVOIEEeOjUNvXUJp2WQ" name="mediaTypeKey">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujVeIEEeOjUNvXUJp2WQ" name="from">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujVuIEEeOjUNvXUJp2WQ" name="to">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujV-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC602OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujWOIEEeOjUNvXUJp2WQ" name="list" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujWeIEEeOjUNvXUJp2WQ" name="from">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujWuIEEeOjUNvXUJp2WQ" name="to">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujW-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC602OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEujXOIEEeOjUNvXUJp2WQ" name="get" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujXeIEEeOjUNvXUJp2WQ" name="key">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEujXuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC_tU-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_JEujX-IEEeOjUNvXUJp2WQ" name="sources">
+        <packagedElement xmi:type="uml:Package" xmi:id="_JEujYOIEEeOjUNvXUJp2WQ" name="controller">
+          <packagedElement xmi:type="uml:Class" xmi:id="_JEvJoOIEEeOjUNvXUJp2WQ" name="ContentSourceController">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEvJoeIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJouIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJo-IEEeOjUNvXUJp2WQ" name="startScan" visibility="public"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_JEvJpOIEEeOjUNvXUJp2WQ" name="ContentStreamingController">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEvJpeIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJpuIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJp-IEEeOjUNvXUJp2WQ" name="streamContent" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJqOIEEeOjUNvXUJp2WQ" name="mediaitemKey">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJqeIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC7b4-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_JEvJquIEEeOjUNvXUJp2WQ" name="integration">
+          <packagedElement xmi:type="uml:Class" xmi:id="_JEvJq-IEEeOjUNvXUJp2WQ" name="ContentDiscoveryEndpoint">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEvJrOIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jC8C8uICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJreIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJruIEEeOjUNvXUJp2WQ" name="startScan" visibility="public"/>
+            <nestedClassifier xmi:type="uml:Class" xmi:id="_JEvJr-IEEeOjUNvXUJp2WQ" name="ContentDiscoveredMessageContent">
+              <generalization xmi:type="uml:Generalization" xmi:id="_JEvJsOIEEeOjUNvXUJp2WQ">
+                <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </generalization>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJseIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJsuIEEeOjUNvXUJp2WQ" name="contentHandle" type="_JEui_-IEEeOjUNvXUJp2WQ"/>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJs-IEEeOjUNvXUJp2WQ" name="contentSource" type="_JEvJ7OIEEeOjUNvXUJp2WQ"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJtOIEEeOjUNvXUJp2WQ" name="getContentHandle" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJteIEEeOjUNvXUJp2WQ" name="return" type="_JEui_-IEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJtuIEEeOjUNvXUJp2WQ" name="getContentSource" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJt-IEEeOjUNvXUJp2WQ" name="return" type="_JEvJ7OIEEeOjUNvXUJp2WQ" direction="return"/>
+              </ownedOperation>
+            </nestedClassifier>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_JEvJuOIEEeOjUNvXUJp2WQ" name="ContentHandleToContentDescriptionTransformer">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEvJueIEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJuuIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJu-IEEeOjUNvXUJp2WQ" name="transform" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJvOIEEeOjUNvXUJp2WQ" name="contentHandle" type="_JEui_-IEEeOjUNvXUJp2WQ"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJveIEEeOjUNvXUJp2WQ" name="return" type="_JEui7uIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_JEvJvuIEEeOjUNvXUJp2WQ" name="StaticContentSourceRepo">
+            <generalization xmi:type="uml:Generalization" xmi:id="_JEvJv-IEEeOjUNvXUJp2WQ">
+              <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+            </generalization>
+            <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JEvJwOIEEeOjUNvXUJp2WQ" client="_JEvJvuIEEeOjUNvXUJp2WQ" supplier="_JEvKGOIEEeOjUNvXUJp2WQ" contract="_JEvKGOIEEeOjUNvXUJp2WQ"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJweIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJwuIEEeOjUNvXUJp2WQ" name="populate" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJw-IEEeOjUNvXUJp2WQ" name="create" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJxOIEEeOjUNvXUJp2WQ" name="builder">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC6NyOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJxeIEEeOjUNvXUJp2WQ" name="return" type="_JEvJ7OIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJxuIEEeOjUNvXUJp2WQ" name="get" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJx-IEEeOjUNvXUJp2WQ" name="key">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJyOIEEeOjUNvXUJp2WQ" name="return" type="_JEvJ7OIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJyeIEEeOjUNvXUJp2WQ" name="getAll" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJyuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC4_oOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJy-IEEeOjUNvXUJp2WQ" name="getAll" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJzOIEEeOjUNvXUJp2WQ" name="from">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJzeIEEeOjUNvXUJp2WQ" name="to">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC600uICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJzuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC4_oOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJz-IEEeOjUNvXUJp2WQ" name="deleteAll" visibility="public"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJ0OIEEeOjUNvXUJp2WQ" name="createNewBuilder" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ0eIEEeOjUNvXUJp2WQ" name="return" type="_JEvJ7eIEEeOjUNvXUJp2WQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJ0uIEEeOjUNvXUJp2WQ" name="createNewBuilder" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ0-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC6NyOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJ1OIEEeOjUNvXUJp2WQ" name="get" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ1eIEEeOjUNvXUJp2WQ" name="arg0">
+                <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ1uIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJ1-IEEeOjUNvXUJp2WQ" name="create" visibility="public">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ2OIEEeOjUNvXUJp2WQ" name="arg0">
+                <type xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC6NyOICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ2eIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_JEvJ2uIEEeOjUNvXUJp2WQ" name="util">
+        <packagedElement xmi:type="uml:Package" xmi:id="_JEvJ2-IEEeOjUNvXUJp2WQ" name="http">
+          <packagedElement xmi:type="uml:Package" xmi:id="_JEvJ3OIEEeOjUNvXUJp2WQ" name="filter">
+            <packagedElement xmi:type="uml:Class" xmi:id="_JEvJ3eIEEeOjUNvXUJp2WQ" name="SimpleCORSFilter">
+              <generalization xmi:type="uml:Generalization" xmi:id="_JEvJ3uIEEeOjUNvXUJp2WQ">
+                <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+              </generalization>
+              <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JEvJ3-IEEeOjUNvXUJp2WQ" client="_JEvJ3eIEEeOjUNvXUJp2WQ">
+                <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC-fNeICEeOjUNvXUJp2WQ"/>
+                <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC-fNeICEeOjUNvXUJp2WQ"/>
+              </interfaceRealization>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJ4OIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJ4eIEEeOjUNvXUJp2WQ" name="doFilter" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ4uIEEeOjUNvXUJp2WQ" name="req">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC_GQuICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ4-IEEeOjUNvXUJp2WQ" name="res">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC_GQ-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ5OIEEeOjUNvXUJp2WQ" name="chain">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC_GROICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJ5eIEEeOjUNvXUJp2WQ" name="init" visibility="public">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ5uIEEeOjUNvXUJp2WQ" name="filterConfig">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jC_GReICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJ5-IEEeOjUNvXUJp2WQ" name="destroy" visibility="public"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_JEvJ6OIEEeOjUNvXUJp2WQ" name="configuration">
+      <packagedElement xmi:type="uml:Package" xmi:id="_JEvJ6eIEEeOjUNvXUJp2WQ" name="sources">
+        <packagedElement xmi:type="uml:Package" xmi:id="_JEvJ6uIEEeOjUNvXUJp2WQ" name="api">
+          <packagedElement xmi:type="uml:Package" xmi:id="_JEvJ6-IEEeOjUNvXUJp2WQ" name="model">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_JEvJ7OIEEeOjUNvXUJp2WQ" name="ContentSource" isAbstract="true">
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_JEvJ7eIEEeOjUNvXUJp2WQ" name="ContentSourceBuilder">
+                <generalization xmi:type="uml:Generalization" xmi:id="_JEvJ7uIEEeOjUNvXUJp2WQ">
+                  <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+                </generalization>
+                <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JEvJ7-IEEeOjUNvXUJp2WQ" client="_JEvJ7eIEEeOjUNvXUJp2WQ">
+                  <supplier xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC6NyOICEeOjUNvXUJp2WQ"/>
+                  <contract xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC6NyOICEeOjUNvXUJp2WQ"/>
+                </interfaceRealization>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJ8OIEEeOjUNvXUJp2WQ" name="&lt;init>" visibility="public"/>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJ8eIEEeOjUNvXUJp2WQ" name="setName" visibility="public">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ8uIEEeOjUNvXUJp2WQ" name="name">
+                    <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ8-IEEeOjUNvXUJp2WQ" name="return" type="_JEvJ7eIEEeOjUNvXUJp2WQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJ9OIEEeOjUNvXUJp2WQ" name="setUrl" visibility="public">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ9eIEEeOjUNvXUJp2WQ" name="url">
+                    <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsyZOICEeOjUNvXUJp2WQ"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ9uIEEeOjUNvXUJp2WQ" name="return" type="_JEvJ7eIEEeOjUNvXUJp2WQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJ9-IEEeOjUNvXUJp2WQ" name="build" visibility="public">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ-OIEEeOjUNvXUJp2WQ" name="return" type="_JEvJ7OIEEeOjUNvXUJp2WQ" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJ-eIEEeOjUNvXUJp2WQ" name="setKey" visibility="public">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ-uIEEeOjUNvXUJp2WQ" name="key">
+                    <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvJ--IEEeOjUNvXUJp2WQ" name="build" visibility="public">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvJ_OIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                    <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+                  </ownedParameter>
+                </ownedOperation>
+              </nestedClassifier>
+              <nestedClassifier xmi:type="uml:Class" xmi:id="_JEvJ_eIEEeOjUNvXUJp2WQ" name="ContentSourceImpl">
+                <generalization xmi:type="uml:Generalization" xmi:id="_JEvJ_uIEEeOjUNvXUJp2WQ">
+                  <general xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+                </generalization>
+                <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_JEvJ_-IEEeOjUNvXUJp2WQ" client="_JEvJ_eIEEeOjUNvXUJp2WQ" supplier="_JEvJ7OIEEeOjUNvXUJp2WQ" contract="_JEvJ7OIEEeOjUNvXUJp2WQ"/>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvKAOIEEeOjUNvXUJp2WQ" name="getId" visibility="public">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvKAeIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                    <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvKAuIEEeOjUNvXUJp2WQ" name="getName" visibility="public">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvKA-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                    <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvKBOIEEeOjUNvXUJp2WQ" name="setName" visibility="public">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvKBeIEEeOjUNvXUJp2WQ" name="name">
+                    <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvKBuIEEeOjUNvXUJp2WQ" name="hashCode" visibility="public">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvKB-IEEeOjUNvXUJp2WQ" name="return" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="reverse/mediaitems-app.uml#_jDI3QuICEeOjUNvXUJp2WQ"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvKCOIEEeOjUNvXUJp2WQ" name="equals" visibility="public">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvKCeIEEeOjUNvXUJp2WQ" name="obj">
+                    <type xmi:type="uml:Class" href="reverse/mediaitems-app.uml#_jCnS1OICEeOjUNvXUJp2WQ"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvKCuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                    <type xmi:type="uml:PrimitiveType" href="reverse/mediaitems-app.uml#_jCrkRuICEeOjUNvXUJp2WQ"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvKC-IEEeOjUNvXUJp2WQ" name="toString" visibility="public">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvKDOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                    <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                  </ownedParameter>
+                </ownedOperation>
+                <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvKDeIEEeOjUNvXUJp2WQ" name="getUrl" visibility="public">
+                  <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvKDuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                    <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsyZOICEeOjUNvXUJp2WQ"/>
+                  </ownedParameter>
+                </ownedOperation>
+              </nestedClassifier>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvKD-IEEeOjUNvXUJp2WQ" name="getId" visibility="public" isAbstract="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvKEOIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvKEeIEEeOjUNvXUJp2WQ" name="getName" visibility="public" isAbstract="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvKEuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvKE-IEEeOjUNvXUJp2WQ" name="setName" visibility="public" isAbstract="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvKFOIEEeOjUNvXUJp2WQ" name="arg0">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCn55-ICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+              <ownedOperation xmi:type="uml:Operation" xmi:id="_JEvKFeIEEeOjUNvXUJp2WQ" name="getUrl" visibility="public" isAbstract="true">
+                <ownedParameter xmi:type="uml:Parameter" xmi:id="_JEvKFuIEEeOjUNvXUJp2WQ" name="return" direction="return">
+                  <type xmi:type="uml:DataType" href="reverse/mediaitems-app.uml#_jCsyZOICEeOjUNvXUJp2WQ"/>
+                </ownedParameter>
+              </ownedOperation>
+            </packagedElement>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_JEvKF-IEEeOjUNvXUJp2WQ" name="repository">
+            <packagedElement xmi:type="uml:Interface" xmi:id="_JEvKGOIEEeOjUNvXUJp2WQ" name="ContentSourceRepository" isAbstract="true">
+              <generalization xmi:type="uml:Generalization" xmi:id="_JEvKGeIEEeOjUNvXUJp2WQ">
+                <general xmi:type="uml:Interface" href="reverse/mediaitems-app.uml#_jC600eICEeOjUNvXUJp2WQ"/>
+              </generalization>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_zqNwgOH9EeOjUNvXUJp2WQ" name="java">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zqNwgeH9EeOjUNvXUJp2WQ" source="Jar2UML">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zqNwguH9EeOjUNvXUJp2WQ" key="inferred" value="true"/>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Package" xmi:id="_zqNwg-H9EeOjUNvXUJp2WQ" name="lang">
+      <packagedElement xmi:type="uml:Class" xmi:id="_zqNwhOH9EeOjUNvXUJp2WQ" name="Object" isAbstract="true"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zqNwheH9EeOjUNvXUJp2WQ" name="String" isLeaf="true" isAbstract="true"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zqNwhuH9EeOjUNvXUJp2WQ" name="Long" isLeaf="true" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_zqNwh-H9EeOjUNvXUJp2WQ" name="Enum" isAbstract="true"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zqNwiOH9EeOjUNvXUJp2WQ" name="Iterable" isLeaf="true" isAbstract="true"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zqNwieH9EeOjUNvXUJp2WQ" name="Integer" isLeaf="true" isAbstract="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_zqNwiuH9EeOjUNvXUJp2WQ" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_zqNwi-H9EeOjUNvXUJp2WQ" name="List" isLeaf="true" isAbstract="true"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_zqNwjOH9EeOjUNvXUJp2WQ" name="org">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zqNwjeH9EeOjUNvXUJp2WQ" source="Jar2UML">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zqNwjuH9EeOjUNvXUJp2WQ" key="inferred" value="true"/>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Package" xmi:id="_zqNwj-H9EeOjUNvXUJp2WQ" name="joda">
+      <packagedElement xmi:type="uml:Package" xmi:id="_zqNwkOH9EeOjUNvXUJp2WQ" name="time">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_zqNwkeH9EeOjUNvXUJp2WQ" name="Duration" isLeaf="true" isAbstract="true"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_zqNwkuH9EeOjUNvXUJp2WQ" name="LocalDateTime" isLeaf="true" isAbstract="true"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_wZLVMOILEeOjUNvXUJp2WQ" name="Component0"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_U-bTcOIPEeOjUNvXUJp2WQ" name="mediaitems-http"/>
 </uml:Model>
