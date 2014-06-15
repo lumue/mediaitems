@@ -3,6 +3,6 @@
  * gradle is only used to setup the eclipse project 
  */
 
- eclipse{
-	 project.name=mediaitems-model
+eclipse{
+	 project.name='mediaitems-model'
  }
