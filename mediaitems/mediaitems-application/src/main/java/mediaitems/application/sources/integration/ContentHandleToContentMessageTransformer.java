@@ -11,7 +11,7 @@ import mediaitems.sources.filesystem.local.LocalFileSystemContentSource;
 import org.springframework.integration.annotation.Transformer;
 import org.springframework.stereotype.Component;
 @Component("contentHandleToContentDescription")
-public class ContentHandleToContentDescriptionTransformer {
+public class ContentHandleToContentMessageTransformer {
 
 	ContentReader contentReader = new LocalFileSystemContentSource(
 			URI.create("file:///"));

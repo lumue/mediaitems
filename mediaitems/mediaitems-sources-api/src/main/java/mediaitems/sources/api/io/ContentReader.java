@@ -7,4 +7,6 @@ public interface ContentReader {
 
 	public ContentDescription describe(ContentHandle handle)
 			throws ContentAccessException;
+
+	public String checksum(ContentHandle handle) throws ContentAccessException;
 }

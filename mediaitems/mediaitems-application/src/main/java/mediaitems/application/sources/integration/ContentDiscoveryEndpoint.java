@@ -6,7 +6,6 @@ import mediaitems.configuration.sources.api.model.ContentSource;
 import mediaitems.configuration.sources.api.repository.ContentSourceRepository;
 import mediaitems.sources.AbstractSourceScanner;
 import mediaitems.sources.api.io.ContentBrowser;
-import mediaitems.sources.api.io.ContentHandle;
 import mediaitems.sources.api.scan.ContentDiscoveredEvent;
 import mediaitems.sources.api.scan.ScanEvent;
 import mediaitems.sources.api.scan.ScanEventHandler;
@@ -33,27 +32,6 @@ public class ContentDiscoveryEndpoint extends MessageProducerSupport {
 
 	@Autowired(required = true)
 	private ContentSourceRepository contentSourceRepository;
-
-	public static class ContentDiscoveredMessageContent {
-		private final ContentHandle contentHandle;
-		private final ContentSource contentSource;
-
-		public ContentDiscoveredMessageContent(ContentHandle contentHandle,
-				ContentSource contentSource) {
-			super();
-			this.contentHandle = contentHandle;
-			this.contentSource = contentSource;
-		}
-
-		public ContentHandle getContentHandle() {
-			return contentHandle;
-		}
-
-		public ContentSource getContentSource() {
-			return contentSource;
-		}
-	}
-
 
 	public void startScan() {
 		Iterable<? extends ContentSource> contentSources = contentSourceRepository

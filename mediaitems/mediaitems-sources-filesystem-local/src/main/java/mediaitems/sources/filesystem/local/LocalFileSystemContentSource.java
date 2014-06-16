@@ -19,6 +19,8 @@ public class LocalFileSystemContentSource implements ContentBrowser,
 
 	private final Path path;
 
+	private final FileChecksumBuilder checksumBuilder = new FileChecksumBuilder();
+
 	public LocalFileSystemContentSource(URI uri) {
 		this.path = FileSystems.getDefault().getPath(uri.getPath());
 	}
@@ -68,6 +70,16 @@ public class LocalFileSystemContentSource implements ContentBrowser,
 			return LocalFileSystemContentDescription.fromPath(FileSystems
 					.getDefault().getPath(
 							handle.getLocationIdentifier().getPath()));
+		} catch (IOException e) {
+			throw new ContentAccessException(e);
+		}
+	}
+
+	@Override
+	public String checksum(ContentHandle handle) throws ContentAccessException {
+		try {
+		return this.checksumBuilder.buildChecksum(FileSystems.getDefault()
+				.getPath(handle.getLocationIdentifier().getPath()));
 		} catch (IOException e) {
 			throw new ContentAccessException(e);
 		}

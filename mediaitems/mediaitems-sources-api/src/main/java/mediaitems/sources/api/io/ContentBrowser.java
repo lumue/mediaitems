@@ -6,4 +6,5 @@ public interface ContentBrowser {
 	public boolean supportsScheme(String scheme);
 
 	public ContentIterable<? extends ContentHandle> list();
+
 }
