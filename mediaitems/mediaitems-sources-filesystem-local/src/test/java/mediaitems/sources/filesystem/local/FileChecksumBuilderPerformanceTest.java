@@ -26,7 +26,7 @@ public class FileChecksumBuilderPerformanceTest {
 
 	@Before
 	public void setup() {
-		this.checksumBuilder = new FileChecksumBuilder("MD5");
+		this.checksumBuilder = new FileChecksumBuilder("SHA-1");
 	}
 
 	@Test
