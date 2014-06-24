@@ -9,56 +9,66 @@
 <!-- by monorom -->
 </head>
 
-<body>
+<body> 
 	<div id="container">
-
+ 
 		<header>
 			<h2>mediaitems</h2>
+			
 		</header>
-
+ 
 		<nav>
 			<ul>
-				<li><a href="#"><img src="icons/folder.png" height="32px"
-						style="vertical-align: middle;" />&nbsp;items</a></li>
-				<li style="float: right;"><a href="#"><img
-						src="icons/gear.png" height="32px" style="vertical-align: middle;" />&nbsp;manage</a></li>
+				<li><a href="#"><img src="icons/folder_transparent.png" height="32px"
+						style="vertical-align: middle;" title="content locations" /></a></li>
+				<li><a href="#"><img src="icons/video.png" height="32px"
+						style="vertical-align: middle;" title="video"/></a></li>
+				<li><a href="#"><img src="icons/music_transparent.png" height="32px"
+						style="vertical-align: middle;" title="music"/></a></li>
+						<li><a href="#"><img src="icons/document_transparent.png" height="32px"
+            style="vertical-align: middle;" title="documents"/></a></li>
+            <li><a href="#"><img src="icons/image_transparent.png" height="32px"
+            style="vertical-align: middle;" title="pictures" /></a></li>
+				<li style="float: right;"><input type="text" /><a href="#" style="padding-left:10px;padding-right:10px;"><img
+						src="icons/magnifyingglass_transparent.png" height="32px" style="vertical-align: middle;" title="search" /></a></li>
 			</ul>
 		</nav>
 
 		<section id="content">
 			<article>
-				<div id="content_head">
-					<h1>
-						<img src="icons/folder.png" height="64px"
-							style="vertical-align: middle;" />&nbsp;items
-					</h1>
-				</div>
+				
 				<div id="result">
 					<div id="pager">
 						<ul style="float: right;">
-							<li id="result_pager_back" style="display: inline;"><a href="#"><img
-									src="icons/arrow-left.png" height="32px" /></a>&nbsp;</li>
-							<li id="result_pager_forward" style="display: inline;"><a href="#"><img
-								src="icons/arrow-right.png" height="32px" /></a></li>
+							<li id="result_pager_back" style="display: inline;" alt="page back"><a
+								href="#"><img src="icons/arrow-left.png" height="32px" /></a>&nbsp;</li>
+							<li id="result_pager_forward" style="display: inline;"><a
+								href="#"><img src="icons/arrow-right.png" height="32px" alt="page forward"/></a></li>
 						</ul>
 					</div>
 					<br />
-					<table style="width: 100%">
+					<table style="width: 100%"> 
 						<thead>
 							<tr>
+							  <td style="width:20px;"><input id="result_page_selected" type="checkbox"  style="width:10px;margin:3px;"/></td>
 								<td>&nbsp;name</td>
 								<td>&nbsp;type</td>
 							</tr>
 						</thead>
 						<tfoot>
 							<tr>
-								<td colspan="2">42 items</td>
+								<td colspan="3">42 items</td> 
 							</tr>
 						</tfoot>
 						<tbody id="result_body" style="color: #4F5D73">
 							<tr>
-								<td id="result_item_name">Charly und die Schokoladenfabrik</td>
-								<td id="result_item_type">video</td>
+							  <td style="width:20px;"><input id="result_item_selected" type="checkbox" style="width:10px;margin:3px;" /></td>
+							  <td>
+							  <span id="result_item_name">
+							  	Charly und die Schokoladenfabrik
+							  </span>
+							  </td>
+								<td ><span id="result_item_type">video</span></td>
 							</tr>
 						</tbody>
 					</table>
@@ -72,9 +82,17 @@
 		</aside>
 
 		<footer>
-			<p>version 0.1</p>
-		</footer>
-	</div>
+		  <span>
+				<div style="float:left;">version 0.1</div>
+				<div style="float:right;">
+				<ul>
+				  <li><a href="#"><img src="icons/settings_transparent.png" height="50px"  title="settings"/></a></li>
+	        <li><a href="#"><img src="icons/browser.png" height="50px" title="browser"/></a></li>
+	     </ul>
+	     </div>
+     </span>  
+		</footer> 
+	</div> 
 	<script type="application/dart" src="mediaitems_webclient.dart"></script>
 	<script src="packages/browser/dart.js"></script>
 

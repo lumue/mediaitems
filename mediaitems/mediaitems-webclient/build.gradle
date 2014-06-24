@@ -6,13 +6,24 @@ eclipse.project {
 	buildCommand 'com.google.dart.tools.core.dartBuilder'
 }
 
+
 //dart tasks
 task build(type:Exec) {
 	commandLine 'pub','build','web'
+	doLast{
+	copy{
+		from 'web'
+		into 'build/web'
+		include '**/*.dart'
+	}
+	}
 }
+
+
 
 task pubGet << {
 	commandLine 'pub','get'
 }
+
 
 
