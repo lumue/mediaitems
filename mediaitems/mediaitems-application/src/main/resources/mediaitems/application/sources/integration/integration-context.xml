@@ -9,21 +9,28 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
 		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-4.0.xsd">
 
+	<int:poller default="true" fixed-delay="50"/>
+	
 	<bean id="contentDiscoveryEndpoint" class="mediaitems.application.sources.integration.ContentDiscoveryEndpoint">
-	  <property name="outputChannel" ref="content-source-scanner-in" />
+	  <property name="outputChannel" ref="contenthandle-input-channel" />
 	</bean>
+	
+	 <int:channel id="contenthandle-input-channel" datatype="mediaitems.application.sources.integration.ContentDiscoveredMessageContent">
+    <int:queue />
+  </int:channel>
+	
 	
 	<int:transformer ref="contentHandleToContentDescription" 
 	                 input-channel="contenthandle-input-channel"
 	                 output-channel="contentdescription-input-channel"/>
 	
+	
+	
 	<int:channel id="contentdescription-input-channel" datatype="mediaitems.sources.api.io.ContentDescription">
     <int:queue />
   </int:channel>
 	
-	<int:channel id="contenthandle-input-channel" datatype="mediaitems.application.sources.integration.ContentDiscoveryEndpoint$ContentDiscoveredMessageContent">
-		<int:queue />
-	</int:channel>
+
 	
 	<int:channel id="generic-contentdescription-input-channel" datatype="mediaitems.sources.api.io.ContentDescription">
     <int:queue />
