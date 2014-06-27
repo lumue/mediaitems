@@ -63,4 +63,6 @@
 	  <int:mapping value="IMAGE" channel="image-contentdescription-input-channel" />
 	</int:router>
 	
+	
+	
 </beans>

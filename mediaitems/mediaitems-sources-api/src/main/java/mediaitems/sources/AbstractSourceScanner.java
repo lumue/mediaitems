@@ -4,7 +4,6 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
-import mediaitems.sources.api.error.ContentAccessException;
 import mediaitems.sources.api.io.ContentBrowser;
 import mediaitems.sources.api.io.ContentHandle;
 import mediaitems.sources.api.io.ContentIterable;
@@ -41,7 +40,7 @@ public abstract class AbstractSourceScanner implements SourceScanner {
 				});
 			}
 			contentIterable.close();
-		} catch (ContentAccessException e) {
+		} catch (Exception e) {
 			scanFailed(e);
 		}
 
@@ -49,8 +48,13 @@ public abstract class AbstractSourceScanner implements SourceScanner {
 
 	protected abstract ContentBrowser getContentBrowser(URI uri);
 
-	private void scanFailed(ContentAccessException e) {
+	private void scanFailed(final Exception e) {
 		publishEvent(new ScanFailedEvent() {
+
+			@Override
+			public Throwable getCause() {
+				return e;
+			}
 
 		});
 	}

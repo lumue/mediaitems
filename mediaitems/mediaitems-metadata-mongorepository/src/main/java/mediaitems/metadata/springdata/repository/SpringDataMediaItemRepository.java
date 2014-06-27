@@ -10,8 +10,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-interface SpringDataMediaItemRepository extends
-		PagingAndSortingRepository<MediaItemImpl, String> {
+interface SpringDataMediaItemRepository extends PagingAndSortingRepository<MediaItemImpl, String> {
 
 	Page<MediaItemImpl> findByMediaType(MediaType mediaType, Pageable pageable);
 

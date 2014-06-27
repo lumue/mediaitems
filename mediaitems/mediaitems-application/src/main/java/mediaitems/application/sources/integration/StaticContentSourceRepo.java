@@ -26,8 +26,8 @@ public class StaticContentSourceRepo implements ContentSourceRepository {
 	@PostConstruct
 	public void populate()
 	{
-		create(createBuilder("thinkpad", "file:///mnt/media_thinkpad/media"));
-		create(createBuilder("home", "file:///home/lm"));
+		create(createBuilder("thinkpad", "file:///mnt/media_thinkpad/media/adult"));
+		// create(createBuilder("home", "file:///home/lm"));
 	}
 
 	private ContentSourceBuilder createBuilder(String name, String url) {
@@ -39,7 +39,7 @@ public class StaticContentSourceRepo implements ContentSourceRepository {
 	}
 
 	@Override
-	public ContentSource create(Builder<? extends ContentSource> builder) {
+	public ContentSource create(Builder<ContentSource> builder) {
 		ContentSource source = builder.build();
 		contentSources.put(source.getId(), source);
 		return source;
@@ -51,12 +51,12 @@ public class StaticContentSourceRepo implements ContentSourceRepository {
 	}
 
 	@Override
-	public Iterable<? extends ContentSource> getAll() {
+	public Iterable<ContentSource> getAll() {
 		return contentSources.values();
 	}
 
 	@Override
-	public Iterable<? extends ContentSource> getAll(Integer from, Integer to) {
+	public Iterable<ContentSource> getAll(Integer from, Integer to) {
 		return contentSources.values();
 	}
 

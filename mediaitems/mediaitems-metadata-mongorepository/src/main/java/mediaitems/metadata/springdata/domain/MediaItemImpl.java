@@ -10,15 +10,23 @@ import mediaitems.metadata.domain.Tag;
 
 import org.joda.time.LocalDateTime;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.TypeAlias;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "mediaitems")
+@TypeAlias("mediaitem")
 public class MediaItemImpl implements
  mediaitems.metadata.domain.MediaItem {
 
 	@Id
 	private String key;
 
+	@Indexed
 	private String name;
 
+	@DBRef
 	private Set<Tag> tagCollection;
 
 	MediaItemImpl(String name, MediaType mediaType,
@@ -31,12 +39,15 @@ public class MediaItemImpl implements
 		this.creationTime = time;
 	}
 
+
 	private final MediaType mediaType;
 
 	private final List<ContentLocation> contentLocation;
 
+	@Indexed
 	private final LocalDateTime creationTime;
 
+	@Indexed
 	private final Long size;
 
 	@Override

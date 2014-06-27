@@ -7,6 +7,7 @@ import mediaitems.metadata.domain.MediaType;
 import mediaitems.metadata.repository.MediaItemRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
@@ -20,7 +21,8 @@ import com.google.common.collect.Lists;
 public class MediaItemRestController {
 
 	@Autowired(required = true)
-	MediaItemRepository mediaItemRepository;
+	@Qualifier("mediaItemRepository")
+	MediaItemRepository<? extends MediaItem> mediaItemRepository;
 
 	@RequestMapping("/metadata/{mediaTypeKey}/list")
 	@Transactional(propagation = Propagation.REQUIRES_NEW)

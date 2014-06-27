@@ -16,6 +16,7 @@
     
     
     <import resource="classpath*:mediaitems/application/sources/integration/integration-context.xml"/>
+    <import resource="classpath*:mediaitems/application/metadata/integration/integration-context.xml"/>
     <context:component-scan base-package="mediaitems.application,
                                           mediaitems.metadata.springdata" />
 

@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ContentStreamingController {
 
 	@Autowired(required = true)
-	MediaItemRepository mediaItemRepository;
+	MediaItemRepository<? extends MediaItem> mediaItemRepository;
 
 	@RequestMapping("content/get/{mediaitemKey}")
 	@ResponseBody

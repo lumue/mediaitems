@@ -1,16 +1,14 @@
 package mediaitems.metadata.springdata.repository;
 
 import mediaitems.common.domain.api.Builder;
-import mediaitems.metadata.domain.Tag;
 import mediaitems.metadata.repository.TagRepository;
 import mediaitems.metadata.springdata.domain.TagImpl;
-import mediaitems.metadata.springdata.domain.TagImpl.TagImplBuilder;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
-public class SpringDataTagRepositoryAdapter implements TagRepository {
+public class SpringDataTagRepositoryAdapter implements TagRepository<TagImpl> {
 
 	private final SpringDataTagRepository delegate;
 
@@ -20,8 +18,8 @@ public class SpringDataTagRepositoryAdapter implements TagRepository {
 	}
 
 	@Override
-	public TagImpl create(Builder<? extends Tag> builder) {
-		return delegate.save(((TagImplBuilder) builder).build());
+	public TagImpl create(Builder<TagImpl> builder) {
+		return delegate.save(builder.build());
 	}
 
 	@Override
@@ -30,12 +28,12 @@ public class SpringDataTagRepositoryAdapter implements TagRepository {
 	}
 
 	@Override
-	public Iterable<? extends TagImpl> getAll() {
+	public Iterable<TagImpl> getAll() {
 		return delegate.findAll();
 	}
 
 	@Override
-	public Iterable<? extends TagImpl> getAll(Integer from, Integer to) {
+	public Iterable<TagImpl> getAll(Integer from, Integer to) {
 		final PageRequest pageRequest = RepositoryUtil.createPageable(from, to);
 		Page<TagImpl> resultPage = delegate.findAll(pageRequest);
 		return resultPage.getContent();

@@ -7,8 +7,10 @@ import mediaitems.configuration.sources.api.repository.ContentSourceRepository;
 import mediaitems.sources.AbstractSourceScanner;
 import mediaitems.sources.api.io.ContentBrowser;
 import mediaitems.sources.api.scan.ContentDiscoveredEvent;
+import mediaitems.sources.api.scan.ScanCompleteEvent;
 import mediaitems.sources.api.scan.ScanEvent;
 import mediaitems.sources.api.scan.ScanEventHandler;
+import mediaitems.sources.api.scan.ScanFailedEvent;
 import mediaitems.sources.api.scan.SourceScanner;
 import mediaitems.sources.filesystem.local.LocalFileSystemContentSource;
 
@@ -54,16 +56,28 @@ public class ContentDiscoveryEndpoint extends MessageProducerSupport {
 
 			@Override
 			public void handleEvent(ScanEvent event) {
+				
+				LOGGER.debug(event.getClass().toString() + " " + event.toString() + " received");
+				
+				if (event instanceof ScanFailedEvent) {
+					ScanFailedEvent scanFailedEvent = (ScanFailedEvent) event;
+					LOGGER.error("scan failed", scanFailedEvent.getCause());
+				}
+
+				if (event instanceof ScanCompleteEvent) {
+					LOGGER.info("scan complete");
+				}
+
 				if (event instanceof ContentDiscoveredEvent) {
 					ContentDiscoveredEvent contentDiscoveredEvent = (ContentDiscoveredEvent) event;
 					Message<ContentDiscoveredMessageContent> message = new GenericMessage<ContentDiscoveredMessageContent>(
 							new ContentDiscoveredMessageContent(
 									contentDiscoveredEvent.getContentHandle(),
 									contentSource));
-					LOGGER.info("sending scan event message " + message);
+					LOGGER.debug("sending content discovered message " + message);
 					sendMessage(message);
 				}
-				// TODO handle more types!
+				
 			}
 		});
 		scanner.scan(contentSource.getUrl());

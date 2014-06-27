@@ -8,7 +8,11 @@ import mediaitems.metadata.domain.VideoItem;
 
 import org.joda.time.Duration;
 import org.joda.time.LocalDateTime;
+import org.springframework.data.annotation.TypeAlias;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "mediaitems")
+@TypeAlias("videoitem")
 public class VideoItemImpl extends MediaItemImpl implements VideoItem {
 
 	private final String videoCodec;
@@ -51,7 +55,7 @@ public class VideoItemImpl extends MediaItemImpl implements VideoItem {
 		private String audioCodec;
 		private String videoCodec;
 		private String name;
-		private MediaType mediaType;
+		private final MediaType mediaType = MediaType.VIDEO;
 		private final List<ContentLocation> contentLocation = new ArrayList<ContentLocation>();
 		private Long size;
 		private LocalDateTime time;
@@ -72,7 +76,7 @@ public class VideoItemImpl extends MediaItemImpl implements VideoItem {
 
 		@Override
 		public VideoItemBuilderImpl setMediaType(MediaType mediaType) {
-			this.mediaType = mediaType;
+			// noop, always video
 			return this;
 		}
 
